@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cotsutsumi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>こつつみ</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <!-- /header -->
+  <header>
+    <div class="container">
+      <nav class="nav navbar-left">
+        <span><%= link_to root_path do %>
+          <!-- 画像入れたい、検討中 -->こつつみ
+          <% end %>
+        </span>
+      </nav>
+      <nav class="nav navbar-right">
+        <li><%= link_to "About", homes_about_path %></li>
+        <li>ユーザー一覧</li>
+          <% if user_signed_in? %>
+        <li>マイページ</li>
+        <li>フォロー一覧</li>
+        <li><%= link_to "ログアウト", destroy_user_session %></li>
+          <% else %>
+        <li><%= link_to "私もガマンする／新規登録", new_user_registration_path %></li>
+        <li><%= link_to "今日のガマン入力／ログイン", new_user_session_path %></li>
+          <% end %>
+      </nav>
+    </div>
+  </header>
+  <!-- /header -->
+  <%= yield %>
+</body>
 </html>
