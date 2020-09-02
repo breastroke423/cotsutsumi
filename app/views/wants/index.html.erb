@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>欲しい目標</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.wants.each do |want| %>
+    <tr>
+      <td><%= want.name %></td>
+      <td><%= want.price %>円</td>
+      <td><%= want.reason %></td>
+      <td>欲しかったものを買う！<!-- btnにして、確認出して、買った分合計額から引くようにする --></td>
+      <td><%= link_to "目標を変更する", edit_want_path(want) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

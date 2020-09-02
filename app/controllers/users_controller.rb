@@ -17,6 +17,20 @@ class UsersController < ApplicationController
 
   def mypage
     @user = current_user
+    @sum = @user.wastes.price.to_i * @user.wastes.count.to_i
+  end
+
+  def count_up
+    @user = current_user
+    @user.wastes.count.to_i += 1
+    @user.save
+    redirect_to mypage
+  end
+  def count_down
+    @user = current_user
+    @user.wastes.count.to_i += 1
+    @user.save
+    redirect_to mypage
   end
 
   private

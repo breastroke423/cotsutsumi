@@ -1,16 +1,41 @@
 <h2>ユーザー一覧</h2>
 
-<% @users.each do |user| %>
-  <%= user.nickname %>
-    <% user.wants.each do |want| %>
-      <%= want.name %>
-      <%= want.price %>
-      <%= want.reason %>
+<table>
+  <thead>
+    <% @users.each do |user| %>
+    <tr>
+      <th>プロフィール画像</th>
+      <th><%= user.nickname %></th>
+    </tr>
     <% end %>
-    <% user.wastes.each do |waste| %>
-    <!-- each で回すことで　オブジェクトを拾わずにデータの○番目、というとり方に -->
-      <%= waste.name %>
-      <%= waste.price %>
-      <%= waste.reason %>
+  </thead>
+  <tbody>
+    <tr>
+      <td>欲しいもの</td>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+     <% user.wants.each do |want| %>
+     <td><%= want.name %></td>
+     <td><%= want.price %></td>
+     <td><%= want.reason %></td>
+   </tr>
+   <% end %>
+   <tr>
     <% end %>
-<% end %>
+    <td>無駄遣い</td>
+  </tr>
+  <% @users.each do |user| %>
+
+  <% user.wastes.each do |waste| %>
+  <tr>
+    <td><%= waste.name %></td>
+    <td><%= waste.price %></td>
+    <td><%= waste.reason %></td>
+  </tr>
+  <% end %>
+
+  <% end %>
+</tbody>
+</table>
+<!-- each で回すことで　オブジェクトを拾わずにデータの○番目、というとり方に -->
