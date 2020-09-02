@@ -11,4 +11,6 @@ end
 root 'homes#top'
 get 'homes/about'
 get 'mypage' => 'users#mypage'
+get 'users/count_up' => 'usere#count_up'
+get 'users/count_down' => 'users#count_down'
 end

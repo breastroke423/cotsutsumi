@@ -16,7 +16,7 @@
     <% @user.wastes.each do |waste| %>
     <tr>
       <td><%= waste.name %></td>
-      <td>合計額　円</td>
+      <td>合計額<%= @sum %>円</td>
       <td></td>
     </tr>
     <% end %>
@@ -34,8 +34,16 @@
     <tr>
       <td><%= waste.name %></td>
       <td><%= waste.price %>円</td>
-      <td>ガマンできた！<!-- btn updateする　count+1 --></td>
-      <td>使っちゃった…。<!-- btn destroy? --></td>
+      <td>
+        <%= form_with model: waste, url: users_count_up_path do |f| %>
+        <%= f.submit "ガマンできた！" %>
+        <% end %>
+      </td>
+      <td>
+        <%= form_with model: waste, url: users_count_down_path do |f| %>
+        <%= f.submit "使っちゃった…。" %>
+        <% end %>
+      </td>
       <td><%= link_to "過去のガマンを書く", edit_waste_path(waste) %></td>
     </tr>
     <% end %>
@@ -56,8 +64,9 @@
       <td><%= want.name %></td>
       <td><%= want.price %>円</td>
       <td><%= want.reason %></td>
-      <td><%= link_to "目標を変更する", edit_want_path(want) %></td>
     </tr>
     <% end %>
   </tbody>
+      <%= link_to "目標を一覧を見る／変更する", wants_path %>
+
 </table>

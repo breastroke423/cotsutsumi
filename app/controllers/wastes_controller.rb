@@ -24,6 +24,7 @@ class WastesController < ApplicationController
     end
   end
 
+
 private
   def waste_params
   params.require(:waste).permit(:name, :price, :reason)
