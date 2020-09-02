@@ -2014,3 +2014,401 @@ Processing by HomesController#about as HTML
 Completed 200 OK in 52ms (Views: 47.1ms | ActiveRecord: 0.3ms)
 
 
+app/controllers/wants_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+pected end-of-input, expecting keyword_end):
+, ["LIMIT", 1]]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    app/controllers/wants_controller.rb:10:in `new'
+ant_params' for #<WantsController:0x00007feaa444bab0>
+Did you mean?  want_path):
+sion" ASC[0m
+                                                                                                                                                                                                                                                       .4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `want_params' for #<WantsController:0x00007feaa444bab0>
+Did you mean?  want_path):
+  
+app/controllers/wants_controller.rb:10:in `new'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 01:19:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: want):
+  
+app/controllers/wants_controller.rb:28:in `want_params'
+app/controllers/wants_controller.rb:10:in `new'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 01:23:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (467.4ms)
+Completed 500 Internal Server Error in 521ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fc34c4ce4f8>:0x00000000051b2948>
+Did you mean?  fork):
+    1: <h2>欲しいものを登録する</h2>
+    2: 
+    3: <%= form_with model: @want do |f| %>
+    4:   <%= form.text_field :name %>
+    5:   <%= form.text_field :price %>
+    6:   <%= form.text_field :reason %>
+    7:   <%= f.submit %>
+  
+app/views/wants/new.html.erb:4:in `block in _app_views_wants_new_html_erb___1385067469785121886_70238387730780'
+app/views/wants/new.html.erb:3:in `_app_views_wants_new_html_erb___1385067469785121886_70238387730780'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 01:23:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (29.6ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 766ms (Views: 751.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 01:38:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 125ms (Views: 117.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/waste/new" for 10.0.2.2 at 2020-09-02 01:45:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/waste/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/wastes/new" for 10.0.2.2 at 2020-09-02 01:45:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#new as HTML
+  Rendering wastes/new.html.erb within layouts/application
+  Rendered wastes/new.html.erb within layouts/application (23.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 681ms (Views: 647.6ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/wastes" for 10.0.2.2 at 2020-09-02 01:46:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+L5DkE2y8rdFyeptivuRineSz/neOjvW5Q5YLHmqcOwVCkLcbVupJCu+ZFP6M37CWYEexebFutsdTiqSBWjNg==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ"}, "commit"=>"登録する"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user' for #<Waste:0x00000000071cb810>):
+  
+app/controllers/wastes_controller.rb:18:in `create'
+Started GET "/wastes/new" for 10.0.2.2 at 2020-09-02 01:48:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WastesController#new as HTML
+  Rendering wastes/new.html.erb within layouts/application
+  Rendered wastes/new.html.erb within layouts/application (23.8ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 927ms (Views: 892.0ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/wastes" for 10.0.2.2 at 2020-09-02 01:48:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NNXFonmlroThTuQg7qTemmgEGEYiaap9uRbGhRUsxqgvYxWnSSYL6qz3OhgXZ/0nSLxXAtKKVHmO98dP7N/MXQ==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ"}, "commit"=>"登録する"}
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current' for #<WastesController:0x00007fee1406f040>
+Did you mean?  current_user):
+  
+app/controllers/wastes_controller.rb:18:in `create'
+Started GET "/wastes/new" for 10.0.2.2 at 2020-09-02 01:49:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WastesController#new as HTML
+  Rendering wastes/new.html.erb within layouts/application
+  Rendered wastes/new.html.erb within layouts/application (28.2ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 881ms (Views: 804.7ms | ActiveRecord: 34.3ms)
+
+
+Started POST "/wastes" for 10.0.2.2 at 2020-09-02 01:49:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeF/k/Q1AEvxsEKtq8BrgQimNOMywXTs6eNp3gwaBgV+V6+WxLalJbwJnJVSA0g8KB57p8IiiujeAmgU9ekM8A==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:18
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `saving' for 2:Integer):
+  
+app/controllers/wastes_controller.rb:18:in `create'
+Started GET "/wastes/new" for 10.0.2.2 at 2020-09-02 01:52:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WastesController#new as HTML
+  Rendering wastes/new.html.erb within layouts/application
+  Rendered wastes/new.html.erb within layouts/application (26.7ms)
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 835ms (Views: 757.1ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/wastes/new" for 10.0.2.2 at 2020-09-02 01:52:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#new as HTML
+  Rendering wastes/new.html.erb within layouts/application
+  Rendered wastes/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 112ms (Views: 106.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/wastes" for 10.0.2.2 at 2020-09-02 01:52:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WastesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RRwrspnPHOUQgNTgaAotwI5HDc03IGEBMloyBpns6nheqvu3qUy5i105CtiRyQ59rv9CicfDnwUFuzPMYB/gjQ==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:18
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `saving' for 2:Integer):
+  
+app/controllers/wastes_controller.rb:18:in `create'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:01:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 136ms (Views: 109.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:02:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdQyCKXFAv7/D5a1NmP3pUNn4+v8d9Ne4IixPA6U/1MCYuINlUankLK2SI3PoNQYY9+srwyULVrXabD292f1pg==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:15
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `id=' for nil:NilClass):
+  
+app/controllers/wants_controller.rb:15:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:04:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (25.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 872ms (Views: 808.5ms | ActiveRecord: 31.5ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:04:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kkCgj9Hp6+lPndiDJJNBL9M2sb+eQV0jrEl/tmF8SlKJ9nCK4WpOhwIkBrvdUGKS847++26ioyebqH58mI9Apw==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 138ms (Views: 128.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:08:14 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (32.7ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 1034ms (Views: 992.7ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:08:22 +0000
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Qevq8w2F6CKub+KWN/q3NvXKocZ54pQh3zonu0SdZ3msX+u/LWyzscAYbKhHMlh+29lw+kEdFSwnelUFOF/aA==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 127ms (Views: 118.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:12:36 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (30.1ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 920ms (Views: 866.2ms | ActiveRecord: 19.2ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:12:45 +0000
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S+RDDl2i6aITklsYGNZ2//rhhr1CrGKGKXDddIxM+nRQUpMLbSFMzF4rhSDhFVVC2lnJ+bJPnIIekdy+db/wgQ==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 138ms (Views: 129.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:14:05 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (44.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 938ms (Views: 886.6ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:14:10 +0000
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"anLJ59RVsCHtxOOX74TIUvmLbUFuBejHmg2sX5CSKn1xxBni5NYVT6B9Pa8WR+vv2TMiBZ7mFsOt7K2VaWEgiA==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/wants_controller.rb:16:in `create'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:14:41 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (24.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 603ms (Views: 568.2ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:14:48 +0000
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QpSoqgNILRYPwyPEG4fk8A27yMgYpyv/Wp06yvwXXqdZInivM8uIeEJ6/fziRMdNLQOHjOhE1fttfDsABeRUUg==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:15
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `id=' for nil:NilClass):
+  
+app/controllers/wants_controller.rb:15:in `create'
+Started GET "/wants/new" for 10.0.2.2 at 2020-09-02 02:15:29 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#new as HTML
+  Rendering wants/new.html.erb within layouts/application
+  Rendered wants/new.html.erb within layouts/application (21.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 904ms (Views: 855.7ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/wants" for 10.0.2.2 at 2020-09-02 02:15:33 +0000
+Processing by WantsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k95OUGzMexJT0MLZmfsOXc3n97szOrSSGX9RZhqTXQaIaJ5VXE/efB5pHOFgOC3g7V+4/8PZSpYunlCs42BX8w==", "want"=>{"name"=>"Pixel", "price"=>"100000", "reason"=>"携帯を買い換えたい"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[36mWant Create (2.3ms)[0m  [1m[32mINSERT INTO "wants" ("name", "price", "reason", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pixel"], ["price", 100000], ["reason", "携帯を買い換えたい"], ["created_at", "2020-09-02 02:15:33.497425"], ["updated_at", "2020-09-02 02:15:33.497425"], ["user_id", 2]]
+  ↳ app/controllers/wants_controller.rb:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:16
+Redirected to http://localhost:3000/
+Completed 200 OK in 29ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-02 02:15:33 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 117ms (Views: 109.2ms | ActiveRecord: 1.2ms)
+
+
