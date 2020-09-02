@@ -15,8 +15,9 @@ class WastesController < ApplicationController
 
   def create
     @waste = Waste.new(waste_params)
-    @waste.saving.id = current_user.id.saving
-    if @waste.save
+    @waste.user_id = current_user.id
+    if @waste.save!
+      # saving がないから登録できない(Validation failed: Saving must exist):
       redirect_to root_path
     else
       render 'new'

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
   end
 
   def show
@@ -15,5 +16,11 @@ class UsersController < ApplicationController
 
 
   def mypage
+    @user = current_user
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :price, :reason)
   end
 end

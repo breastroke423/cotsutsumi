@@ -21,9 +21,9 @@
       </nav>
       <nav class="nav navbar-right">
         <li><%= link_to "About", homes_about_path %></li>
-        <li>ユーザー一覧</li>
+        <li><%= link_to "ユーザー一覧", users_path %></li>
           <% if user_signed_in? %>
-        <li>マイページ</li>
+        <li><%= link_to "マイページ", mypage_path %></li>
         <li>フォロー一覧</li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
