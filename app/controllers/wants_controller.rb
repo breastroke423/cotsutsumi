@@ -13,7 +13,7 @@ class WantsController < ApplicationController
   def create
     @want = Want.new(want_params)
     @want.user_id = current_user.id
-    if @want.save!
+    if @want.save
       redirect_to root_path
     else
       render 'new'

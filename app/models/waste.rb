@@ -1,3 +1,3 @@
 class Waste < ApplicationRecord
-  belongs_to :saving
+  belongs_to :user
 end

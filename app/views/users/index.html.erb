@@ -1,0 +1,16 @@
+<h2>ユーザー一覧</h2>
+
+<% @users.each do |user| %>
+  <%= user.nickname %>
+    <% user.wants.each do |want| %>
+      <%= want.name %>
+      <%= want.price %>
+      <%= want.reason %>
+    <% end %>
+    <% user.wastes.each do |waste| %>
+    <!-- each で回すことで　オブジェクトを拾わずにデータの○番目、というとり方に -->
+      <%= waste.name %>
+      <%= waste.price %>
+      <%= waste.reason %>
+    <% end %>
+<% end %>

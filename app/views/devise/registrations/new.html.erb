@@ -27,6 +27,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :意気込み %><br />
+    <%= f.text_field :introduction, autofocus: true, autocomplete: "introduction" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "続いて欲しいものを入力！" %>
   </div>
