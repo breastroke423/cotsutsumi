@@ -1,19 +1,25 @@
-<table>
-  <thead>
-    <tr>
-      <th>欲しい目標</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @user.wants.each do |want| %>
-    <tr>
-      <td><%= want.name %></td>
-      <td><%= want.price %>円</td>
-      <td><%= want.reason %></td>
-      <td>欲しかったものを買う！<!-- btnにして、確認出して、買った分合計額から引くようにする --></td>
-    </tr>
-    <% end %>
+<h2>目標を変更する</h2>
+<% @wants.each do |want| %>
+<%= form_with model: want do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :price %>
+<%= f.text_field :reason %>
+<%= f.submit "←を更新する" %>
+<%= link_to "目標から削除する", want_path(want), method: :delete %>
+<% end %>
+<% end %>
 
-  </tbody>
-</table>
-          <%= link_to "目標を変更／新規登録する", edit_want_path(@user.wants) %>
+<h2>欲しいものを追加する</h2>
+
+<%= form_with model: @want do |f| %>
+  <%= f.label :欲しいもの %>
+  <%= f.text_field :name %>
+  <%= f.label :ものの値段 %>
+  <%= f.text_field :price %>
+  <%= f.label :欲しい理由 %>
+  <%= f.text_field :reason %>
+  <%= f.submit "追加する" %>
+  <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
+<% end %>
+
+<%= link_to "無駄遣いを入力／変更する", wastes_path %>

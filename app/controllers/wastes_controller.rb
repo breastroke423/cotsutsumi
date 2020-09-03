@@ -1,32 +1,35 @@
 class WastesController < ApplicationController
 
   def index
+    @user = current_user
+    @waste = Waste.new
   end
 
   def show
   end
 
   def edit
-    @user = current_user
-    @waste = Waste.new
+    # @user = current_user
+    # @waste = Waste.new
 
   end
 
   def create
     @waste = Waste.new(waste_params)
     @waste.user_id = current_user.id
-    if @waste.save!
+    if @waste.save
       # saving がないから登録できない(Validation failed: Saving must exist):
-      redirect_to root_path
+      redirect_to wastes_path
     else
       render 'new'
     end
   end
 
   def count_up
-    @waste_count = wastes.count += 1
-    @waste_count.update
-    redirect_to mypage
+    @waste = Waste.find(params[:waste])
+    @waste.count = @waste.count + 1
+    @waste.save
+    redirect_to root_path
   end
   def count_down
     waste.wastes.count += 1
@@ -36,6 +39,7 @@ class WastesController < ApplicationController
 
 
   def update
+    byebug
     @waste = Waste.find(params[:id])
     if @waste.save
       redirect_to root_path
