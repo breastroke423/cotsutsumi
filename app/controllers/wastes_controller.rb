@@ -29,20 +29,20 @@ class WastesController < ApplicationController
     @waste = Waste.find(params[:waste])
     @waste.count = @waste.count + 1
     @waste.save
-    redirect_to root_path
+    redirect_to mypage_path
   end
   def count_down
-    waste.wastes.count += 1
-    waste.update
-    redirect_to mypage
+    @waste = Waste.find(params[:waste])
+    @waste.count = @waste.count - 1
+    @waste.save
+    redirect_to mypage_path
   end
 
 
   def update
-    byebug
     @waste = Waste.find(params[:id])
-    if @waste.save
-      redirect_to root_path
+    if @waste.update(waste_params)
+      redirect_to wastes_path
     else
       render 'edit'
     end
