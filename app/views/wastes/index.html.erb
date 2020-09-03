@@ -1,6 +1,6 @@
 <h2>無駄遣いを変更する</h2>
 <% @user.wastes.each do |waste| %>
-<%= form_with model: waste, url: wastes_path do |f| %>
+<%= form_with model: waste do |f| %>
 <%= f.text_field :name %>
 <%= f.text_field :price %>
 <%= f.text_field :reason %>
@@ -10,7 +10,7 @@
 
 
 <h2>節約したいものを入力</h2>
-<%= form_with model: @waste, url: wastes_path do |f| %>
+<%= form_with model: @waste do |f| %>
   <%= f.label :節約したいもの %>
   <%= f.text_field :name %>
   <%= f.label :１個／1回あたりの値段 %>

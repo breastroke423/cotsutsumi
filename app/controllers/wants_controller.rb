@@ -24,7 +24,7 @@ class WantsController < ApplicationController
   def update
     @want = Want.find(params[:id])
     if @want.update(want_params)
-      redirect_to root_path
+      redirect_to wants_path
     else
       render 'edit'
     end
