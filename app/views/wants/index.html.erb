@@ -1,17 +1,17 @@
 <h2>目標を変更する</h2>
-<% @user.wants.each do |want| %>
-<%= form_with model: want, url: wants_path do |f| %>
+<% @wants.each do |want| %>
+<%= form_with model: want do |f| %>
 <%= f.text_field :name %>
 <%= f.text_field :price %>
 <%= f.text_field :reason %>
 <%= f.submit "←を更新する" %>
-<%= link_to "目標から削除する", want_path(want), method: :delete, remote: true %>
+<%= link_to "目標から削除する", want_path(want), method: :delete %>
 <% end %>
 <% end %>
 
 <h2>欲しいものを追加する</h2>
 
-<%= form_with model: @want, url: wants_path do |f| %>
+<%= form_with model: @want do |f| %>
   <%= f.label :欲しいもの %>
   <%= f.text_field :name %>
   <%= f.label :ものの値段 %>

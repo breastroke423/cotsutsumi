@@ -3,6 +3,7 @@ class WantsController < ApplicationController
   def index
     @user = current_user
     @want = Want.new
+    @wants = Want.all
   end
 
   def edit
@@ -22,19 +23,21 @@ class WantsController < ApplicationController
 
   def update
     @want = Want.find(params[:id])
-    if @want.update
+    if @want.update(want_params)
       redirect_to root_path
     else
       render 'edit'
     end
 
+  end
+
   def destroy
     want = Want.find(params[:id])
-    want.destroy!
+    want.destroy
     redirect_to wants_path
   end
 
-  end
+
 
   private
   def want_params

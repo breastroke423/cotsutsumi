@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
+patch 'wastes/count_up' => 'wastes#count_up'
+patch 'wastes/count_down' => 'wastes#count_down'
+
 resources :users
 resources :wastes
 resources :wants do
@@ -11,6 +14,5 @@ end
 root 'homes#top'
 get 'homes/about'
 get 'mypage' => 'users#mypage'
-patch 'wastes/count_up' => 'wastes#count_up'
-patch 'wastes/count_down' => 'wastes#count_down'
+
 end

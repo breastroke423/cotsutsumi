@@ -7,7 +7,7 @@
 <!-- 合計額書く -->
 
 
-<!-- <h3>継続日数</h3>　カレンダー機能の時に -->
+<!-- <h3>継続日数</h3>カレンダー機能の時に -->
 <table>
   <thead>
     <tr>
@@ -38,14 +38,18 @@
       <td><%= waste.name %></td>
       <td><%= waste.price %>円</td>
       <td>
-        <%= form_with model: waste, url: wastes_count_up_path do |f| %>
-        <%= f.submit "ガマンできた！" %>
-        <% end %>
+        <%= button_to "ガマンできた！", {controller: 'wastes', action: 'count_up'}, {method: :patch, params: {waste: waste.id}} %>
+        <%#= button_to 'ガマンできた！', controller: 'wastes', action: 'count_up', {params: {waste: :waste}, method: :PATCH } %>
+
+
+        <%#= form_with model: waste, url: wastes_count_up_path do |f| %>
+        <%#= f.submit "ガマンできた！" %>
+        <%# end %>
       </td>
       <td>
-        <%= form_with model: waste, url: wastes_count_down_path do |f| %>
-        <%= f.submit "使っちゃった…。" %>
-        <% end %>
+        <%#= form_with model: waste, url: wastes_count_down_path do |f| %>
+        <%#= f.submit "使っちゃった…。" %>
+        <%# end %>
       </td>
       <td><%#= link_to "過去のガマンを書く", edit_waste_path(waste) %></td>
     </tr>
