@@ -6,11 +6,10 @@ class WastesController < ApplicationController
   def show
   end
 
-  def new
-    @waste = Waste.new
-  end
-
   def edit
+    @user = current_user
+    @waste = Waste.new
+
   end
 
   def create
@@ -24,10 +23,32 @@ class WastesController < ApplicationController
     end
   end
 
+  def count_up
+    @waste_count = wastes.count += 1
+    @waste_count.update
+    redirect_to mypage
+  end
+  def count_down
+    waste.wastes.count += 1
+    waste.update
+    redirect_to mypage
+  end
 
-private
+
+  def update
+    @waste = Waste.find(params[:id])
+    if @waste.save
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+  end
+
+
+
+  private
   def waste_params
-  params.require(:waste).permit(:name, :price, :reason)
+    params.require(:waste).permit(:name, :price, :reason)
   end
 
 end

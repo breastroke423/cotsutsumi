@@ -1,0 +1,22 @@
+<h2>目標を変更する</h2>
+<% @user.wants.each do |want| %>
+<%= form_with model: want, url: want_path do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :price %>
+<%= f.text_field :reason %>
+<%= f.submit "←を更新する" %>
+<% end %>
+<% end %>
+
+<h2>欲しいものを追加する</h2>
+
+<%= form_with model: @want, url: wants_path do |f| %>
+  <%= f.label :欲しいもの %>
+  <%= f.text_field :name %>
+  <%= f.label :ものの値段 %>
+  <%= f.text_field :price %>
+  <%= f.label :欲しい理由 %>
+  <%= f.text_field :reason %>
+  <%= f.submit "追加する" %>
+  <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
+<% end %>
