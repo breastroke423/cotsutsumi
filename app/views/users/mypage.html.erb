@@ -1,6 +1,8 @@
 <h2>マイページ</h2>
 
 
+<h4><%= link_to "プロフィールを変更する", edit_user_registration_path %></h4>
+
 <h3>Total</h3>
 <!-- 合計額書く -->
 
@@ -17,9 +19,10 @@
     <tr>
       <td><%= waste.name %></td>
       <td>合計額<%#= waste.price * waste.count %>円</td>
-      <td><%= link_to "無駄遣いを変更する", edit_waste_path(waste) %></td>
     </tr>
     <% end %>
+    <td><%= link_to "無駄遣いを変更/追加する", wastes_path %></td>
+
   </tbody>
 </table>
 
@@ -44,13 +47,12 @@
         <%= f.submit "使っちゃった…。" %>
         <% end %>
       </td>
-      <td><%= link_to "過去のガマンを書く", edit_waste_path(waste) %></td>
+      <td><%#= link_to "過去のガマンを書く", edit_waste_path(waste) %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "買いたかったものを買う！" %>
 
 <table>
   <thead>
@@ -61,12 +63,13 @@
   <tbody>
     <% @user.wants.each do |want| %>
     <tr>
+      <!-- <td>want.image 欲しいものの画像</td> -->
       <td><%= want.name %></td>
       <td><%= want.price %>円</td>
       <td><%= want.reason %></td>
     </tr>
     <% end %>
   </tbody>
-      <%= link_to "目標を一覧を見る／変更する", wants_path %>
 
 </table>
+<%= link_to "買いたかったものを買う！／変更する", wants_path %>
