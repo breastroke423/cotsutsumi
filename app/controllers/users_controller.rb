@@ -8,6 +8,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    wastes.count += 1
+    waste.save
+    redirect_to mypage
   end
 
   def edit
@@ -17,21 +20,9 @@ class UsersController < ApplicationController
 
   def mypage
     @user = current_user
-    @sum = @user.wastes.price.to_i * @user.wastes.count.to_i
+    # @sum = current_user.wastes.price * current_user.wastes.count
   end
 
-  def count_up
-    @user = current_user
-    @user.wastes.count.to_i += 1
-    @user.save
-    redirect_to mypage
-  end
-  def count_down
-    @user = current_user
-    @user.wastes.count.to_i += 1
-    @user.save
-    redirect_to mypage
-  end
 
   private
   def user_params

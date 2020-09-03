@@ -5,6 +5,9 @@ class WantsController < ApplicationController
   end
 
   def edit
+    @user = current_user
+    @want = Want.new
+
   end
 
   def new
@@ -22,6 +25,13 @@ class WantsController < ApplicationController
   end
 
   def update
+    @want = Want.find(params[:id])
+    if @want.save
+      redirect_to root_path
+    else
+      render 'edit'
+    end
+
   end
 
   private

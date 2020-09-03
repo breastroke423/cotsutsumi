@@ -11,8 +11,9 @@
       <td><%= want.price %>円</td>
       <td><%= want.reason %></td>
       <td>欲しかったものを買う！<!-- btnにして、確認出して、買った分合計額から引くようにする --></td>
-      <td><%= link_to "目標を変更する", edit_want_path(want) %></td>
     </tr>
     <% end %>
+
   </tbody>
 </table>
+          <%= link_to "目標を変更／新規登録する", edit_want_path(@user.wants) %>
