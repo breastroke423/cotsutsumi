@@ -6,6 +6,10 @@ class WantsController < ApplicationController
     @wants = Want.all
   end
 
+  def show
+    @want = Want.find(params[:id])
+  end
+
   def edit
     # @user = current_user
 

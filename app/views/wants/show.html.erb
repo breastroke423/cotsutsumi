@@ -1,0 +1,9 @@
+<h2>欲しいものを買う</h2>
+
+<%# @user.wants.each do |want| %>
+  <%= @want.name %><br>
+  <%= @want.price %><br>
+  <%= @want.reason %><br>
+  登録日<%= @want.created_at %><br>
+  <%= link_to "購入する" %> <!-- confirm画面作成 -->
+
