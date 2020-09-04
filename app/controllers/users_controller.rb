@@ -17,6 +17,10 @@ class UsersController < ApplicationController
   end
 
 
+  def achievement
+  end
+
+
 
   def mypage
     @user = current_user
