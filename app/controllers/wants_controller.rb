@@ -25,6 +25,16 @@ class WantsController < ApplicationController
     end
   end
 
+
+  def purchase
+    @user = current_user
+    @want = Want.find(params[:id])
+    @user.purchase_price = @user.purchase_price + @want.price
+    @user.save
+    redirect_to achievement_path
+  end
+
+
   def update
     @want = Want.find(params[:id])
     if @want.update(want_params)
