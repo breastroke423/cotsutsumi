@@ -1,6 +1,9 @@
 <h2>目標を変更する</h2>
 <% @wants.each do |want| %>
+買いたいもの<%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
 <%= form_with model: want do |f| %>
+
+<%= f.attachment_field :want_image %>
 <%= f.text_field :name %>
 <%= f.text_field :price %>
 <%= f.text_field :reason %>
@@ -12,6 +15,7 @@
 <h2>欲しいものを追加する</h2>
 
 <%= form_with model: @want do |f| %>
+  <%= f.attachment_field :want_image %>
   <%= f.label :欲しいもの %>
   <%= f.text_field :name %>
   <%= f.label :ものの値段 %>

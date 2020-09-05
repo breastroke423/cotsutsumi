@@ -1,9 +1,8 @@
 <h2>欲しいものを買う</h2>
 
-<%# @user.wants.each do |want| %>
   <%= @want.name %><br>
   <%= @want.price %><br>
   <%= @want.reason %><br>
   登録日<%= @want.created_at %><br>
   <%= link_to "購入する" %> <!-- confirm画面作成 -->
-        <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want: want.id}} %>
+        <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want_id: @want.id}} %>

@@ -1,7 +1,11 @@
 <h2>マイページ</h2>
+  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
+  <%= current_user.nickname %>
+  <%= link_to "フォロー一覧", user_follows_path(current_user.id) %>
+  <%= link_to "フォロワー一覧", user_followers_path(current_user.id) %>
 
 
-<h4><%= link_to "プロフィールを変更する", edit_user_registration_path %></h4>
+<h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
 
 <h3>通算積立Total
   <% sum = 0 %>
@@ -46,22 +50,36 @@
     <td><%= link_to "無駄遣いを変更/追加する", wastes_path %></td>
 
 
-
     <table>
+      <h3>欲しい目標</h3>
+
       <thead>
         <tr>
-          <th>欲しい目標</th>
-        </tr>
+          <th></th>
       </thead>
       <tbody>
         <tr>
+          <td></td>
+          <td>目標</td>
+          <td>購入金額</td>
+          <td>理由</td>
+          <td>目標まで</td>
+          <td>購入へ</td>
+
+        </tr>
+        <tr>
           <% @user.wants.each do |want| %>
           <!-- <td>want.image 欲しいものの画像</td> -->
+          <td><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
           <td><%= want.name %></td>
           <td><%= want.price %>円</td>
           <td><%= want.reason %></td>
-          <td>あと<%= want.price-sum %>円</td>
+          <td>あと<%= want.price-(sum-@user.purchase_price) %>円</td>
+          <% if want.price-(sum-@user.purchase_price) <= 0 %>
           <td><%= link_to "購入画面へ進む", want_path(want) %></td>
+          <% else %>
+          <td> </td>
+          <% end %>
         </tr>
         <% end %>
       </tbody>
