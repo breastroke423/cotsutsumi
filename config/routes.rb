@@ -5,7 +5,13 @@ patch 'wastes/count_up' => 'wastes#count_up'
 patch 'wastes/count_down' => 'wastes#count_down'
 patch 'wants/purchase' => 'wants#purchase'
 
-resources :users
+resources :users do
+  resource :relationships, only: [:create, :destroy]
+  get :follows
+  get :followers
+end
+
+
 resources :wastes
 resources :wants do
   resource :cheers, only:[:create, :destroy]

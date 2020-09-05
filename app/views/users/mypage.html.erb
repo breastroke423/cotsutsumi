@@ -1,6 +1,8 @@
 <h2>マイページ</h2>
   <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
   <%= current_user.nickname %>
+  <%= link_to "フォロー一覧", user_follows_path(current_user.id) %>
+  <%= link_to "フォロワー一覧", user_followers_path(current_user.id) %>
 
 
 <h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
