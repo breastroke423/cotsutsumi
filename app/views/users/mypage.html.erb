@@ -1,7 +1,9 @@
 <h2>マイページ</h2>
+  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
+  <%= current_user.nickname %>
 
 
-<h4><%= link_to "プロフィールを変更する", edit_user_registration_path %></h4>
+<h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
 
 <h3>通算積立Total
   <% sum = 0 %>
@@ -60,8 +62,12 @@
           <td><%= want.name %></td>
           <td><%= want.price %>円</td>
           <td><%= want.reason %></td>
-          <td>あと<%= want.price-sum %>円</td>
+          <td>あと<%= want.price-(sum-@user.purchase_price) %>円</td>
+          <% if want.price-(sum-@user.purchase_price) <= 0 %>
           <td><%= link_to "購入画面へ進む", want_path(want) %></td>
+          <% else %>
+          <td> </td>
+          <% end %>
         </tr>
         <% end %>
       </tbody>

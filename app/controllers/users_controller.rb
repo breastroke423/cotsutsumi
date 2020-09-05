@@ -8,12 +8,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    wastes.count += 1
-    waste.save
-    redirect_to mypage
+    @user = current_user
+    @user.update(user_params)
+    redirect_to mypage_path
+
+
   end
 
   def edit
+    @user = current_user
   end
 
 
@@ -30,6 +33,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :price, :reason)
+    params.require(:user).permit(:nickname, :profile_image, :introduction)
   end
 end

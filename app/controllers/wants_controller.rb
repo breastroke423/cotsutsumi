@@ -28,7 +28,7 @@ class WantsController < ApplicationController
 
   def purchase
     @user = current_user
-    @want = Want.find(params[:id])
+    @want = Want.find(params[:want_id])
     @user.purchase_price = @user.purchase_price + @want.price
     @user.save
     redirect_to achievement_path
@@ -55,6 +55,6 @@ class WantsController < ApplicationController
 
   private
   def want_params
-    params.require(:want).permit(:name, :price, :reason)
+    params.require(:want).permit(:name, :price, :reason, :want_image)
   end
 end

@@ -1,19 +1,18 @@
 <h2>ユーザー一覧</h2>
 
 <table>
+      <% @users.each do |user| %>
   <thead>
-    <% @users.each do |user| %>
     <tr>
-      <th>プロフィール画像</th>
+      <th><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></th>
       <th><%= user.nickname %></th>
     </tr>
-    <% end %>
   </thead>
   <tbody>
+
     <tr>
       <td>欲しいもの</td>
     </tr>
-    <% @users.each do |user| %>
     <tr>
      <% user.wants.each do |want| %>
      <td><%= want.name %></td>
@@ -22,10 +21,8 @@
    </tr>
    <% end %>
    <tr>
-    <% end %>
     <td>無駄遣い</td>
-  </tr>
-  <% @users.each do |user| %>
+   </tr>
 
   <% user.wastes.each do |waste| %>
   <tr>
@@ -35,7 +32,8 @@
   </tr>
   <% end %>
 
-  <% end %>
 </tbody>
+  <% end %>
+
 </table>
 <!-- each で回すことで　オブジェクトを拾わずにデータの○番目、というとり方に -->

@@ -1,0 +1,26 @@
+<h2>プロフィールの変更</h2>
+
+
+<%= form_for @user do |f| %>
+
+  <label>プロフィール画像</label><br>
+  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
+
+  <div class="field">
+    <%= f.label :ニックネーム %><br />
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "プロフィールの更新" %>
+  </div>
+<% end %>
+
+
+<%= link_to "パスワードを忘れた方はこちら" %>

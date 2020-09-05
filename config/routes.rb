@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 patch 'wastes/count_up' => 'wastes#count_up'
 patch 'wastes/count_down' => 'wastes#count_down'
-patch 'users/purchase' => 'users#purchase'
+patch 'wants/purchase' => 'wants#purchase'
 
 resources :users
 resources :wastes

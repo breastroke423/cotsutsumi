@@ -15545,3 +15545,2123 @@ Migrating to AddWantImageIdToWant (20200904154302)
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:30:16 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 444ms (Views: 422.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:34:01 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:34:32 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:44:14 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 143ms (Views: 139.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:44:35 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 03:44:56 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/fRQcri+r7DMaKVDc4S1Kz2mbLYg4Ro2noBsQ4uiBbjbLltEJDQRBP+5u8TI/zXGWR9NM9/1QjkCE3YldrWgg==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa7d442f1e8 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7263-658qkb.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 341ms (Views: 51.6ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 03:45:11 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N3CUQQBSVJOHlfCnCQF1QsLfAd3Wx4ZNniQhdoQSj1/b6/xt2iB+aVdatN0X7JtBd03lW8E71y2gVm0fH+bRyw==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa7b85ec920 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7263-2al2ax.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Redirected to http://localhost:3000/
+Completed 302 Found in 292ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-05 03:45:11 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:45:14 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:8
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:58
+  Rendered users/mypage.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 91ms (Views: 79.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:45:45 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:59
+  Rendered users/mypage.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 103ms (Views: 97.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:46:12 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:46:38 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:47:54 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 58ms (Views: 51.2ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-05 03:48:43 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"gVFw/d6dSlY2vAFIx1TqrcAhPaiMVbKRruJNO6JafyxtyhjRBO9grOZzRTLZuQSudbPZLpup4/GQkAFSOa4huA==", "waste"=>"1"}
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mWaste Update (2.4ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 8], ["updated_at", "2020-09-05 03:48:43.237891"], ["id", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 16ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:48:43 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 58ms (Views: 53.0ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/wastes/count_down" for 10.0.2.2 at 2020-09-05 03:48:56 +0000
+Processing by WastesController#count_down as HTML
+  Parameters: {"authenticity_token"=>"NqN0dDDtsKvMwDxkgsgSgoomHEFpub4FywatxZp89sjaOBxY6p+aURwPeB6cJfyBP7T4x35F72X1dOGsAYioXA==", "waste"=>"5"}
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[36mWaste Update (1.2ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", -2], ["updated_at", "2020-09-05 03:48:56.346099"], ["id", 5]]
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:37
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 14ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:48:56 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:52:55 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 03:55:54 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 403ms (Views: 384.2ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 03:56:01 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZyutcCwfveepVXvNIDTUlFe+OVhjFZj4sd6qZnqzP6HO1ZjQKautsp1TScxRYVpNDcJ1JZCMT2GYb2zNnCK5Kg==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb170658028 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7313-1ci6g7g.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-05 03:56:02 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 03:56:04 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 83ms (Views: 71.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/wants/1" for 10.0.2.2 at 2020-09-05 03:59:35 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (243.6ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `want' for #<#<Class:0x00007fb164670350>:0x00007fb16467eb08>
+Did you mean?  @want):
+    6:   <%= @want.reason %><br>
+    7:   登録日<%= @want.created_at %><br>
+    8:   <%= link_to "購入する" %> <!-- confirm画面作成 -->
+    9:         <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want: want.id}} %>
+  
+app/views/wants/show.html.erb:9:in `_app_views_wants_show_html_erb___1708202450439975037_70199935206880'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:07:26 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (3.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (310.9ms)
+Completed 200 OK in 433ms (Views: 394.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/wants/1" for 10.0.2.2 at 2020-09-05 04:07:30 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (217.4ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `want' for #<#<Class:0x00007f4fe00465c8>:0x00007f4fe0044b60>
+Did you mean?  @want):
+    6:   <%= @want.reason %><br>
+    7:   登録日<%= @want.created_at %><br>
+    8:   <%= link_to "購入する" %> <!-- confirm画面作成 -->
+    9:         <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want: want.id}} %>
+  
+app/views/wants/show.html.erb:9:in `_app_views_wants_show_html_erb___32175572304454522_69990518765340'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:09:32 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 108ms (Views: 101.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wants/2" for 10.0.2.2 at 2020-09-05 04:09:42 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (288.3ms)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `want' for #<#<Class:0x00007f4fe00465c8>:0x00007f4fcde5c990>
+Did you mean?  @want):
+    6:   <%= @want.reason %><br>
+    7:   登録日<%= @want.created_at %><br>
+    8:   <%= link_to "購入する" %> <!-- confirm画面作成 -->
+    9:         <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want: want.id}} %>
+  
+app/views/wants/show.html.erb:9:in `_app_views_wants_show_html_erb___32175572304454522_69990366767500'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:10:14 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 90ms (Views: 83.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wants/1" for 10.0.2.2 at 2020-09-05 04:10:31 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (323.2ms)
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `want' for #<#<Class:0x00007f4fe00465c8>:0x00007f4fcd5c0d18>
+Did you mean?  @want):
+    6:   <%= @want.reason %><br>
+    7:   登録日<%= @want.created_at %><br>
+    8:   <%= link_to "購入する" %> <!-- confirm画面作成 -->
+    9:         <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want: want.id}} %>
+  
+app/views/wants/show.html.erb:9:in `_app_views_wants_show_html_erb___32175572304454522_69990362256020'
+Started GET "/wants/1" for 10.0.2.2 at 2020-09-05 04:12:50 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 119ms (Views: 113.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:12:58 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wants/2" for 10.0.2.2 at 2020-09-05 04:13:05 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWant Load (1.1ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/wants/purchase" for 10.0.2.2 at 2020-09-05 04:13:14 +0000
+Processing by WantsController#purchase as HTML
+  Parameters: {"authenticity_token"=>"zSUL05CkdU+K3qFC2E4fvzYdTxvujhczeZWOfPULudBpAQkUMkoLpBgsp/ooEciM/038Zee8ygEO0MPsvCdaKg==", "want"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:30
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Want without an ID):
+  
+app/controllers/wants_controller.rb:31:in `purchase'
+Started GET "/wants/2" for 10.0.2.2 at 2020-09-05 04:15:05 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 605ms (Views: 576.4ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/wants/purchase" for 10.0.2.2 at 2020-09-05 04:15:07 +0000
+Processing by WantsController#purchase as HTML
+  Parameters: {"authenticity_token"=>"45I1Xj3qCyDHMIF0sSwjJawYnr5YINuT6SpUjL+zKywPCV1y55gh2hf/xQ6vwc0mGYp6OE/civPXWBjlJEd1uA==", "want_id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:30
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:33
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "purchase_price" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["purchase_price", 5000], ["updated_at", "2020-09-05 04:15:07.121505"], ["id", 2]]
+  ↳ app/controllers/wants_controller.rb:33
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:33
+Redirected to http://localhost:3000/achievement
+Completed 302 Found in 19ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/achievement" for 10.0.2.2 at 2020-09-05 04:15:07 +0000
+Processing by UsersController#achievement as HTML
+  Rendering users/achievement.html.erb within layouts/application
+  Rendered users/achievement.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:15:10 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 71ms (Views: 63.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:37:33 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:38:10 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:11 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-05 04:40:17 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"/V89Yv5i1M4lKYH/JBoOXoD4LIHMrys2ks1gpRroJgURxFVOJBD+NPXmxYU69+BdNWrIB9tTelasvyzMgRx4kQ==", "waste"=>"5"}
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mWaste Update (2.4ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", -1], ["updated_at", "2020-09-05 04:40:17.057881"], ["id", 5]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:17 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 61ms (Views: 45.5ms | ActiveRecord: 10.0ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-05 04:40:19 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"1hJN2ggdfUsQKtCs1vv2tKw3LQlz/KE283jhzqIDVtA6iSX20m9XscDllNbIFhi3GaXJj2QA8FbNCq2nOfcIRA==", "waste"=>"5"}
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mWaste Update (1.1ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 0], ["updated_at", "2020-09-05 04:40:19.806057"], ["id", 5]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:19 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-05 04:40:21 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"wjC6dWnigahBmOAmG+kmZ6mwZdvuCkA7H/KtZhUcf7Muq9JZs5CrUpFXpFwFBMhkHCKBXfn2EVshgOEPjughJw==", "waste"=>"5"}
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mWaste Update (1.7ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 1], ["updated_at", "2020-09-05 04:40:21.082463"], ["id", 5]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:21 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/wastes/count_down" for 10.0.2.2 at 2020-09-05 04:40:27 +0000
+Processing by WastesController#count_down as HTML
+  Parameters: {"authenticity_token"=>"gBjAK5/vs+zKm5IBNIJfThjdWuJd/05jrbR4jMeTHFdsg6gHRZ2ZFhpU1nsqb7FNrU++ZEoDHwOTxjTlXGdCww==", "waste"=>"5"}
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[36mWaste Update (1.1ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 0], ["updated_at", "2020-09-05 04:40:27.579617"], ["id", 5]]
+  ↳ app/controllers/wastes_controller.rb:37
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:37
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 11ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:27 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wants/2" for 10.0.2.2 at 2020-09-05 04:40:32 +0000
+Processing by WantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:10
+  Rendering wants/show.html.erb within layouts/application
+  Rendered wants/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-05 04:40:38 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"4jy8YB9DB1uWiePIjUtuPAt5fxoIdLARd3CDtolG8K4Op9RMxTEtoUZGp7KTpoA/vuubnB+I4XFJAs/fErKuOg==", "waste"=>"1"}
+  [1m[36mWaste Load (1.2ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[36mWaste Update (1.4ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 9], ["updated_at", "2020-09-05 04:40:38.971541"], ["id", 1]]
+  ↳ app/controllers/wastes_controller.rb:31
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:31
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 14ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:40:38 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 48ms (Views: 43.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 04:40:50 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 62ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 04:41:00 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9FyHFul2GyAYUFAUCYsWxx0gtxgHUSXil76rzY+hYKJdorK27MILdSxWYhV43pgeR1z7ZfTI8nu+D21maTDmKQ==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000003aa47d8 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7424-15o8r89.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Redirected to http://localhost:3000/
+Completed 302 Found in 306ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-05 04:41:01 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 48ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:41:02 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 57ms (Views: 45.5ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:44:46 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (353.9ms)
+Completed 200 OK in 556ms (Views: 523.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 04:44:48 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 69ms (Views: 65.6ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 04:44:57 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZnCjBzMLIOqaZqmLb7aUFJs60i4imzcjHP1XrtrJrtPPjpanNr8wv65gm4oe4xrNwUaeU9EC4Lo1TJEFPFgoWA==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000006b39e98 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7587-1locnf.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Redirected to http://localhost:3000/
+Completed 302 Found in 301ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-05 04:44:58 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:44:59 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 71ms (Views: 62.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 04:45:26 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/users" for 10.0.2.2 at 2020-09-05 04:45:35 +0000
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"us9hDua1o2PuTCTyqS9pDgiAuD9P8jB2La0HdBYtym8TMVSu4wGzNtpKFvPYeufXUvz0Qrxr5+8EHMHf8LxM5A==", "user"=>{"profile_image"=>"{}", "nickname"=>"ほげhoge", "email"=>"hoge@hoge", "current_password"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Unpermitted parameters: :profile_image, :nickname
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-05 04:45:35 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:45:36 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 72ms (Views: 64.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2020-09-05 04:59:51 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 455ms (Views: 432.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 04:59:57 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  Rendered users/mypage.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users"}, missing required keys: [:id]):
+    3:   <%= current_user.nickname %>
+    4: 
+    5: 
+    6: <h4><%= link_to "プロフィールを変更する", edit_user_path %></h4>
+    7: 
+    8: <h3>通算積立Total
+    9:   <% sum = 0 %>
+  
+app/views/users/mypage.html.erb:6:in `_app_views_users_mypage_html_erb__1923779325099824840_69963574555740'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:00:09 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 102ms (Views: 93.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:00:11 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (248.9ms)
+Completed 500 Internal Server Error in 267ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x00007f4354046020>:0x00007f4354c3d680>):
+    1: <h2>プロフィールの変更</h2>
+    2: 
+    3: 
+    4: <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    5:   <%= render "devise/shared/error_messages", resource: resource %>
+    6: 
+    7:   <label class="control-label sr-only" for="inputEmail">プロフィール画像</label><br>
+  
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb__1611688192780994312_69963580829720'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:02:00 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 91ms (Views: 82.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:02:02 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (312.1ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x00007f4354046020>:0x00007f4354387248>):
+    2: 
+    3: 
+    4: <%= form_for @user do |f| %>
+    5:   <%= render "devise/shared/error_messages", resource: resource %>
+    6: 
+    7:   <label class="control-label sr-only" for="inputEmail">プロフィール画像</label><br>
+    8:   <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+  
+app/views/users/edit.html.erb:5:in `block in _app_views_users_edit_html_erb__1611688192780994312_69963576262140'
+app/views/users/edit.html.erb:4:in `_app_views_users_edit_html_erb__1611688192780994312_69963576262140'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:02:13 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 77ms (Views: 68.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:02:14 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 64.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:02:19 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k4VFnOYb3eUslwMQyVdz0EqK1/BBw9n+7Gc2utblVVR9Co4b6JIn5My33T0aiwycAYt2G3vvX/kZBqH4nkoihA==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f435492fe98 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7635-34ii4t.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `current_user_params' for #<UsersController:0x00007f43548fc5c0>
+Did you mean?  current_user):
+  
+app/controllers/users_controller.rb:12:in `update'
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:03:32 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 467ms (Views: 438.7ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:03:37 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a/9cF15m8zDtiAO4ZGgca9K3nENV+tLbO77gadfK09+HZDQ7hBTZyj1HR8J6hfJoZyV4xUIGg7sFzKwATD6NSw==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f6878090230 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7809-185q3iz.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/users_controller.rb:12:in `update'
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:04:34 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 426ms (Views: 401.7ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:04:39 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h7usLWG44KbhxOIUW26H5Y40S+YHK4TA3me30Mqc7YxrIMQBu8rKXDELpm5Fg2nmO6avYBDX1aDgFfu5UWizGA==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007fd2480a5830 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7857-13va73c.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["profile_image_id", "73241999cb794daedb932a58584ac043d79adfc1b55743719dd7121e48c9"], ["updated_at", "2020-09-05 05:04:39.156264"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:04:39 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  Rendered users/mypage.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '7db80b7c1169ddcdc118db08e3fe3ad7a21da21a8caacfcf59e2433813a97b94f8f7b42378a9d4a68bc35ed6995f5578bd2ded13139833aadaca16de490076c3'
+```
+
+):
+    1: <h2>マイページ</h2>
+    2:   <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
+    3:   <%= current_user.nickname %>
+    4: 
+    5: 
+  
+app/views/users/mypage.html.erb:2:in `_app_views_users_mypage_html_erb___1886945049545865497_70270564508340'
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:06:25 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 438ms (Views: 413.8ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:06:29 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Fggm36Ib2fxL8hQFmhCoo7hoIQ8mQq1X73F/jI7yHIIw0i3pPpFnSHgjCoIhayhO3NEAitlW9Vhz4mXqc+W5g==", "user"=>{"profile_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f59a4093f58 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7904-1qfxgi8.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[profile_image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">, "nickname"=>"ほげ", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["profile_image_id", "7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d"], ["updated_at", "2020-09-05 05:06:29.544012"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 21ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:06:29 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 97ms (Views: 86.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/attachments/e8a3fa01a1aba52cb6bd11f8d1e3fa1d0fc1d5b7/store/fill/60/60/7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d/profile_image.jpeg" for 10.0.2.2 at 2020-09-05 05:06:29 +0000
+Refile::App: [2020-09-05 05:06:29 +0000] GET "/e8a3fa01a1aba52cb6bd11f8d1e3fa1d0fc1d5b7/store/fill/60/60/7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d/profile_image.jpeg" 200 214.1ms
+
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:06:38 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 56ms (Views: 45.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:06:42 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VaRfpZP13u/pvlo9Ypj4+iHNCG0KifaFLuCj83GGyae7K5QinXwk7gmehBCxRIe2asyphjClcILbgTSxOSm+dw==", "user"=>{"profile_image"=>"{}", "nickname"=>"ほげhoge", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "nickname" = ?, "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["nickname", "ほげhoge"], ["profile_image_id", "7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d"], ["updated_at", "2020-09-05 05:06:42.320994"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:06:42 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2/edit" for 10.0.2.2 at 2020-09-05 05:06:46 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 58ms (Views: 48.6ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/users/2" for 10.0.2.2 at 2020-09-05 05:06:51 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJitLA+tuijWkw0UPrjib3p7Fg3hccZKZgydZpjEqgl6F2arASRAKTaz0zntZJ0jMXq35ttdQE2TbQok0Gvd2Q==", "user"=>{"profile_image"=>"{}", "nickname"=>"ほげ", "email"=>"hoge@hoge"}, "commit"=>"プロフィールの更新", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Unpermitted parameter: :email
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "nickname" = ?, "profile_image_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["nickname", "ほげ"], ["profile_image_id", "7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d"], ["updated_at", "2020-09-05 05:06:51.398735"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:06:51 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:10:23 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 66ms (Views: 59.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 05:10:25 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:30
+  Rendered users/index.html.erb within layouts/application (44.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 91ms (Views: 73.3ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-05 05:55:32 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:10
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 754ms (Views: 713.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 05:55:35 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (1.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 128ms (Views: 114.5ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/wants/7" for 10.0.2.2 at 2020-09-05 05:55:59 +0000
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rlF80qLcZvqgPeVf2CNOWO/hhV0EOZdUn6VNZSUgFqEs/M7bFUF3Ev49yOUpzn8DqNj2lctfI3NiSCJpJcV6Zg==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f00b1ed2138 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-7963-r355jj.jpg>, @original_filename="yamasha1102053_TP_V.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"yamasha1102053_TP_V.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"旅行代", "price"=>"20000", "reason"=>"月2回は行きたい"}, "commit"=>"←を更新する", "id"=>"7"}
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mWant Update (2.1ms)[0m  [1m[33mUPDATE "wants" SET "want_image_id" = ?, "updated_at" = ? WHERE "wants"."id" = ?[0m  [["want_image_id", "dcbf5ff5f83d6b26912f6aaff42b5725fbbfa0858fa22a56faff124b2818"], ["updated_at", "2020-09-05 05:55:59.751851"], ["id", 7]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+Redirected to http://localhost:3000/wants
+Completed 200 OK in 31ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 05:55:59 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 115ms (Views: 102.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:01:15 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 766ms (Views: 706.8ms | ActiveRecord: 5.2ms)
+
+
+Started PATCH "/wants/7" for 10.0.2.2 at 2020-09-05 06:04:17 +0000
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bERjPlj1GLmZdqzkCRz3wcDFi1XZ4+a/ypYFhRHOpDGA3wsSgocyQ0m56J4X8RnCdVdv084ft9/05Ensijr6pQ==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x00000000077635c0 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-8024-7ptw6.jpg>, @original_filename="yamasha1102053_TP_V.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"yamasha1102053_TP_V.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"旅行代", "price"=>"20000", "reason"=>"月2回は行きたい"}, "commit"=>"←を更新する", "id"=>"7"}
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mWant Update (2.2ms)[0m  [1m[33mUPDATE "wants" SET "want_image_id" = ?, "updated_at" = ? WHERE "wants"."id" = ?[0m  [["want_image_id", "edd6cf1088caa7545cbf15b21d02dbd0b2e8dd50e3eddf6351b166b83597"], ["updated_at", "2020-09-05 06:04:17.090127"], ["id", 7]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+Redirected to http://localhost:3000/wants
+Completed 200 OK in 40ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:04:17 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 103ms (Views: 89.7ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/wants/6" for 10.0.2.2 at 2020-09-05 06:04:41 +0000
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RiiwlzzR2uHiQz0h6ZW2JLeONKwh0p1g1Zz8ckps4VNcX1AqTQvD/shCPT8cbCyhCRcVjzZMcBDF/DlVVmieMA==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f4b0818fba0 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-8024-mf7yb2.jpg>, @original_filename="TSURU814018_TP_V4.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"TSURU814018_TP_V4.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"靴", "price"=>"5000", "reason"=>"買換え時"}, "commit"=>"←を更新する", "id"=>"6"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mWant Update (2.4ms)[0m  [1m[33mUPDATE "wants" SET "want_image_id" = ?, "updated_at" = ? WHERE "wants"."id" = ?[0m  [["want_image_id", "baaa8b667a273abed9286491a42a992fcb4917460e85857cca7a297b325f"], ["updated_at", "2020-09-05 06:04:41.890683"], ["id", 6]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+Redirected to http://localhost:3000/wants
+Completed 200 OK in 25ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:04:41 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 98ms (Views: 88.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:07:27 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 95ms (Views: 88.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:07:42 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:08:12 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 689ms (Views: 612.3ms | ActiveRecord: 5.4ms)
+
+
+Started PATCH "/wants/7" for 10.0.2.2 at 2020-09-05 06:08:19 +0000
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TCoepPMsxSnlXkdzO9fz3PgBs00KL1kLmE8Z4ciNrQdq8BWSb6Z7ndaPWfSArHMxnLiSyPU7AQQE3AOHNZoIA==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f4b95e4e728 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-8072-nvudrb.jpg>, @original_filename="yamasha1102053_TP_V.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"yamasha1102053_TP_V.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"旅行代", "price"=>"20000", "reason"=>"月2回は行きたい"}, "commit"=>"←を更新する", "id"=>"7"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+Completed 500 Internal Server Error in 99935ms (ActiveRecord: 0.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/wants_controller.rb:41:in `update'
+Started PATCH "/wants/7" for 10.0.2.2 at 2020-09-05 06:10:26 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TCoepPMsxSnlXkdzO9fz3PgBs00KL1kLmE8Z4ciNrQdq8BWSb6Z7ndaPWfSArHMxnLiSyPU7AQQE3AOHNZoIA==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000003f4a968 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-8120-q10rvy.jpg>, @original_filename="yamasha1102053_TP_V.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"yamasha1102053_TP_V.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"旅行代", "price"=>"20000", "reason"=>"月2回は行きたい"}, "commit"=>"←を更新する", "id"=>"7"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mWant Update (2.4ms)[0m  [1m[33mUPDATE "wants" SET "want_image_id" = ?, "updated_at" = ? WHERE "wants"."id" = ?[0m  [["want_image_id", "08f866d56df30b2e8d8e521321080050fa679fe8f8ce5fcc28a09a8bf064"], ["updated_at", "2020-09-05 06:10:26.832648"], ["id", 7]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+Redirected to http://localhost:3000/wants
+Completed 200 OK in 83ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:10:26 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 565ms (Views: 553.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:11:32 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 118ms (Views: 107.8ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/wants/7" for 10.0.2.2 at 2020-09-05 06:11:46 +0000
+Processing by WantsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ihij+7SjMy9AzYQAn/jawyPw8r2ak5Z4R+XlHYHof/fOg8vXbtEZ1ZACwHqBFTTAlmIWO41vxxh5l6l0GhwhYw==", "want"=>{"want_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f65941deec0 @tempfile=#<Tempfile:/tmp/RackMultipart20200905-8120-12pev36.jpg>, @original_filename="yamasha1102053_TP_V.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"want[want_image]\"; filename=\"yamasha1102053_TP_V.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"旅行代", "price"=>"20000", "reason"=>"月2回は行きたい"}, "commit"=>"←を更新する", "id"=>"7"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[36mWant Update (2.9ms)[0m  [1m[33mUPDATE "wants" SET "want_image_id" = ?, "updated_at" = ? WHERE "wants"."id" = ?[0m  [["want_image_id", "d43bcc1295f9a132b7f2f2019e1ce1ec245a95f943bc4a998c32c8083bdb"], ["updated_at", "2020-09-05 06:11:46.132575"], ["id", 7]]
+  ↳ app/controllers/wants_controller.rb:40
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wants_controller.rb:40
+Redirected to http://localhost:3000/wants
+Completed 200 OK in 26ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:11:46 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (1.1ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 120ms (Views: 111.1ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mWant Load (1.3ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:14:19 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (434.9ms)
+Completed 200 OK in 861ms (Views: 792.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/attachments/eeeace470870ad9eeb1bf2504db9c1e34931ba3d/store/fill/60/60/baaa8b667a273abed9286491a42a992fcb4917460e85857cca7a297b325f/want_image.jpeg" for 10.0.2.2 at 2020-09-05 06:14:20 +0000
+Started GET "/attachments/5d4fd1b035fb208eb01ba55b855e323d775c7930/store/fill/60/60/d43bcc1295f9a132b7f2f2019e1ce1ec245a95f943bc4a998c32c8083bdb/want_image.jpeg" for 10.0.2.2 at 2020-09-05 06:14:20 +0000
+Refile::App: [2020-09-05 06:14:20 +0000] GET "/eeeace470870ad9eeb1bf2504db9c1e34931ba3d/store/fill/60/60/baaa8b667a273abed9286491a42a992fcb4917460e85857cca7a297b325f/want_image.jpeg" 200 498.9ms
+
+Refile::App: [2020-09-05 06:14:20 +0000] GET "/5d4fd1b035fb208eb01ba55b855e323d775c7930/store/fill/60/60/d43bcc1295f9a132b7f2f2019e1ce1ec245a95f943bc4a998c32c8083bdb/want_image.jpeg" 200 569.9ms
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-05 06:24:25 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants"[0m
+  ↳ app/views/wants/index.html.erb:2
+  Rendered wants/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 112ms (Views: 101.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/attachments/732a2dddff6302fb2f6c368175487259dab1d0f6/store/fill/60/60/baaa8b667a273abed9286491a42a992fcb4917460e85857cca7a297b325f/want_image" for 10.0.2.2 at 2020-09-05 06:24:25 +0000
+Started GET "/attachments/c4b79ea9d2bed6bbf97fcaa86ff52b126a692bd1/store/fill/60/60/d43bcc1295f9a132b7f2f2019e1ce1ec245a95f943bc4a998c32c8083bdb/want_image" for 10.0.2.2 at 2020-09-05 06:24:25 +0000
+Refile::App: [2020-09-05 06:24:25 +0000] GET "/732a2dddff6302fb2f6c368175487259dab1d0f6/store/fill/60/60/baaa8b667a273abed9286491a42a992fcb4917460e85857cca7a297b325f/want_image" 200 290.5ms
+
+Refile::App: [2020-09-05 06:24:25 +0000] GET "/c4b79ea9d2bed6bbf97fcaa86ff52b126a692bd1/store/fill/60/60/d43bcc1295f9a132b7f2f2019e1ce1ec245a95f943bc4a998c32c8083bdb/want_image" 200 359.6ms
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:25:29 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vagrant/work/cotsutsumi/app/views/users/index.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/users/index.html.erb:41: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:25:39 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:26
+  Rendered users/index.html.erb within layouts/application (129.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 233ms (Views: 199.0ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:26:18 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (1.2ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (1.1ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (1.1ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (1.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:26
+  Rendered users/index.html.erb within layouts/application (94.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 185ms (Views: 158.6ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:26:58 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mWant Load (1.1ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:26
+  Rendered users/index.html.erb within layouts/application (95.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 183ms (Views: 159.7ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/attachments/5c258987d5ab1a176b1da57605419c4c9febfa22/store/fill/60/60/7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d/profile_image" for 10.0.2.2 at 2020-09-05 06:26:58 +0000
+Refile::App: [2020-09-05 06:26:58 +0000] GET "/5c258987d5ab1a176b1da57605419c4c9febfa22/store/fill/60/60/7a0ce325e0d019effddc5666b56d5063f7d76c57ccb535c8325163e92e2d/profile_image" 200 91.2ms
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:28:16 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.2ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (122.3ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 228ms (Views: 199.9ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:31:10 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:11
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (1.1ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (1.2ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:30
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:30
+  Rendered users/index.html.erb within layouts/application (108.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 196ms (Views: 167.3ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:31:47 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mWant Load (1.1ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.1ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.2ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.2ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (1.1ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mWant Load (1.2ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:21
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (128.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 227ms (Views: 193.6ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-05 06:32:22 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (1.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (1.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (1.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/views/users/index.html.erb:28
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/index.html.erb:28
+  Rendered users/index.html.erb within layouts/application (100.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 184ms (Views: 155.6ms | ActiveRecord: 22.8ms)
+
+
