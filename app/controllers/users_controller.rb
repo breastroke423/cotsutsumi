@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.where.not(id: current_user.id)
   end
 
   def show
@@ -27,7 +27,6 @@ class UsersController < ApplicationController
 
   def mypage
     @user = current_user
-    # @sum = current_user.wastes.price * current_user.wastes.count
   end
 
 

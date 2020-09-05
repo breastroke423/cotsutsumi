@@ -8,7 +8,7 @@ patch 'wants/purchase' => 'wants#purchase'
 resources :users
 resources :wastes
 resources :wants do
-  resource :cheers, only:[:create, :destoroy]
+  resource :cheers, only:[:create, :destroy]
 end
 
 

@@ -18,6 +18,12 @@
      <td><%= want.name %></td>
      <td><%= want.price %></td>
      <td><%= want.reason %></td>
+     <% if @user == current_user %>
+     <td></td>
+<% else %>
+<td><%= render 'wants/cheer', want: want %></td>
+<% end %>
+
    </tr>
    <% end %>
    <tr>
