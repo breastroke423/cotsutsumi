@@ -18,7 +18,6 @@ class WastesController < ApplicationController
     @waste = Waste.new(waste_params)
     @waste.user_id = current_user.id
     if @waste.save
-      # saving がないから登録できない(Validation failed: Saving must exist):
       redirect_to wastes_path
     else
       render 'new'
@@ -31,6 +30,8 @@ class WastesController < ApplicationController
     @waste.save
     redirect_to mypage_path
   end
+
+
   def count_down
     @waste = Waste.find(params[:waste])
     @waste.count = @waste.count - 1

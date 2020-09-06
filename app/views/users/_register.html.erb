@@ -1,0 +1,50 @@
+
+<table>
+      <% @users.each do |user| %>
+  <thead>
+    <tr>
+      <th><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></th>
+      <th><%= user.nickname %></th>
+        <% sum = 0 %>
+      <th><% user.wastes.each do |waste| %>
+        <% sub_total = waste.price * waste.count %>
+        <% sum+=sub_total %>
+        <% end %>
+        <%= sum.to_s(:delimited) %>円
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>欲しいもの</td>
+    </tr>
+    <tr>
+     <% user.wants.each do |want| %>
+     <td><%= want.name %></td>
+     <td><%= want.price.to_s(:delimited) %>円</td>
+     <td><%= want.reason %></td>
+     <% if @user == current_user %>
+     <td></td>
+<% else %>
+<td><%= render 'wants/cheer', want: want %></td>
+<% end %>
+
+   </tr>
+   <% end %>
+   <tr>
+    <td>無駄遣い</td>
+   </tr>
+
+  <% user.wastes.each do |waste| %>
+  <tr>
+    <td><%= waste.name %></td>
+    <td><%= waste.price.to_s(:delimited) %>円</td>
+    <td><%= waste.reason %></td>
+  </tr>
+  <% end %>
+
+</tbody>
+  <% end %>
+
+</table>
