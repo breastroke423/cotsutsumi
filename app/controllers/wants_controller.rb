@@ -3,7 +3,8 @@ class WantsController < ApplicationController
   def index
     @user = current_user
     @want = Want.new
-    @wants = Want.all
+    @wants = current_user.wants.all
+    # @wants = Want.all
   end
 
   def show
