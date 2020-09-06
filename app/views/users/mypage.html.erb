@@ -1,17 +1,23 @@
 <h2>マイページ</h2>
 <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
 <%= current_user.nickname %>
-<%= link_to "フォロー一覧", user_follows_path(current_user.id) %>
-<%= link_to "フォロワー一覧", user_followers_path(current_user.id) %>
+<%= link_to user_follows_path(current_user.id) do %>
+フォロー一覧（<%= @user.followers.count %>）
+<% end %>
+
+<%= link_to user_followers_path(current_user.id) do %>
+フォロワー一覧（<%= @user.followings.count %>）
+<% end %>
 
 
 <h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
 
-<h3>通算積立Total
-  <%= @user_total_price.to_s(:delimited) %>円
+<h3>通算ガマン<br>
+  <%= @user_total_price.to_s(:delimited) %>円／<%= @waste_count_all %>回
 </h3>
-<h3>現在の積立Total
+<h3>現在の積立 (通算から購入した額を引いた金額)<br>
   <%= @user_difference_price.to_s(:delimited) %>円</h3>
+
   <!-- ↑合計から購入金額抜いた額 -->
   <!-- <h3>継続日数</h3>カレンダー機能の時に -->
   <table>
@@ -21,7 +27,6 @@
         <th>金額</th>
         <th>通算ガマン</th>
         <th>本日のガマン</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -30,19 +35,14 @@
         <td><%= waste.name %></td>
         <td><%= waste.price.to_s(:delimited) %>円</td>
 
-        <td><%= (waste.price * waste.count).to_s(:delimited) %>円</td>
-        <td><%= button_to "ガマンできた！", {controller: 'wastes', action: 'count_up'}, {method: :patch, params: {waste: waste.id}} %>
+        <td><%= (waste.price * waste.count).to_s(:delimited) %>円／<%= waste.count %>回</td>
+        <td><%= button_to "ガマンできた！", {controller: 'wastes', action: 'count_up'}, {method: :patch, params: {waste: waste.id}} %> <%= button_to "使っちゃった…。", {controller: 'wastes', action: 'count_down'}, {method: :patch, params: {waste: waste.id}} %>
         </td>
-        <td><%= button_to "使っちゃった…。", {controller: 'wastes', action: 'count_down'}, {method: :patch, params: {waste: waste.id}} %>
-        </td>
-        <td><%#= link_to "過去のガマンを書く", edit_waste_path(waste) %></td>
 
       </tr>
       <% end %>
-      <td><%= link_to "無駄遣いを変更/追加する", wastes_path %></td>
-
-
       <table>
+        <%= link_to "無駄遣いを変更/追加する", wastes_path %>
         <h3>欲しい目標</h3>
 
         <thead>

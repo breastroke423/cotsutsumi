@@ -1,29 +1,58 @@
 <h2>目標を変更する</h2>
-<% @wants.each do |want| %>
-買いたいもの<%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
-<%= form_with model: want do |f| %>
 
-<%= f.attachment_field :want_image %>
-<%= f.text_field :name %>
-<%= f.text_field :price %>
-<%= f.text_field :reason %>
-<%= f.submit "←を更新する" %>
-<%= link_to "目標から削除する", want_path(want), method: :delete %>
-<% end %>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>欲しいもの</th>
+      <th>値段</th>
+      <th>理由</th>
+      <th>更新</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wants.each do |want| %>
+    <%= form_with model: want do |f| %>
+    <tr>
+      <td><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
+          <%= f.attachment_field :want_image %></td>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :price %></td>
+      <td><%= f.text_field :reason %></td>
+      <td><%= f.submit "←を更新する" %></td>
+      <td><%= link_to "目標から削除する", want_path(want), method: :delete %></td>
+    </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
 
 <h2>欲しいものを追加する</h2>
 
-<%= form_with model: @want do |f| %>
-  <%= f.attachment_field :want_image %>
-  <%= f.label :欲しいもの %>
-  <%= f.text_field :name %>
-  <%= f.label :ものの値段 %>
-  <%= f.text_field :price %>
-  <%= f.label :欲しい理由 %>
-  <%= f.text_field :reason %>
-  <%= f.submit "追加する" %>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>欲しいもの</th>
+      <th>金額</th>
+      <th>理由</th>
+      <th>追加</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= form_with model: @want do |f| %>
+    <tr>
+      <td><%= f.attachment_field :want_image %></td>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :price %></td>
+      <td><%= f.text_field :reason %></td>
+      <td><%= f.submit "追加する" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
   <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
-<% end %>
 
 <%= link_to "無駄遣いを入力／変更する", wastes_path %>

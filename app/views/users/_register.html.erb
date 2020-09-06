@@ -12,6 +12,13 @@
         <% end %>
         <%= sum.to_s(:delimited) %>円
       </th>
+      <th>
+        <% if user.followed_by?(current_user) %>
+            <p><%=link_to "フォロー済み", user_relationships_path(user.id), method: :delete %></p>
+        <% else %>
+            <p><%=link_to "フォローする", user_relationships_path(user.id), method: :post %></p>
+        <% end %>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +28,7 @@
     </tr>
     <tr>
      <% user.wants.each do |want| %>
+     <td><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
      <td><%= want.name %></td>
      <td><%= want.price.to_s(:delimited) %>円</td>
      <td><%= want.reason %></td>
@@ -38,6 +46,7 @@
 
   <% user.wastes.each do |waste| %>
   <tr>
+    <td></td>
     <td><%= waste.name %></td>
     <td><%= waste.price.to_s(:delimited) %>円</td>
     <td><%= waste.reason %></td>

@@ -29,11 +29,15 @@ class UsersController < ApplicationController
     @user = current_user
     @wastes = Waste.where(user_id: @user.id)
     @user_total_price = 0
-    @wastes.each do |waste|
-      sub_total = waste.price * waste.count
-      @user_total_price+=sub_total
-    end
+      @wastes.each do |waste|
+        sub_total = waste.price * waste.count
+        @user_total_price+=sub_total
+      end
     @user_difference_price = @user_total_price - @user.purchase_price
+    @waste_count_all = 0
+      @wastes.each do |waste|
+        @waste_count_all += waste.count
+      end
   end
 
   def follows

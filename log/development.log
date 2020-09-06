@@ -35008,3 +35008,1997 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 109ms (Views: 97.2ms | ActiveRecord: 6.9ms)
 
 
+Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 3.9ms)
+
+
+ms)
+ "cheers"."want_id" = ?[0m  [["want_id", 3]]
+d", 1]]
+_id", 1]]
+_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+ 2], ["following_id", 1], ["LIMIT", 1]]
+lows_path(current_user.id) %><%= @user.followers.count %>
+    5: <%= link_to "フォロワー一覧", user_followers_path(current_user.id) %><%= @user.followeds.count %>
+    6: 
+    7: 
+    8: <h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -06 11:31:56 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.9ms)
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.7ms)
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.7ms)
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.9ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.5ms)
+  Rendered users/_register.html.erb (479.7ms)
+  Rendered users/index.html.erb within layouts/application (483.7ms)
+Completed 200 OK in 642ms (Views: 623.4ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/wants/1/cheers" for 10.0.2.2 at 2020-09-06 11:32:00 +0000
+Processing by CheersController#create as HTML
+  Parameters: {"authenticity_token"=>"mxlWeycu/Vldac09V4aas5GIVgb0ANnkKZOuZPjq2F5N3Smye2sZWC6IVMmXy3FkvFo+Fa+IipJ2VdDgCdyBpQ==", "want_id"=>"1"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mCheer Create (2.1ms)[0m  [1m[32mINSERT INTO "cheers" ("user_id", "want_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["want_id", 1], ["created_at", "2020-09-06 11:32:00.469876"], ["updated_at", "2020-09-06 11:32:00.469876"]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 15ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:32:00 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.7ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.4ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.8ms)
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.2ms)
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.9ms)
+  Rendered users/_register.html.erb (47.0ms)
+  Rendered users/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 110ms (Views: 98.4ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/wants/5/cheers" for 10.0.2.2 at 2020-09-06 11:32:03 +0000
+Processing by CheersController#create as HTML
+  Parameters: {"authenticity_token"=>"W17mugMKt+V6Dfrs9FG0ej97sOh/1E0wj2WzKmuKD1CNmplzX09T5AnsYxg0HF+tEqnY+yRcHkbQo82umrxWqw==", "want_id"=>"5"}
+  [1m[36mWant Load (1.0ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mCheer Create (3.1ms)[0m  [1m[32mINSERT INTO "cheers" ("user_id", "want_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["want_id", 5], ["created_at", "2020-09-06 11:32:03.520860"], ["updated_at", "2020-09-06 11:32:03.520860"]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 27ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:32:03 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.8ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.8ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.5ms)
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:23
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.0ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.0ms)
+  Rendered users/_register.html.erb (42.2ms)
+  Rendered users/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 103ms (Views: 91.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:34:49 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (2.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 1], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.1ms)
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.7ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (2.9ms)
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.7ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.5ms)
+  Rendered users/_register.html.erb (75.2ms)
+  Rendered users/index.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 152ms (Views: 136.2ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/users/1/relationships" for 10.0.2.2 at 2020-09-06 11:34:51 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"x+w/5T82yu5z5EqWIhOGaCYpxVDrVn0Sz2rYqAyAVSwRKEAsY3Mu7wAF02LiXm2/C/utQ7DeLmSQrKYs/bYM1w==", "user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mRelationship Create (3.2ms)[0m  [1m[32mINSERT INTO "relationships" ("created_at", "updated_at", "following_id", "follower_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-09-06 11:34:51.637236"], ["updated_at", "2020-09-06 11:34:51.637236"], ["following_id", 3], ["follower_id", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:34:51 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 1], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.0ms)
+  [1m[36mCheer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.8ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.2ms)
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.9ms)
+  Rendered users/_register.html.erb (43.8ms)
+  Rendered users/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 105ms (Views: 94.4ms | ActiveRecord: 7.4ms)
+
+
+Started DELETE "/users/1/relationships" for 10.0.2.2 at 2020-09-06 11:34:52 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"r1tVs6w/ZEGnIEo+iJcJG0Eljxf40e+qAeJavpHIK795nyp68HqAQNTB08pI2uLMbPfnBKNZvNxeJCQ6YP5yRA==", "user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."following_id" = ? AND "relationships"."follower_id" = ? LIMIT ?[0m  [["following_id", 3], ["follower_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[36mRelationship Destroy (2.6ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+Redirected to http://localhost:3000/users
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:34:52 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 1], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (7.0ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.4ms)
+  [1m[36mCheer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.4ms)
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.0ms)
+  [1m[36mCheer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (5.1ms)
+  Rendered users/_register.html.erb (60.5ms)
+  Rendered users/index.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 120ms (Views: 105.8ms | ActiveRecord: 9.2ms)
+
+
+Started DELETE "/users/2/relationships" for 10.0.2.2 at 2020-09-06 11:34:55 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JUTIn9aujYiVOt66uzp4r9uwjy2+KwBJuhvd0aRVcD/zgLdWiutpiebbR057d5N49mLnPuWjUz/l3aNVVWMpxA==", "user_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."following_id" = ? AND "relationships"."follower_id" = ? LIMIT ?[0m  [["following_id", 3], ["follower_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[36mRelationship Destroy (2.4ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+Redirected to http://localhost:3000/users
+Completed 302 Found in 13ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:34:55 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 1], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.1ms)
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.4ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.1ms)
+  Rendered users/_register.html.erb (43.8ms)
+  Rendered users/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 104ms (Views: 92.7ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/users/2/relationships" for 10.0.2.2 at 2020-09-06 11:34:58 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"FDtwzXutWzOf+RLQuHKEnFCzgY4ymtpF59LgVruvwF7C/w8EJ+i/MuwYiyR4P29LfWHpnWkSiTO4FJ7SSpmZpQ==", "user_id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mRelationship Create (2.1ms)[0m  [1m[32mINSERT INTO "relationships" ("created_at", "updated_at", "following_id", "follower_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-09-06 11:34:58.678726"], ["updated_at", "2020-09-06 11:34:58.678726"], ["following_id", 3], ["follower_id", 2]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 17ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:34:58 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 1], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.2ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 2], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.4ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.9ms)
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.8ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (9.1ms)
+  Rendered users/_register.html.erb (52.9ms)
+  Rendered users/index.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 112ms (Views: 101.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:35:01 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 74ms (Views: 63.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/3/follows" for 10.0.2.2 at 2020-09-06 11:35:03 +0000
+Processing by UsersController#follows as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  Rendering users/follows.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.9ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.2ms)
+  Rendered users/_register.html.erb (25.5ms)
+  Rendered users/follows.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 86ms (Views: 70.6ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/users/2/relationships" for 10.0.2.2 at 2020-09-06 11:35:04 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+EhICVtj/B/QUuy+gH1+H/rNCowSsFfBC0Ck68jQMq8ujDfAByYYHqOzdUpAMJXI1x9in0k4BLdUhtpvOeZrVA==", "user_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."following_id" = ? AND "relationships"."follower_id" = ? LIMIT ?[0m  [["following_id", 3], ["follower_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[36mRelationship Destroy (2.8ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/relationships_controller.rb:11
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:11
+Redirected to http://localhost:3000/users/3/follows
+Completed 302 Found in 17ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/users/3/follows" for 10.0.2.2 at 2020-09-06 11:35:04 +0000
+Processing by UsersController#follows as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  Rendering users/follows.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 3]]
+  ↳ app/views/users/_register.html.erb:3
+  Rendered users/_register.html.erb (2.4ms)
+  Rendered users/follows.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:35:07 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 75ms (Views: 62.6ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-09-06 11:39:17 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hDNQC56stHp7XyIkFvUzRHzP4ZMNnWTbspqYcYhjiIhS9y/CwulQewi+u9DWuNiTUR2JgFYVN63tXOb1eVXRcw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-09-06 11:39:18 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 97ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-09-06 11:39:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 92ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-09-06 11:39:26 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TseNYUasM6S+tGqSmkcb09jZwD422QqIGNUo/jo1xHBmfVx3osnD6+/8CTItZ2EORi6UDdYA4y7d7Emfc37E7w==", "user"=>{"email"=>"1@1", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"節約を入力する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "1@1"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 287ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:39:27 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 81ms (Views: 72.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1/follows" for 10.0.2.2 at 2020-09-06 11:39:38 +0000
+Processing by UsersController#follows as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  Rendering users/follows.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  Rendered users/_register.html.erb (2.8ms)
+  Rendered users/follows.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 75ms (Views: 66.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/followers" for 10.0.2.2 at 2020-09-06 11:39:40 +0000
+Processing by UsersController#followers as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/followers.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (5.0ms)
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.0ms)
+  Rendered users/_register.html.erb (26.2ms)
+  Rendered users/followers.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 93ms (Views: 79.9ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/wants/4/cheers" for 10.0.2.2 at 2020-09-06 11:39:47 +0000
+Processing by CheersController#create as HTML
+  Parameters: {"authenticity_token"=>"dZ1drNQn/FquE+DoIE/pDSbqGyIcobuxqIcRFFZuW5A747BY97MFUfss66smRjLFiy9eeOGP7FYvCfR0VzEHHg==", "want_id"=>"4"}
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:3
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mCheer Create (2.8ms)[0m  [1m[32mINSERT INTO "cheers" ("user_id", "want_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["want_id", 4], ["created_at", "2020-09-06 11:39:47.154168"], ["updated_at", "2020-09-06 11:39:47.154168"]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+Redirected to http://localhost:3000/users/1/followers
+Completed 302 Found in 19ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/1/followers" for 10.0.2.2 at 2020-09-06 11:39:47 +0000
+Processing by UsersController#followers as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/followers.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.5ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.5ms)
+  Rendered users/_register.html.erb (26.0ms)
+  Rendered users/followers.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 88ms (Views: 80.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:39:57 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 71ms (Views: 61.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:39:58 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.3ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.4ms)
+  Rendered users/_register.html.erb (34.8ms)
+  Rendered users/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 106ms (Views: 86.3ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/wants/6/cheers" for 10.0.2.2 at 2020-09-06 11:40:02 +0000
+Processing by CheersController#create as HTML
+  Parameters: {"authenticity_token"=>"xyEnA0gtY6LzvTN28BGUvCVpgSbez6OJng4I9hZQTISJX8r3a7maqaaCODX2GE90iKzEfCPh9G4ZgO2WFw8QCg==", "want_id"=>"6"}
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT  "wants".* FROM "wants" WHERE "wants"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[36mCheer Create (1.7ms)[0m  [1m[32mINSERT INTO "cheers" ("user_id", "want_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["want_id", 6], ["created_at", "2020-09-06 11:40:02.307979"], ["updated_at", "2020-09-06 11:40:02.307979"]]
+  ↳ app/controllers/cheers_controller.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cheers_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 15ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:40:02 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.9ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.4ms)
+  Rendered users/_register.html.erb (35.6ms)
+  Rendered users/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 97ms (Views: 85.7ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/users/3/relationships" for 10.0.2.2 at 2020-09-06 11:40:04 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"authenticity_token"=>"MFRe7gkpOj4JccZkUijX54YTXVoMT3nd/wnnFvYD8KJ+KrMaKr3DNVxOzSdUIQwvK9YYAPFhLjp4hwJ291ysLA==", "user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[36mRelationship Create (3.6ms)[0m  [1m[32mINSERT INTO "relationships" ("created_at", "updated_at", "following_id", "follower_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2020-09-06 11:40:04.587857"], ["updated_at", "2020-09-06 11:40:04.587857"], ["following_id", 1], ["follower_id", 3]]
+  ↳ app/controllers/relationships_controller.rb:5
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:5
+Redirected to http://localhost:3000/users
+Completed 302 Found in 22ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 11:40:04 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.2ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.3ms)
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.7ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.3ms)
+  Rendered users/_register.html.erb (34.1ms)
+  Rendered users/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 89ms (Views: 79.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:40:25 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (1.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 77ms (Views: 66.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:41:22 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:63
+  Rendered users/mypage.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 85ms (Views: 76.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:41:30 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:28
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:62
+  Rendered users/mypage.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 82ms (Views: 72.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:41:45 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:59
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:61
+  Rendered users/mypage.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 78ms (Views: 66.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:42:09 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 80ms (Views: 71.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:42:29 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 84ms (Views: 76.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:42:44 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.9ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:57
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:59
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:59
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:59
+  Rendered users/mypage.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 81ms (Views: 68.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:44:02 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:2
+  Rendered wastes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:48:46 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:4
+  Rendered wastes/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:00 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 69ms (Views: 60.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/wastes/1" for 10.0.2.2 at 2020-09-06 11:49:09 +0000
+Processing by WastesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MZ1QWks6r2u60RJrJSBCHoFP+CaYDcuR/PtYUmL4jdxzCUxSGe7cwKH3zYV8/hpHo1qXj2uuTRegBAbARTC9EA==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ/高い"}, "id"=>"1"}
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mWaste Update (3.4ms)[0m  [1m[33mUPDATE "wastes" SET "reason" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["reason", "飲み過ぎ/高い"], ["updated_at", "2020-09-06 11:49:09.138354"], ["id", 1]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+Redirected to http://localhost:3000/wastes
+Completed 200 OK in 16ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:09 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 90ms (Views: 73.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:11 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/wastes/3" for 10.0.2.2 at 2020-09-06 11:49:19 +0000
+Processing by WastesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2OYmn+i68iiqiBOuGmKHakXkifgocYxHqfxDrva+MUr1cdfkeNJsW16TzI88/+CfqFSupAwWDUlK2h99LjYw0g==", "waste"=>{"name"=>"サブスク", "price"=>"700", "reason"=>"コスパ悪すぎ"}, "id"=>"3"}
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mWaste Update (2.8ms)[0m  [1m[33mUPDATE "wastes" SET "reason" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["reason", "コスパ悪すぎ"], ["updated_at", "2020-09-06 11:49:19.251905"], ["id", 3]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+Redirected to http://localhost:3000/wastes
+Completed 200 OK in 17ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:19 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 79ms (Views: 66.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:21 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:49:59 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/wastes/1" for 10.0.2.2 at 2020-09-06 11:50:02 +0000
+Processing by WastesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWzmKXgVTfr5HjI/lTsLYXe4u80yyIPJeJw55vI8ChRX+PohKsE+UeI47dHM5VM4Va3UZMFrBU8kY2d01fQ62A==", "waste"=>{"name"=>"コーヒー", "price"=>"180", "reason"=>"飲み過ぎ"}, "id"=>"1"}
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[36mWaste Update (1.6ms)[0m  [1m[33mUPDATE "wastes" SET "reason" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["reason", "飲み過ぎ"], ["updated_at", "2020-09-06 11:50:02.342718"], ["id", 1]]
+  ↳ app/controllers/wastes_controller.rb:45
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:45
+Redirected to http://localhost:3000/wastes
+Completed 200 OK in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:50:02 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:50:04 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 67ms (Views: 60.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:52:43 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (298.7ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007efdd82dbdd8>:0x00007efdd8422840>):
+    48: 
+    49:   </tbody>
+    50: </table>
+    51: <%= f.label :節約したいもの %>
+    52: 
+    53: 
+    54: 
+  
+app/views/wastes/index.html.erb:51:in `_app_views_wastes_index_html_erb___40555323527001272_69814360021260'
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:52:56 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 112ms (Views: 100.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/wastes" for 10.0.2.2 at 2020-09-06 11:53:19 +0000
+Processing by WastesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zEnjj/pEvGID6T51OaWs4W21O7mwN+/5jg3S35NhO0v4SnDmko6BXqiFNQy+cTF88Bqv0UhOF4epTDOQj75nCw==", "waste"=>{"name"=>"ストロングゼロ", "price"=>"200", "reason"=>"体に悪いしもったいない"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:20
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:20
+  [1m[36mWaste Create (2.8ms)[0m  [1m[32mINSERT INTO "wastes" ("name", "price", "reason", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ストロングゼロ"], ["price", 200], ["reason", "体に悪いしもったいない"], ["created_at", "2020-09-06 11:53:19.516590"], ["updated_at", "2020-09-06 11:53:19.516590"], ["user_id", 1]]
+  ↳ app/controllers/wastes_controller.rb:20
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:20
+Redirected to http://localhost:3000/wastes
+Completed 200 OK in 15ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:53:19 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wastes" for 10.0.2.2 at 2020-09-06 11:53:50 +0000
+Processing by WastesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:4
+  Rendering wastes/index.html.erb within layouts/application
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wastes/index.html.erb:13
+  Rendered wastes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 83ms (Views: 77.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 11:58:17 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[36mCACHE Waste Load (3.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:56
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:58
+  Rendered users/mypage.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 98ms (Views: 84.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-06 11:58:21 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wants/index.html.erb:15
+  Rendered wants/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 82ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-06 11:58:41 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wants/index.html.erb:15
+  Rendered wants/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 100ms (Views: 92.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-06 12:04:53 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wants/index.html.erb:15
+  Rendered wants/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 78ms (Views: 73.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:25:12 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  Rendered users/mypage.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `follow' for #<User:0x00007efde4009568>
+Did you mean?  followers):
+    1: <h2>マイページ</h2>
+    2: <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
+    3: <%= current_user.nickname %>
+    4: <%= link_to "フォロー一覧", user_follows_path(current_user.id) %><%= @user.follow.count %>
+    5: <%= link_to "フォロワー一覧", user_followers_path(current_user.id) %>
+    6: 
+    7: 
+  
+app/views/users/mypage.html.erb:4:in `_app_views_users_mypage_html_erb__4603271438494905763_69814360439420'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:25:22 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:4
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.9ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:56
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:58
+  Rendered users/mypage.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 118ms (Views: 105.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/1/follows" for 10.0.2.2 at 2020-09-06 12:25:24 +0000
+Processing by UsersController#follows as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  Rendering users/follows.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (1.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (6.2ms)
+  Rendered users/_register.html.erb (21.7ms)
+  Rendered users/follows.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 96ms (Views: 85.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:25:50 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:4
+  Rendered users/mypage.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `followeds' for #<User:0x00007efde43b7f20>
+Did you mean?  followers
+               follower_ids
+               followers=
+               followings):
+    2: <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
+    3: <%= current_user.nickname %>
+    4: <%= link_to "フォロー一覧", user_follows_path(current_user.id) %><%= @user.followers.count %>
+    5: <%= link_to "フォロワー一覧", user_followers_path(current_user.id) %><%= @user.followeds.count %>
+    6: 
+    7: 
+    8: <h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
+  
+app/views/users/mypage.html.erb:5:in `_app_views_users_mypage_html_erb__4603271438494905763_69814460443160'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:26:05 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:27
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:56
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:58
+  Rendered users/mypage.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 94ms (Views: 78.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/1/followers" for 10.0.2.2 at 2020-09-06 12:26:07 +0000
+Processing by UsersController#followers as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  Rendering users/followers.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.8ms)
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.3ms)
+  Rendered users/_register.html.erb (23.6ms)
+  Rendered users/followers.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 96ms (Views: 85.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:27:05 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:7
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:29
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:58
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:60
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:60
+  Rendered users/mypage.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 87ms (Views: 77.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:27:40 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:32
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:63
+  Rendered users/mypage.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 101ms (Views: 92.5ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/wastes/count_up" for 10.0.2.2 at 2020-09-06 12:27:51 +0000
+Processing by WastesController#count_up as HTML
+  Parameters: {"authenticity_token"=>"Xih/B5LoQQu/ZC8RPEpasyHEbhse41ASLeXK/DFnIPwQVpLzsXy4AOpbJFI6Q4F7jAErQePNB/Wqay+cMDh8cg==", "waste"=>"9"}
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT  "wastes".* FROM "wastes" WHERE "wastes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wastes_controller.rb:30
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wastes_controller.rb:30
+  [1m[36mWaste Update (6.5ms)[0m  [1m[33mUPDATE "wastes" SET "count" = ?, "updated_at" = ? WHERE "wastes"."id" = ?[0m  [["count", 1], ["updated_at", "2020-09-06 12:27:51.944590"], ["id", 9]]
+  ↳ app/controllers/wastes_controller.rb:30
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wastes_controller.rb:30
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 17ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:27:51 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:32
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:63
+  Rendered users/mypage.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 93ms (Views: 83.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:28:47 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:32
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:63
+  Rendered users/mypage.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 88ms (Views: 77.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:29:04 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:32
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:61
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:63
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:63
+  Rendered users/mypage.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:31:42 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `count' for nil:NilClass):
+  
+app/controllers/users_controller.rb:37:in `mypage'
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:35:07 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (502.9ms)
+Completed 200 OK in 687ms (Views: 645.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:36:05 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 83ms (Views: 73.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:36:24 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.6ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 92ms (Views: 79.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:36:37 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.7ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 91ms (Views: 80.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:36:53 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 86ms (Views: 75.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:37:10 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.4ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 100ms (Views: 90.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:37:22 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 90ms (Views: 79.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/mypage" for 10.0.2.2 at 2020-09-06 12:37:53 +0000
+Processing by UsersController#mypage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/mypage.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."following_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/mypage.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."following_id" = ?[0m  [["following_id", 1]]
+  ↳ app/views/users/mypage.html.erb:9
+  [1m[36mCACHE Waste Load (0.0ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:33
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/mypage.html.erb:62
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 1]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 2]]
+  ↳ app/views/users/mypage.html.erb:64
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 3]]
+  ↳ app/views/users/mypage.html.erb:64
+  Rendered users/mypage.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 83ms (Views: 73.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/wants" for 10.0.2.2 at 2020-09-06 12:38:34 +0000
+Processing by WantsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wants_controller.rb:4
+  Rendering wants/index.html.erb within layouts/application
+  [1m[36mWant Load (0.4ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/wants/index.html.erb:15
+  Rendered wants/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 78ms (Views: 71.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 12:38:48 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.8ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.2ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.6ms)
+  [1m[36mWaste Load (0.3ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.6ms)
+  Rendered users/_register.html.erb (43.3ms)
+  Rendered users/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 114ms (Views: 98.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 12:39:54 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.8ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.5ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.7ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (3.3ms)
+  [1m[36mWaste Load (0.5ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (6.1ms)
+  Rendered users/_register.html.erb (37.9ms)
+  Rendered users/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 98ms (Views: 85.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-09-06 12:40:37 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/users/_register.html.erb:3
+  [1m[36mWaste Load (0.7ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.3ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.3ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 4], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 4]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (4.4ms)
+  [1m[36mCheer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 5]]
+  ↳ app/views/wants/_cheer.html.erb:11
+  Rendered wants/_cheer.html.erb (4.5ms)
+  [1m[36mWaste Load (0.6ms)[0m  [1m[34mSELECT "wastes".* FROM "wastes" WHERE "wastes"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:9
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."follower_id" = ? AND "relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 3], ["following_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mWant Load (0.8ms)[0m  [1m[34mSELECT "wants".* FROM "wants" WHERE "wants"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_register.html.erb:30
+  [1m[36mCheer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "cheers" WHERE "cheers"."want_id" = ? AND "cheers"."user_id" = ? LIMIT ?[0m  [["want_id", 6], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/want.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "cheers" WHERE "cheers"."want_id" = ?[0m  [["want_id", 6]]
+  ↳ app/views/wants/_cheer.html.erb:6
+  Rendered wants/_cheer.html.erb (3.6ms)
+  Rendered users/_register.html.erb (37.8ms)
+  Rendered users/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 111ms (Views: 98.1ms | ActiveRecord: 7.1ms)
+
+
