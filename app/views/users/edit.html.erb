@@ -24,3 +24,6 @@
 
 
 <%= link_to "パスワードを忘れた方はこちら" %>
+<% if user_signed_in? && @user.id == current_user.id %>
+<%= link_to "退会する", users_hide_path(current_user), method: :put, "data-confirm" => "本当に退会しますか？" %>
+<% end %>

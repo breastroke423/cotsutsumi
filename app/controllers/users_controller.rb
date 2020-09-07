@@ -49,6 +49,15 @@ class UsersController < ApplicationController
   end
 
 
+  def hide
+    @user = User.find(params[:id])
+    @user.update(is_deleted: "t")
+    # default = "f"
+    reset_session
+    flash[:notice] = "買いたいものができたときのご利用お待ちしております"
+    redirect_to top_path
+  end
+
   private
   def user_params
     params.require(:user).permit(:nickname, :profile_image, :introduction)

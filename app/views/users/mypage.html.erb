@@ -2,11 +2,11 @@
 <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
 <%= current_user.nickname %>
 <%= link_to user_follows_path(current_user.id) do %>
-フォロー一覧（<%= @user.followers.count %>）
+フォロー一覧（<%= @user.followings.count %>）
 <% end %>
 
 <%= link_to user_followers_path(current_user.id) do %>
-フォロワー一覧（<%= @user.followings.count %>）
+フォロワー一覧（<%= @user.followers.count %>）
 <% end %>
 
 

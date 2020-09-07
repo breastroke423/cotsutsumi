@@ -1,6 +1,6 @@
-
 <table>
       <% @users.each do |user| %>
+      <% if user.is_deleted == "f" %>
   <thead>
     <tr>
       <th><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></th>
@@ -55,5 +55,5 @@
 
 </tbody>
   <% end %>
-
+<% end %>
 </table>

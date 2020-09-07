@@ -13,21 +13,21 @@
   <!-- /header -->
   <header>
     <div class="container">
-      <nav class="nav navbar-left">
+      <nav  class="nav navbar-nav navbar-left">
         <span><%= link_to root_path do %>
           <!-- 画像入れたい、検討中 -->こつつみ
           <% end %>
         </span>
       </nav>
-      <nav class="nav navbar-right">
-        <li><%= link_to "About", homes_about_path %></li>
-        <li><%= link_to "ユーザー一覧", users_path %></li>
+      <nav class="nav navbar-nav navbar-right">
+        <li class="btn btn-default"><%= link_to "About", homes_about_path %></li>
+        <li class="btn btn-default"><%= link_to "ユーザー一覧", users_path %></li>
           <% if user_signed_in? %>
-        <li><%= link_to "マイページ", mypage_path %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <li class="btn btn-default"><%= link_to "マイページ", mypage_path %></li>
+        <li class="btn btn-default"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
-        <li><%= link_to "私もガマンする／新規登録", new_user_registration_path %></li>
-        <li><%= link_to "今日のガマン入力／ログイン", new_user_session_path %></li>
+        <li class="btn btn-default"><%= link_to "私もガマンする／新規登録", new_user_registration_path %></li>
+        <li class="btn btn-default"><%= link_to "今日のガマン入力／ログイン", new_user_session_path %></li>
           <% end %>
       </nav>
     </div>

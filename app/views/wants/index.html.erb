@@ -30,6 +30,7 @@
 
 <h2>欲しいものを追加する</h2>
 
+    <%= form_with model: @want do |f| %>
 <table>
   <thead>
     <tr>
@@ -41,7 +42,6 @@
     </tr>
   </thead>
   <tbody>
-    <%= form_with model: @want do |f| %>
     <tr>
       <td><%= f.attachment_field :want_image %></td>
       <td><%= f.text_field :name %></td>
@@ -49,9 +49,10 @@
       <td><%= f.text_field :reason %></td>
       <td><%= f.submit "追加する" %></td>
     </tr>
-    <% end %>
   </tbody>
 </table>
+   <% end %>
+
 
   <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
 
