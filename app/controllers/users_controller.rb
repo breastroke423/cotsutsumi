@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
   def index
+    if user_signed_in?
     @users = User.where.not(id: current_user.id)
+  else
+    @users = User.all
+    end
   end
 
   def show
@@ -29,11 +33,15 @@ class UsersController < ApplicationController
     @user = current_user
     @wastes = Waste.where(user_id: @user.id)
     @user_total_price = 0
-    @wastes.each do |waste|
-      sub_total = waste.price * waste.count
-      @user_total_price+=sub_total
-    end
+      @wastes.each do |waste|
+        sub_total = waste.price * waste.count
+        @user_total_price+=sub_total
+      end
     @user_difference_price = @user_total_price - @user.purchase_price
+    @waste_count_all = 0
+      @wastes.each do |waste|
+        @waste_count_all += waste.count
+      end
   end
 
   def follows
@@ -44,6 +52,15 @@ class UsersController < ApplicationController
     @users = current_user.followers
   end
 
+
+  def hide
+    @user = User.find(params[:id])
+    @user.update(is_deleted: "t")
+    # default = "f"
+    reset_session
+    flash[:notice] = "買いたいものができたときのご利用お待ちしております"
+    redirect_to top_path
+  end
 
   private
   def user_params

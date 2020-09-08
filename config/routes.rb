@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+devise_for :users
 
 patch 'wastes/count_up' => 'wastes#count_up'
 patch 'wastes/count_down' => 'wastes#count_down'
@@ -10,6 +10,8 @@ resources :users do
   get :follows
   get :followers
 end
+
+  put 'users/:id/hide' => 'users#hide', as:'users_hide'
 
 
 resources :wastes
@@ -22,5 +24,6 @@ root 'homes#top'
 get 'homes/about'
 get 'mypage' => 'users#mypage'
 get 'achievement' => 'users#achievement'
+
 
 end

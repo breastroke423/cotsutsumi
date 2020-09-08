@@ -1,23 +1,57 @@
 <h2>無駄遣いを変更する</h2>
-<% @user.wastes.each do |waste| %>
-<%= form_with model: waste do |f| %>
-<%= f.text_field :name %>
-<%= f.text_field :price %>
-<%= f.text_field :reason %>
-<%= f.submit "←を更新する" %>
-<% end %>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>節約したいもの</th>
+      <th>金額</th>
+      <th>理由</th>
+      <th>更新する</th>
+    </tr>
+  </thead>
+    <% @user.wastes.each do |waste| %>
+    <%= form_with model: waste do |f| %>
+
+  <tbody>
+
+    <tr>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :price %></td>
+      <td><%= f.text_field :reason %></td>
+      <td><%= f.submit "更新", class: "btn btn-success" %></td>
+    </tr>
+  </tbody>
+      <% end %>
+    <% end %>
+
+
+</table>
 
 
 <h2>節約したいものを入力</h2>
-<%= form_with model: @waste do |f| %>
-  <%= f.label :節約したいもの %>
-  <%= f.text_field :name %>
-  <%= f.label :１個／1回あたりの値段 %>
-  <%= f.text_field :price %>
-  <%= f.label :節約／辞めたい理由 %>
-  <%= f.text_field :reason %>
-  <%= f.submit "追加する" %>
-  <!-- 将来、続けて登録する、と、マイページへ移動する、に分けてボタンを付けたい -->
-<% end %>
+    <%= form_with model: @waste do |f| %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>節約したいもの</th>
+      <th>１個／1回あたりの値段</th>
+      <th>節約／辞めたい理由</th>
+      <th>更新</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :price %></td>
+      <td><%= f.text_field :reason %></td>
+      <td><%= f.submit "追加する", class: "btn btn-success" %></td>
+    </tr>
+  </tbody>
+</table>
+    <% end %>
+
+
+
+
+<!-- 将来、続けて登録する、と、マイページへ移動する、に分けてボタンを付けたい -->
 

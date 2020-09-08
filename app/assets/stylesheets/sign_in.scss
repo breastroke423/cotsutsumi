@@ -1,0 +1,29 @@
+.field {
+  label {
+    width: 100%;
+    text-align: left;
+
+    margin-top: 20px;
+  }
+}
+
+.field_check {
+  width: 100%;
+  text-align: left;
+  display: flex;
+
+    margin-top: 20px;
+
+
+  label{
+    width: 50%;
+  }
+  input{
+    width: 10px;
+    float: left;
+
+  }
+}
+  .actions {
+    margin-top: 20px;
+  }
