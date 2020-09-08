@@ -1,5 +1,5 @@
 <h2>無駄遣いを変更する</h2>
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>節約したいもの</th>
@@ -17,7 +17,7 @@
       <td><%= f.text_field :name %></td>
       <td><%= f.text_field :price %></td>
       <td><%= f.text_field :reason %></td>
-      <td><%= f.submit "更新" %></td>
+      <td><%= f.submit "更新", class: "btn btn-success" %></td>
     </tr>
   </tbody>
       <% end %>
@@ -30,7 +30,7 @@
 <h2>節約したいものを入力</h2>
     <%= form_with model: @waste do |f| %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>節約したいもの</th>
@@ -44,7 +44,7 @@
       <td><%= f.text_field :name %></td>
       <td><%= f.text_field :price %></td>
       <td><%= f.text_field :reason %></td>
-      <td><%= f.submit "追加する" %></td>
+      <td><%= f.submit "追加する", class: "btn btn-success" %></td>
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 <h2>目標を変更する</h2>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>画像</th>
@@ -20,8 +20,8 @@
       <td><%= f.text_field :name %></td>
       <td><%= f.text_field :price %></td>
       <td><%= f.text_field :reason %></td>
-      <td><%= f.submit "←を更新する" %></td>
-      <td><%= link_to "目標から削除する", want_path(want), method: :delete %></td>
+      <td><%= f.submit "←を更新する", class: "btn btn-success" %></td>
+      <td><%= link_to "目標から削除する", want_path(want), method: :delete, class: "btn btn-success" %></td>
     </tr>
     <% end %>
     <% end %>
@@ -31,7 +31,7 @@
 <h2>欲しいものを追加する</h2>
 
     <%= form_with model: @want do |f| %>
-<table>
+<table class="table">
   <thead>
     <tr>
       <th> </th>
@@ -43,11 +43,13 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= f.attachment_field :want_image %></td>
+      <td class="btn btn-success">
+        <label><%= f.attachment_field :want_image %></label>
+      </td>
       <td><%= f.text_field :name %></td>
       <td><%= f.text_field :price %></td>
       <td><%= f.text_field :reason %></td>
-      <td><%= f.submit "追加する" %></td>
+      <td><%= f.submit "追加する", class: "btn btn-success" %></td>
     </tr>
   </tbody>
 </table>
@@ -56,4 +58,4 @@
 
   <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
 
-<%= link_to "無駄遣いを入力／変更する", wastes_path %>
+<%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-success" %>
