@@ -1,14 +1,16 @@
+<div class="container">
 <h2>目標を変更する</h2>
 
+<div class="row table-responsive">
 <table class="table">
   <thead>
     <tr>
-      <th>画像</th>
-      <th>欲しいもの</th>
-      <th>値段</th>
-      <th>理由</th>
-      <th>更新</th>
-      <th>削除</th>
+      <th class="col-xs-2">イメージ</th>
+      <th class="col-xs-2">欲しいもの</th>
+      <th class="col-xs-3">金額</th>
+      <th class="col-xs-3">理由</th>
+      <th class="col-xs-1">更新</th>
+      <th class="col-xs-1">削除</th>
     </tr>
   </thead>
   <tbody>
@@ -20,42 +22,50 @@
         <td><%= f.text_field :name %></td>
         <td><%= f.text_field :price %></td>
         <td><%= f.text_field :reason %></td>
-        <td><%= f.submit "←を更新する", class: "btn btn-success" %></td>
-        <td><%= link_to "目標から削除する", want_path(want), method: :delete, class: "btn btn-success" %></td>
+        <td><%= f.submit "←更新", class: "btn btn-success" %></td>
+        <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-success" %></td>
       </tr>
       <% end %>
       <% end %>
     </tbody>
   </table>
 
+</div>
   <h2>欲しいものを追加する</h2>
 
+<div class="row">
   <%= form_with model: @want do |f| %>
   <table class="table">
     <thead>
       <tr>
-        <th> </th>
-        <th>欲しいもの</th>
-        <th>金額</th>
-        <th>理由</th>
-        <th>追加</th>
+        <th class="col-xs-2"> </th>
+        <th class="col-xs-2">欲しいもの</th>
+        <th class="col-xs-3">金額</th>
+        <th class="col-xs-3">理由</th>
+        <th class="col-xs-1">追加</th>
+        <th class="col-xs-1"></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="btn btn-success">
+        <td>
           <label><%= f.attachment_field :want_image %></label>
         </td>
         <td><%= f.text_field :name %></td>
         <td><%= f.text_field :price %></td>
         <td><%= f.text_field :reason %></td>
-        <td><%= f.submit "追加する", class: "btn btn-success" %></td>
+        <td><%= f.submit "←追加", class: "btn btn-success" %></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <% end %>
+</div>
 
-
-  <!-- 将来、続けて登録する、と、無駄遣いを入力する、に分けてボタンを付けたい -->
-
+<div class="row row-btn">
+<div class="index-btn">
+  <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-success" %>
   <%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-success" %>
+</div>
+</div>
+</div>

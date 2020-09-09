@@ -3,12 +3,12 @@
 <% if want.cheered_by?(current_user) %>
   <%= link_to want_cheers_path(want), method: :delete do %>
 <i class="fa fa-child" aria-hidden="true" style="color:red;"></i>
-      <%= want.cheers.count %>人が応援中
+      <%= want.cheers.count %>人が<br>応援中
   <% end %>
 <% else %>
   <%= link_to want_cheers_path(want), method: :post do %>
 <i class="fa fa-child" style="color:lightgray"></i>
-    <%= want.cheers.count %>人が応援中
+    <%= want.cheers.count %>人が<br>応援中
   <% end %>
 <% end %>
 

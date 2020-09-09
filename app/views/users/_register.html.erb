@@ -3,92 +3,99 @@
   <% if user.is_deleted == "f" %>
   <div class="user_index">
     <div class="row">
-      <div class="user_table">
-        <table class="col-md-12 table">
-          <thead>
-            <tr>
-              <th>ユーザ</th>
-              <th>通算節約金額</th>
-              <th>フォロー</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %><%= user.nickname %></td>
-              <td><% sum = 0 %>
-                <% user.wastes.each do |waste| %>
-                <% sub_total = waste.price * waste.count %>
-                <% sum+=sub_total %>
-                <% end %>
-                <%= sum.to_s(:delimited) %>円
-                <% if user_signed_in? %>
-              </td>
-              <td>
-                <% if user.followed_by?(current_user) %>
-                <%=link_to "フォロー済み", user_relationships_path(user.id), method: :delete %>
-                <% else %>
-                <%=link_to "フォローする", user_relationships_path(user.id), method: :post %>
-              </td>
-              <% end %>
-              <% else %>
-              <td></td>
-              <% end %>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row">
-      <div class="user_table">
+      <div class="user_table table-responsive">
         <table class="table">
           <thead>
-            <tr>
-              <th>欲しいもの</th>
-              <th>金額</th>
-              <th>理由</th>
-              <th>応援！</th>
+            <tr valign="middle">
+              <th class="col-xs-3">ユーザ</th>
+              <th class="col-xs-3">通算節約金額</th>
+              <th class="col-xs-4">意気込み</th>
+              <th class="col-xs-2">フォロー</th>
             </tr>
           </thead>
           <tbody>
-            <% user.wants.each do |want| %>
-            <tr>
-             <td><%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><%= want.name %></td>
-             <td><%= want.price.to_s(:delimited) %>円</td>
-             <td><%= want.reason %></td>
-             <% if @user == current_user %>
-             <td></td>
-             <% else %>
-             <td><%= render 'wants/cheer', want: want %></td>
-             <% end %>
-           </tr>
-           <% end %>
-         </tbody>
-       </table>
-     </div>
-   </div>
-   <div class="row">
-     <div class="user_table">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>無駄遣い</th>
-            <th>金額</th>
-            <th>無駄に思っている理由</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% user.wastes.each do |waste| %>
-          <tr>
-            <td><%= waste.name %></td>
-            <td><%= waste.price.to_s(:delimited) %>円</td>
-            <td><%= waste.reason %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+            <tr valign="middle">
+              <td>
+                <div class="resize"><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %><br><%= user.nickname %></div></td>
+                <td><% sum = 0 %>
+                  <% user.wastes.each do |waste| %>
+                  <% sub_total = waste.price * waste.count %>
+                  <% sum+=sub_total %>
+                  <% end %>
+                  <%= sum.to_s(:delimited) %>円
+                  <% if user_signed_in? %>
+                </td>
+                <td><%= user.introduction %></td>
+                <td>
+                  <% if user.followed_by?(current_user) %>
+                  <%=link_to "フォロー中", user_relationships_path(user.id), method: :delete %>
+                  <% else %>
+                  <%=link_to "フォローする", user_relationships_path(user.id), method: :post %>
+                </td>
+                <% end %>
+                <% else %>
+                <td></td>
+                <% end %>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="user_table table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-xs-3">欲しいもの</th>
+                <th class="col-xs-3">金額</th>
+                <th class="col-xs-4">欲しい理由</th>
+                <th class="col-xs-2">応援！</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% user.wants.each do |want| %>
+              <tr>
+               <td>
+                <div class="resize">
+                  <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><br><%= want.name %></div></td>
+                  <td><%= want.price.to_s(:delimited) %>円</td>
+                  <td><%= want.reason %></td>
+                  <% if @user == current_user %>
+                  <td></td>
+                  <% else %>
+                  <td><%= render 'wants/cheer', want: want %></td>
+                  <% end %>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+         <div class="user_table table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-xs-3">無駄遣い</th>
+                <th class="col-xs-3">金額</th>
+                <th class="col-xs-4">無駄に思っている理由</th>
+                <th class="col-xs-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% user.wastes.each do |waste| %>
+              <tr>
+                <td><%= waste.name %></td>
+                <td><%= waste.price.to_s(:delimited) %>円</td>
+                <td><%= waste.reason %></td>
+                <td></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+    <% end %>
+    <% end %>
   </div>
-</div>
-<% end %>
-<% end %>
-</div>

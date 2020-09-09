@@ -20,13 +20,27 @@
   }
 }
 
+.resize {
+  font-size: 17px;
+  width: 50%;
+  text-align: center;
+  img{
+    width: 100%;
+  }
+}
+
+
 .profile {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
 }
-  // ↑これ入らない
+.profile-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
 // プロフィール画像動かない
 .follow {
   display: flex;
@@ -43,15 +57,11 @@
 .saving {
   text-align:center;
   h3 {
-  margin: 5 auto;
+  margin: 30px auto;
   // ↑これ入らない
   }
 }
 
-.mytable {
-  margin: 10px auto;
-}
 
-.edit-btn {
-  text-align: right;
-}
+
+
