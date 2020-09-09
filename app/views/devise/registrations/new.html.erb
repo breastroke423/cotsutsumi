@@ -2,7 +2,8 @@
 <div class="container">
 <div class="form-signin">
 
-<h2>こちらから登録！</h2>
+<div class="user-info">
+  <h2>こちらから登録！</h2>
   <div class="row">
 
 
@@ -37,10 +38,12 @@
 
 
   <div>
-    <%= f.submit "続いて欲しいものを入力！",,data: {"turbolinks" => false},  class: "btn btn-success" %>
+    <%= f.submit "続いて欲しいものを入力！",data: {"turbolinks" => false},  class: "btn btn-success" %>
   </div>
 <% end %>
   </div>
+</div>
+
 <%= flash[:error] %>
 
     </div>

@@ -1,29 +1,32 @@
-<h2>プロフィールの変更</h2>
 
+<div class="container">
+  <div class="form-signin">
+    <div class="user-info">
+    <h2>プロフィールの変更</h2>
+    <%= form_for @user do |f| %>
+    <div class="field">
+      <label>プロフィール画像</label><br>
+      <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
+    </div>
+    <div class="field">
+      <%= f.label :ニックネーム %><br />
+      <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+    </div>
 
-<%= form_for @user do |f| %>
-
-  <label>プロフィール画像</label><br>
-  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
-
-  <div class="field">
-    <%= f.label :ニックネーム %><br />
-    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+    <div class="field">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "プロフィールの更新", class: "btn btn-success"  %>
+    </div>
+    <%#= link_to "パスワードお忘れですか？", new_password_path(resource_name) %><br />
+    <div>
+      <% if user_signed_in? && @user.id == current_user.id %>
+      <%= link_to "退会する", users_hide_path(current_user), method: :put, "data-confirm" => "本当に退会しますか？", class: "btn btn-danger" %>
+      <% end %>
+    </div>
+    <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "プロフィールの更新" %>
-  </div>
-<% end %>
-
-
-<%= link_to "パスワードを忘れた方はこちら" %>
-<% if user_signed_in? && @user.id == current_user.id %>
-<%= link_to "退会する", users_hide_path(current_user), method: :put, "data-confirm" => "本当に退会しますか？" %>
-<% end %>
+</div>

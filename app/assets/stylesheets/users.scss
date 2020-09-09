@@ -45,8 +45,9 @@
 .follow {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  text-align: center;
+  justify-content: flex-end;
+  text-align: left;
+  padding: 30px auto;
   p{
     .fix {
       margin-top: 5px;

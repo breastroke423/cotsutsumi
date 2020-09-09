@@ -34,12 +34,12 @@
     <table class="table">
       <thead>
         <tr>
-          <th class="col-xs-1"></th>
-          <th class="col-xs-2">無駄遣い</th>
-          <th class="col-xs-3">金額</th>
-          <th class="col-xs-2">通算ガマン</th>
-          <th class="col-xs-2">本日のガマン</th>
-          <th class="col-xs-2"></th>
+          <th></th>
+          <th>無駄遣い</th>
+          <th>金額</th>
+          <th>通算ガマン</th>
+          <th>本日のガマン</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -59,7 +59,7 @@
       </tbody>
       <% end %>
     </table>
-   </div>
+  </div>
   <div class="index-btn">
     <%= link_to "無駄遣い変更/追加", wastes_path, data: {"turbolinks" => false}, class: "btn btn-success" %>
   </div>
@@ -70,32 +70,32 @@
       <h3>欲しい目標</h3>
       <thead>
         <tr>
-          <th class="col-xs-1"></th>
-          <th class="col-xs-2">目標</th>
+          <th class="col-xs-1">　　　　</th>
+          <th class="col-xs-2">目標　　</th>
           <th class="col-xs-3">購入金額</th>
-          <th class="col-xs-2">理由</th>
+          <th class="col-xs-2">理由　　</th>
           <th class="col-xs-2">目標まで</th>
-          <th class="col-xs-2"></th>
+          <th class="col-xs-2">　　　　</th>
         </thead>
         <tbody>
           <tr>
             <% @user.wants.each do |want| %>
-            <td><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
-            <td>
+            <td class="col-xs-1"><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
+            <td class="col-xs-1">
               <div class="resize">
                 <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><br><%= want.name %>
               </div></td>
-              <td><%= want.price.to_s(:delimited) %>円</td>
-              <td><%= want.reason %></td>
+              <td class="col-xs-1"><%= want.price.to_s(:delimited) %>円</td>
+              <td class="col-xs-1"><%= want.reason %></td>
               <% if want.price-@user_difference_price <= 0 %>
-              <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#b00", "#666"] %></td>
-              <td><%= link_to want_path(want), class: "btn btn-primary" do %>
+              <td class="col-xs-1"><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#b00", "#666"] %></td>
+              <td class="col-xs-1"><%= link_to want_path(want), class: "btn btn-primary" do %>
                積み立てた<br>お金で買う
                <% end %>
              </td>
              <% else %>
-             <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#ffd1a3"] %></td>
-             <td>あと<br><%= (want.price-@user_difference_price).to_s(:delimited) %>円</td>
+             <td class="col-xs-1"><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#ffd1a3"] %></td>
+             <td class="col-xs-1">あと<br><%= (want.price-@user_difference_price).to_s(:delimited) %>円</td>
              <% end %>
            </tr>
            <% end %>
