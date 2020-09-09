@@ -1,85 +1,101 @@
 <div class="container">
+  <h2>マイページ</h2>
+  <div class="row">
+    <div class="col-xs-6 profile">
+      <div class="profile-image">
+        <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+      </div>
+      <div class="nickname">
+        <%= current_user.nickname %>
+      </div>
+    </div>
 
-<h2>マイページ</h2>
-<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %><br>
-<%= current_user.nickname %>
-<%= link_to user_follows_path(current_user.id) do %>
-フォロー一覧（<%= @user.followings.count %>）
-<% end %>
+    <div class="col-xs-6 follow">
+      <%= link_to user_follows_path(current_user.id) do %>
+      フォロー一覧（<%= @user.followings.count %>）
+      <% end %>
 
-<%= link_to user_followers_path(current_user.id) do %>
-フォロワー一覧（<%= @user.followers.count %>）
-<% end %>
+      <%= link_to user_followers_path(current_user.id) do %>
+      フォロワー一覧（<%= @user.followers.count %>）
+      <% end %>
 
-
-<h4><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></h4>
-
-<h3>通算ガマン<br>
-  <%= @user_total_price.to_s(:delimited) %>円／<%= @waste_count_all %>回
-</h3>
-<h3>現在の積立 (通算から購入した額を引いた金額)<br>
-  <%= @user_difference_price.to_s(:delimited) %>円</h3>
-
+      <p class="fix"><%= link_to "プロフィールを変更する", edit_user_path(current_user) %></p>
+    </div>
+  </div>
+  <div class="row saving">
+    <h3>通算ガマン</h3>
+    <h3><%= @user_total_price.to_s(:delimited) %>円／<%= @waste_count_all %>回</h3>
+    <h3>現在の積立 (通算-購入額)</h3>
+    <h3><%= @user_difference_price.to_s(:delimited) %>円</h3>
+  </div>
   <!-- ↑合計から購入金額抜いた額 -->
   <!-- <h3>継続日数</h3>カレンダー機能の時に -->
-  <table class="table">
-    <thead>
-      <tr>
-        <th>無駄遣い</th>
-        <th>金額</th>
-        <th>通算ガマン</th>
-        <th>本日のガマン</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @user.wastes.each do |waste| %>
-      <tr>
-        <td><%= waste.name %></td>
-        <td><%= waste.price.to_s(:delimited) %>円</td>
-
-        <td><%= (waste.price * waste.count).to_s(:delimited) %>円／<%= waste.count %>回</td>
-        <td><%= button_to "ガマンできた！", {controller: 'wastes', action: 'count_up'}, {method: :patch, :class => "btn btn-success", params: {waste: waste.id}} %>
-        </td>
-        <td><%= button_to "使っちゃった…。", {controller: 'wastes', action: 'count_down'}, {method: :patch, :class => "btn btn-danger", params: {waste: waste.id}} %>
-        </td>
-
-      </tr>
-    </tbody>
-    <% end %>
+  <div class="row mytable">
     <table class="table">
-      <%= link_to "無駄遣いを変更/追加する", wastes_path, data: {"turbolinks" => false}, class: "btn btn-success" %>
-      <h3>欲しい目標</h3>
-
       <thead>
         <tr>
-            <th></th>
-            <th>目標</th>
-            <th>購入金額</th>
-            <th>理由</th>
-            <th>目標まで</th>
-            <th></th>
-        </thead>
-        <tbody>
+          <th>無駄遣い</th>
+          <th>金額</th>
+          <th>通算ガマン</th>
+          <th>本日のガマン</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user.wastes.each do |waste| %>
+        <tr>
+          <td><%= waste.name %></td>
+          <td><%= waste.price.to_s(:delimited) %>円</td>
 
-          <tr>
-            <% @user.wants.each do |want| %>
-            <!-- <td>want.image 欲しいものの画像</td> -->
-            <td><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
-            <td><%= want.name %></td>
-            <td><%= want.price.to_s(:delimited) %>円</td>
-            <td><%= want.reason %></td>
-            <% if want.price-@user_difference_price <= 0 %>
-            <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#b00", "#666"] %></td>
-            <td><%= link_to "積み立てたお金で買う！", want_path(want) %></td>
-            <% else %>
-            <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#ffd1a3"] %></td>
-            <td>あと<%= (want.price-@user_difference_price).to_s(:delimited) %>円</td>
-            <% end %>
-          </tr>
-          <% end %>
-        </tbody>
+          <td><%= (waste.price * waste.count).to_s(:delimited) %>円／<%= waste.count %>回</td>
+          <td><%= button_to "ガマンできた！", {controller: 'wastes', action: 'count_up'}, {method: :patch, :class => "btn btn-success", params: {waste: waste.id}} %>
+          </td>
+          <td><%= button_to "使っちゃった…。", {controller: 'wastes', action: 'count_down'}, {method: :patch, :class => "btn btn-danger", params: {waste: waste.id}} %>
+          </td>
 
-      </table>
-      <%= link_to "目標を変更する", wants_path, data: {"turbolinks" => false}, class: "btn btn-success" %>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+
+<div class="edit-btn">
+      <%= link_to "無駄遣いを変更/追加する", wastes_path, data: {"turbolinks" => false}, class: "btn btn-success" %>
 </div>
+
+  <table class="table">
+    <h3>欲しい目標</h3>
+    <thead>
+      <tr>
+        <th></th>
+        <th>目標</th>
+        <th>購入金額</th>
+        <th>理由</th>
+        <th>目標まで</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <% @user.wants.each do |want| %>
+          <!-- <td>want.image 欲しいものの画像</td> -->
+          <td><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
+          <td><%= want.name %></td>
+          <td><%= want.price.to_s(:delimited) %>円</td>
+          <td><%= want.reason %></td>
+          <% if want.price-@user_difference_price <= 0 %>
+          <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#b00", "#666"] %></td>
+          <td><%= link_to "積み立てたお金で買う！", want_path(want), class: "btn btn-primary" %></td>
+          <% else %>
+          <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#ffd1a3"] %></td>
+          <td>あと<%= (want.price-@user_difference_price).to_s(:delimited) %>円</td>
+          <% end %>
+        </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+  <div class="edit-btn">
+        <%= link_to "目標を変更する", wants_path, data: {"turbolinks" => false}, class: "btn btn-success" %>
+  </div>
+  </div>
