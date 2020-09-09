@@ -13,11 +13,45 @@
     margin: 10px auto;
   }
   table > thead > tr > th{
-  border-bottom: dashed 2px #ffb03f;
-}
+    border-bottom: dashed 2px #ffb03f;
+  }
   table > tbody > tr > td{
-  border-bottom: dashed 2px #ffb03f;
-}
+    border-bottom: dashed 2px #ffb03f;
+  }
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+  // ↑これ入らない
+// プロフィール画像動かない
+.follow {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  p{
+    .fix {
+      margin-top: 5px;
+    }
+  }
+}
 
+.saving {
+  text-align:center;
+  h3 {
+  margin: 5 auto;
+  // ↑これ入らない
+  }
+}
+
+.mytable {
+  margin: 10px auto;
+}
+
+.edit-btn {
+  text-align: right;
+}
