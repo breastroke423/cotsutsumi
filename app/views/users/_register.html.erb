@@ -27,9 +27,9 @@
                 </td>
                 <td><%= user.introduction %></td>
                   <% if user.followed_by?(current_user) %>
-                <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete %></td>
+                <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete, class: "btn btn-dark" %></td>
                   <% else %>
-                <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post %></td>
+                <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-default" %></td>
                 <% end %>
                 <% else %>
                 <td></td>
@@ -66,7 +66,7 @@
                       <%= f.hidden_field :want_image_id, value: want.want_image_id %>
                       <%= f.hidden_field :name, value: want.name %>
                       <%= f.hidden_field :price, value: want.price %>
-                      <%= f.submit "私も欲しい！", class: "btn btn-success" %>
+                      <%= f.submit "私も欲しい！", class: "btn btn-default" %>
                     <% end %>
                     <!-- ここまで -->
                   </td>
