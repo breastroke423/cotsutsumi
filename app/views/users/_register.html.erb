@@ -26,12 +26,10 @@
                   <% if user_signed_in? %>
                 </td>
                 <td><%= user.introduction %></td>
-                <td>
                   <% if user.followed_by?(current_user) %>
-                  <%=link_to "フォロー中", user_relationships_path(user.id), method: :delete %>
+                <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete %></td>
                   <% else %>
-                  <%=link_to "フォローする", user_relationships_path(user.id), method: :post %>
-                </td>
+                <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post %></td>
                 <% end %>
                 <% else %>
                 <td></td>
