@@ -54,18 +54,27 @@
             </thead>
             <tbody>
               <% user.wants.each do |want| %>
+              <% if want.is_deleted == "f" %>
               <tr>
-               <td>
-                <div class="resize">
+               <td><div class="resize">
                   <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><br><%= want.name %></div></td>
                   <td><%= want.price.to_s(:delimited) %>円</td>
                   <td><%= want.reason %></td>
-                  <% if @user == current_user %>
-                  <td></td>
-                  <% else %>
-                  <td><%= render 'wants/cheer', want: want %></td>
+                  <% if @user != current_user %>
+                  <td><%= render 'wants/cheer', want: want %><br>
+
+                    <!-- 私も欲しいを追加したいが実現できなかった -->
+                    <%= form_with model: want, method: :post do |f| %>
+                    <% f.attachment_field :want_image %>
+                    <% f.text_field :name %>
+                    <% f.text_field :price %>
+                    <%= f.submit "私も欲しい！", class: "btn btn-success" %>
+                    <% end %>
+                    <!-- ここまで -->
+                  </td>
                   <% end %>
                 </tr>
+                <% end %>
                 <% end %>
               </tbody>
             </table>
@@ -84,12 +93,14 @@
             </thead>
             <tbody>
               <% user.wastes.each do |waste| %>
+              <% if waste.status == "0" %>
               <tr>
                 <td><%= waste.name %></td>
                 <td><%= waste.price.to_s(:delimited) %>円</td>
                 <td><%= waste.reason %></td>
                 <td></td>
               </tr>
+              <% end %>
               <% end %>
             </tbody>
           </table>

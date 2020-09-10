@@ -7,10 +7,11 @@
     <tr>
       <th class="col-xs-2">イメージ</th>
       <th class="col-xs-2">欲しいもの</th>
-      <th class="col-xs-3">金額</th>
+      <th class="col-xs-2">金額</th>
       <th class="col-xs-3">理由</th>
       <th class="col-xs-1">更新</th>
       <th class="col-xs-1">削除</th>
+      <th class="col-xs-1">全体公開</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,12 @@
         <td><%= f.text_field :reason %></td>
         <td><%= f.submit "←更新", class: "btn btn-success" %></td>
         <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-success" %></td>
+        <% if want.is_deleted == "f" %>
+        <td><%= link_to "しない", wants_hide_path(want),method: :put, class: "btn btn-danger" %></td>
+          <% else %>
+        <td><%= link_to "する", wants_reveal_path(want),method: :put, class: "btn btn-success" %></td>
+
+        <% end %>
       </tr>
       <% end %>
       <% end %>
@@ -40,9 +47,10 @@
       <tr>
         <th class="col-xs-2"> </th>
         <th class="col-xs-2">欲しいもの</th>
-        <th class="col-xs-3">金額</th>
+        <th class="col-xs-2">金額</th>
         <th class="col-xs-3">理由</th>
         <th class="col-xs-1">追加</th>
+        <th class="col-xs-1"></th>
         <th class="col-xs-1"></th>
       </tr>
     </thead>
@@ -55,6 +63,7 @@
         <td><%= f.text_field :price %></td>
         <td><%= f.text_field :reason %></td>
         <td><%= f.submit "←追加", class: "btn btn-success" %></td>
+        <td></td>
         <td></td>
       </tr>
     </tbody>
