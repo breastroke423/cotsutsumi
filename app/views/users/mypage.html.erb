@@ -1,5 +1,4 @@
 <div class="container">
-  <h2>マイページ</h2>
   <div class="row">
     <div class="col-xs-6 profile">
       <div class="profile-image">
@@ -12,11 +11,13 @@
 
     <div class="col-xs-6 follow">
       <%= link_to user_follows_path(current_user.id) do %>
-      フォロー一覧（<%= @user.followings.count %>）
+      <%= @user.followings.count %><br>
+      フォロー
       <% end %>
 
       <%= link_to user_followers_path(current_user.id) do %>
-      フォロワー一覧（<%= @user.followers.count %>）
+　　　　<%= @user.followers.count %><br>
+      フォロワー
       <% end %>
 
       <p class="fix"><%= link_to "プロフィール変更", edit_user_path(current_user) %></p>
@@ -72,7 +73,6 @@
 
   <div class="row mytable table-responsive">
     <table class="table">
-      <h3>欲しい目標</h3>
       <thead>
         <tr>
           <th class="col-xs-1">　　　　</th>
@@ -93,13 +93,13 @@
               <td><%= want.price.to_s(:delimited) %>円</td>
               <td><%= want.reason %></td>
               <% if want.price-@user_difference_price <= 0 %>
-              <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#b00", "#666"] %></td>
+              <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#666"] %></td>
               <td><%= link_to want_path(want), class: "btn btn-primary" do %>
                積み立てた<br>お金で買う
                <% end %>
              </td>
              <% else %>
-             <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#4242ff", "#ffd1a3"] %></td>
+             <td><%= bar_chart [['積立金', @user_difference_price], [want.name, want.price]], thousands: ",", width: "200px", height: "100px", colors: ["#ff5841", "#ffd1a3"] %></td>
              <td>あと<br><%= (want.price-@user_difference_price).to_s(:delimited) %>円</td>
              <% end %>
            </tr>

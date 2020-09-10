@@ -62,11 +62,11 @@
                   <td><%= render 'wants/cheer', want: want %><br>
 
                     <!-- 私も欲しいを追加したいが実現できなかった -->
-                    <%= form_with model: want, method: :post do |f| %>
-                    <% f.attachment_field :want_image %>
-                    <% f.text_field :name %>
-                    <% f.text_field :price %>
-                    <%= f.submit "私も欲しい！", class: "btn btn-success" %>
+                    <%= form_with model: want, method: :post, url: wants_path do |f| %>
+                      <%= f.hidden_field :want_image_id, value: want.want_image_id %>
+                      <%= f.hidden_field :name, value: want.name %>
+                      <%= f.hidden_field :price, value: want.price %>
+                      <%= f.submit "私も欲しい！", class: "btn btn-success" %>
                     <% end %>
                     <!-- ここまで -->
                   </td>

@@ -61,6 +61,6 @@ before_action :authenticate_user!
 
   private
   def want_params
-    params.require(:want).permit(:name, :price, :reason, :want_image)
+    params.require(:want).permit(:name, :price, :reason, :want_image, :want_image_id)
   end
 end
