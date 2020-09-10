@@ -53,6 +53,19 @@ class WantsController < ApplicationController
   end
 
 
+  def hide
+    @want = Want.find(params[:id])
+    @want.update(is_deleted: "t")
+    redirect_to wants_path
+  end
+
+  def reveal
+    @want = Want.find(params[:id])
+    @want.update(is_deleted: "f")
+    redirect_to wants_path
+  end
+
+
 
   private
   def want_params

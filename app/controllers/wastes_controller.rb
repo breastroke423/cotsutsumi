@@ -49,6 +49,24 @@ class WastesController < ApplicationController
     end
   end
 
+  def hide
+    @waste = Waste.find(params[:id])
+    @waste.update(status: "1")
+    redirect_to wastes_path
+  end
+
+  def reveal
+    @waste = Waste.find(params[:id])
+    @waste.update(status: "0")
+    redirect_to wastes_path
+  end
+
+  def hide_away
+    @waste = Waste.find(params[:id])
+    @waste.update(status: "2")
+    redirect_to wastes_path
+  end
+
 
 
   private

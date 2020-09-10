@@ -12,7 +12,11 @@ resources :users do
 end
 
   put 'users/:id/hide' => 'users#hide', as:'users_hide'
-
+  put 'wastes/:id/hide' => 'wastes#hide', as:'wastes_hide'
+  put 'wastes/:id/reveal' => 'wastes#reveal', as:'wastes_reveal'
+  put 'wastes/:id/hide_away' => 'wastes#hide_away', as:'wastes_hide_away'
+  put 'wants/:id/hide' => 'wants#hide', as:'wants_hide'
+  put 'wants/:id/reveal' => 'wants#reveal', as:'wants_reveal'
 
 resources :wastes
 resources :wants do
