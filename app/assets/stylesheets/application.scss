@@ -127,15 +127,15 @@ footer {
 .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover,
 .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus,
 .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus {
-    background: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-    color: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    background: blue; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: white; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
 }
 
 
 .btn-danger {
     background: white; //ボタンの背景色
-    color: red; //ボタンのテキストの色
-    border-color: red;
+    color: #CC0000; //ボタンのテキストの色
+    border-color: #CC0000;
 }
 .btn-danger:hover, .btn-danger:focus,
 .btn-danger:active, .btn-danger:active:focus, .btn-danger:active:hover, .btn-danger:active.focus,
@@ -175,7 +175,7 @@ footer {
 
 
 .btn-dark {
-    background: lightgray; //ボタンの背景色
+    background: #CCCCCC; //ボタンの背景色
     color: black; //ボタンのテキストの色
     border-color: black;
 
@@ -190,5 +190,8 @@ footer {
 .btn-dark.disabled:hover, .btn-dark[disabled]:hover, fieldset[disabled] .btn-dark:hover,
 .btn-dark.disabled:focus, .btn-dark[disabled]:focus, fieldset[disabled] .btn-dark:focus,
 .btn-dark.disabled.focus, .btn-dark[disabled].focus, fieldset[disabled] .btn-dark.focus {
+    background: #555555; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: #CCCCCC; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    border-color: #555555;
 }
 
