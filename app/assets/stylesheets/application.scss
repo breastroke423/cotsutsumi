@@ -38,7 +38,7 @@ table {
 
 header {
   height: 80px;
-  background-color: #ffb03f;
+  background-color: #825745;
 }
 
 nav {
@@ -79,8 +79,119 @@ nav {
 
 footer {
   text-align: center;
-  background-color: #ffb03f;
+  background-color: #825745;
   height: 50px;
   margin-top: 20px;
+}
+
+.btn {
+    padding: 14px 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-default {
+    background: white; //ボタンの背景色
+    color: #8e5237; //ボタンのテキストの色
+    border-color: #8e5237;
+
+}
+.btn-default:hover, .btn-default:focus,
+.btn-default:active, .btn-default:active:focus, .btn-default:active:hover, .btn-default:active.focus,
+.btn-default.active, .btn-default.active:focus, .btn-default.active:hover, .btn-default.active.focus,
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:hover,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default.focus,
+.btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus {
+    background: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+}
+
+
+.btn-success {
+    background: white; //ボタンの背景色
+    color: blue; //ボタンのテキストの色
+    border-color: blue;
+}
+.btn-success:hover, .btn-success:focus,
+.btn-success:active, .btn-success:active:focus, .btn-success:active:hover, .btn-success:active.focus,
+.btn-success.active, .btn-success.active:focus, .btn-success.active:hover, .btn-success.active.focus,
+.open > .dropdown-toggle.btn-success,
+.open > .dropdown-toggle.btn-success:hover,
+.open > .dropdown-toggle.btn-success:focus,
+.open > .dropdown-toggle.btn-success.focus,
+.btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus {
+    background: blue; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: white; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+}
+
+
+.btn-danger {
+    background: white; //ボタンの背景色
+    color: #CC0000; //ボタンのテキストの色
+    border-color: #CC0000;
+}
+.btn-danger:hover, .btn-danger:focus,
+.btn-danger:active, .btn-danger:active:focus, .btn-danger:active:hover, .btn-danger:active.focus,
+.btn-danger.active, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger,
+.open > .dropdown-toggle.btn-danger:hover,
+.open > .dropdown-toggle.btn-danger:focus,
+.open > .dropdown-toggle.btn-danger.focus,
+.btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus {
+    background: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+}
+
+
+.btn-primary {
+    background: #ffb73c; //ボタンの背景色
+    color: #452d0d; //ボタンのテキストの色
+    border-color: #ffb73c;
+
+}
+.btn-primary:hover, .btn-primary:focus,
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+    background: #ffd988; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: #452d0d; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    border-color: #ffb73c;
+}
+
+
+.btn-dark {
+    background: #CCCCCC; //ボタンの背景色
+    color: black; //ボタンのテキストの色
+    border-color: black;
+
+}
+.btn-dark:hover, .btn-dark:focus,
+.btn-dark:active, .btn-dark:active:focus, .btn-dark:active:hover, .btn-dark:active.focus,
+.btn-dark.active, .btn-dark.active:focus, .btn-dark.active:hover, .btn-dark.active.focus,
+.open > .dropdown-toggle.btn-dark,
+.open > .dropdown-toggle.btn-dark:hover,
+.open > .dropdown-toggle.btn-dark:focus,
+.open > .dropdown-toggle.btn-dark.focus,
+.btn-dark.disabled:hover, .btn-dark[disabled]:hover, fieldset[disabled] .btn-dark:hover,
+.btn-dark.disabled:focus, .btn-dark[disabled]:focus, fieldset[disabled] .btn-dark:focus,
+.btn-dark.disabled.focus, .btn-dark[disabled].focus, fieldset[disabled] .btn-dark.focus {
+    background: #555555; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: #CCCCCC; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    border-color: #555555;
 }
 

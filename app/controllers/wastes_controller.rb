@@ -1,17 +1,9 @@
 class WastesController < ApplicationController
+before_action :authenticate_user!
 
   def index
     @user = current_user
     @waste = Waste.new
-  end
-
-  def show
-  end
-
-  def edit
-    # @user = current_user
-    # @waste = Waste.new
-
   end
 
   def create
@@ -38,7 +30,6 @@ class WastesController < ApplicationController
     @waste.save
     redirect_to mypage_path
   end
-
 
   def update
     @waste = Waste.find(params[:id])

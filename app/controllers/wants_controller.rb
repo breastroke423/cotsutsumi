@@ -1,4 +1,5 @@
 class WantsController < ApplicationController
+before_action :authenticate_user!
 
   def index
     @user = current_user
@@ -11,11 +12,6 @@ class WantsController < ApplicationController
     @want = Want.find(params[:id])
   end
 
-  def edit
-    # @user = current_user
-
-  end
-
   def create
     @want = Want.new(want_params)
     @want.user_id = current_user.id
@@ -26,7 +22,6 @@ class WantsController < ApplicationController
     end
   end
 
-
   def purchase
     @user = current_user
     @want = Want.find(params[:want_id])
@@ -35,7 +30,6 @@ class WantsController < ApplicationController
     redirect_to achievement_path
   end
 
-
   def update
     @want = Want.find(params[:id])
     if @want.update(want_params)
@@ -43,7 +37,6 @@ class WantsController < ApplicationController
     else
       render 'edit'
     end
-
   end
 
   def destroy
@@ -51,7 +44,6 @@ class WantsController < ApplicationController
     want.destroy
     redirect_to wants_path
   end
-
 
   def hide
     @want = Want.find(params[:id])
@@ -69,6 +61,6 @@ class WantsController < ApplicationController
 
   private
   def want_params
-    params.require(:want).permit(:name, :price, :reason, :want_image)
+    params.require(:want).permit(:name, :price, :reason, :want_image, :want_image_id)
   end
 end

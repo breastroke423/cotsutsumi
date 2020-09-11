@@ -26,12 +26,10 @@
                   <% if user_signed_in? %>
                 </td>
                 <td><%= user.introduction %></td>
-                <td>
                   <% if user.followed_by?(current_user) %>
-                  <%=link_to "フォロー中", user_relationships_path(user.id), method: :delete %>
+                <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete, class: "btn btn-dark" %></td>
                   <% else %>
-                  <%=link_to "フォローする", user_relationships_path(user.id), method: :post %>
-                </td>
+                <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-default" %></td>
                 <% end %>
                 <% else %>
                 <td></td>
@@ -64,11 +62,11 @@
                   <td><%= render 'wants/cheer', want: want %><br>
 
                     <!-- 私も欲しいを追加したいが実現できなかった -->
-                    <%= form_with model: want, method: :post do |f| %>
-                    <% f.attachment_field :want_image %>
-                    <% f.text_field :name %>
-                    <% f.text_field :price %>
-                    <%= f.submit "私も欲しい！", class: "btn btn-success" %>
+                    <%= form_with model: want, method: :post, url: wants_path do |f| %>
+                      <%= f.hidden_field :want_image_id, value: want.want_image_id %>
+                      <%= f.hidden_field :name, value: want.name %>
+                      <%= f.hidden_field :price, value: want.price %>
+                      <%= f.submit "私も欲しい！", class: "btn btn-default" %>
                     <% end %>
                     <!-- ここまで -->
                   </td>
