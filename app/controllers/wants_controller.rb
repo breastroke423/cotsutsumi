@@ -14,6 +14,7 @@ before_action :authenticate_user!
 
   def create
     @want = Want.new(want_params)
+    @wants = current_user.wants.all
     @want.user_id = current_user.id
     if @want.save
       redirect_to wants_path
@@ -48,13 +49,11 @@ before_action :authenticate_user!
   def hide
     @want = Want.find(params[:id])
     @want.update(is_deleted: "t")
-    redirect_to wants_path
   end
 
   def reveal
     @want = Want.find(params[:id])
     @want.update(is_deleted: "f")
-    redirect_to wants_path
   end
 
 

@@ -51,10 +51,12 @@ class UsersController < ApplicationController
   end
 
   def follows
+    user = current_user
     @users = current_user.followings
   end
 
   def followers
+    user = current_user
     @users = current_user.followers
   end
 

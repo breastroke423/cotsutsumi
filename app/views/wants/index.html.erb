@@ -2,6 +2,7 @@
 <h2>目標を変更する</h2>
 
 <div class="row table-responsive">
+
 <table class="table">
   <thead>
     <tr>
@@ -16,32 +17,31 @@
   </thead>
   <tbody>
     <% @wants.each do |want| %>
-    <%= form_with model: want do |f| %>
-    <tr>
-      <td><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
-        <%= f.attachment_field :want_image %></td>
-        <td><%= f.text_field :name %></td>
-        <td><%= f.text_field :price %></td>
-        <td><%= f.text_field :reason %></td>
-        <td><%= f.submit "←更新", class: "btn btn-success" %></td>
-        <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-success" %></td>
-        <% if want.is_deleted == "f" %>
-        <td><%= link_to "しない", wants_hide_path(want),method: :put, class: "btn btn-danger" %></td>
-          <% else %>
-        <td><%= link_to "する", wants_reveal_path(want),method: :put, class: "btn btn-success" %></td>
-
-        <% end %>
-      </tr>
-      <% end %>
-      <% end %>
+        <tr>
+            <%= form_with model: want, local: true do |f| %>
+          <td><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
+            <%= f.attachment_field :want_image %></td>
+            <td><%= f.text_field :name %></td>
+            <td><%= f.text_field :price %></td>
+            <td><%= f.text_field :reason %></td>
+            <td><%= f.submit "←更新", class: "btn btn-success" %></td>
+            <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-danger" %></td>
+            <td>
+              <div id="hide_<%= want.id %>">
+                <%= render partial: 'wants/hide', locals:{ want: want } %>
+              </div>
+            </td>
+            <% end %>
+        </tr>
+    <% end %>
     </tbody>
-  </table>
+</table>
 
 </div>
   <h2>欲しいものを追加する</h2>
 
 <div class="row">
-  <%= form_with model: @want do |f| %>
+  <%= form_with model: @want, local: true do |f| %>
   <table class="table">
     <thead>
       <tr>
@@ -73,8 +73,8 @@
 
 <div class="row row-btn">
 <div class="index-btn">
-  <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-success" %>
-  <%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-success" %>
+  <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
+  <%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
 </div>
 </div>
 </div>

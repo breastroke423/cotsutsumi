@@ -33,6 +33,12 @@
     </div>
   </header>
   <!-- /header -->
+    <div class="container">
+    <% if flash[:success] %>
+      <div class="flash">
+        <%= flash[:success] %>
+      </div>
+  <% end %>
 
   <%= yield %>
 
