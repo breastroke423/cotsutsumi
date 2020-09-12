@@ -26,11 +26,15 @@
                   <% if user_signed_in? %>
                 </td>
                 <td><%= user.introduction %></td>
-                  <% if user.followed_by?(current_user) %>
-                <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete, class: "btn btn-dark" %></td>
-                  <% else %>
-                <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-default" %></td>
-                <% end %>
+                <td>
+                  <div id="follows_buttons_<%= user.id %>">
+                    <% if user.followed_by?(current_user) %>
+                      <td><%=link_to "フォロー中", user_relationships_path(user.id), method: :delete, remote: true, class: "btn btn-dark" %></td>
+                      <% else %>
+                      <td><%=link_to "フォローする", user_relationships_path(user.id), method: :post, remote: true, class: "btn btn-default" %></td>
+                      <% end %>
+                  </div>
+                </td>
                 <% else %>
                 <td></td>
                 <% end %>
@@ -39,6 +43,7 @@
           </table>
         </div>
       </div>
+
       <div class="row">
         <div class="user_table table-responsive">
           <table class="table">
@@ -59,16 +64,18 @@
                   <td><%= want.price.to_s(:delimited) %>円</td>
                   <td><%= want.reason %></td>
                   <% if @user != current_user %>
-                  <td><%= render 'wants/cheer', want: want %><br>
-
-                    <!-- 私も欲しいを追加したいが実現できなかった -->
-                    <%= form_with model: want, method: :post, url: wants_path do |f| %>
+                  <td>
+                    <div id="cheers_buttons_<%= want.id %>">
+                      <%= render partial: 'wants/cheer', locals:{ want: want } %>
+                  </div>
+                  <div class="contents">
+                    <%= form_with model: want, method: :post, url: wants_path, remote: true do |f| %>
                       <%= f.hidden_field :want_image_id, value: want.want_image_id %>
                       <%= f.hidden_field :name, value: want.name %>
                       <%= f.hidden_field :price, value: want.price %>
                       <%= f.submit "私も欲しい！", class: "btn btn-default" %>
                     <% end %>
-                    <!-- ここまで -->
+                  </div>
                   </td>
                   <% end %>
                 </tr>

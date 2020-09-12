@@ -1,0 +1,5 @@
+<% if want.is_deleted == "f" %>
+  <%= link_to "しない", wants_hide_path(want), method: :put,remote: true, class: "btn btn-danger" %>
+<% else %>
+  <%= link_to "する", wants_reveal_path(want), method: :put,remote: true, class: "btn btn-success" %>
+<% end %>
