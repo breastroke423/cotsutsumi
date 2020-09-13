@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_030834) do
+ActiveRecord::Schema.define(version: 2020_09_10_054316) do
 
   create_table "cheers", force: :cascade do |t|
     t.integer "user_id"
@@ -19,18 +19,16 @@ ActiveRecord::Schema.define(version: 2020_09_01_030834) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "savings", force: :cascade do |t|
-    t.integer "price"
-    t.integer "count"
+  create_table "relationships", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.integer "following_id"
+    t.integer "follower_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
     t.string "nickname"
-    t.string "is_deleted"
+    t.string "is_deleted", default: "f"
     t.text "introduction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,6 +37,9 @@ ActiveRecord::Schema.define(version: 2020_09_01_030834) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "count", default: 0
+    t.integer "purchase_price", default: 0
+    t.string "profile_image_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -47,10 +48,12 @@ ActiveRecord::Schema.define(version: 2020_09_01_030834) do
     t.string "name"
     t.integer "price"
     t.text "reason"
-    t.integer "count"
+    t.integer "count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "want_image_id"
+    t.string "is_deleted", default: "f"
   end
 
   create_table "wastes", force: :cascade do |t|
@@ -59,6 +62,9 @@ ActiveRecord::Schema.define(version: 2020_09_01_030834) do
     t.text "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "count", default: 0
+    t.string "status", default: "0"
   end
 
 end

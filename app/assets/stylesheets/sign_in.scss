@@ -1,0 +1,42 @@
+.field {
+  label {
+    width: 90%;
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+
+.field_check {
+  width: 100%;
+  text-align: left;
+  display: flex;
+
+  margin-top: 20px;
+
+
+  label{
+    width: 50%;
+  }
+  input{
+    width: 10px;
+    float: left;
+
+  }
+}
+.actions {
+  margin-top: 20px;
+}
+
+.user-info {
+  background: #fffde8;
+  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  border: dashed 2px #ffb03f;/*破線*/
+  border-radius: 9px;
+  padding: 0 10px 20px;
+  margin: 30px auto;
+}
+
+.field_check {
+  width: 90%;
+  margin: 20px auto;
+}

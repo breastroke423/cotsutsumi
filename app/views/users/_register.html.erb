@@ -1,0 +1,113 @@
+<div class="container">
+  <% @users.each do |user| %>
+  <% if user.is_deleted == "f" %>
+  <div class="user_index">
+    <div class="row">
+      <div class="user_table table-responsive">
+        <table class="table">
+          <thead>
+            <tr valign="middle">
+              <th class="col-xs-3">ユーザ</th>
+              <th class="col-xs-3">通算節約金額</th>
+              <th class="col-xs-4">意気込み</th>
+              <th class="col-xs-2">フォロー</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="middle">
+              <td>
+                <div class="resize"><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %><br><%= user.nickname %></div></td>
+                <td><% sum = 0 %>
+                  <% user.wastes.each do |waste| %>
+                  <% sub_total = waste.price * waste.count %>
+                  <% sum+=sub_total %>
+                  <% end %>
+                  <%= sum.to_s(:delimited) %>円
+                  <% if user_signed_in? %>
+                </td>
+                <td><%= user.introduction %></td>
+                <td>
+                  <div id="follows_buttons_<%= user.id %>">
+                    <%= render partial: 'relationships/follow', locals:{ user: user } %>
+                  </div>
+                </td>
+                <% else %>
+                <td></td>
+                <% end %>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="user_table table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-xs-3">欲しいもの</th>
+                <th class="col-xs-3">金額</th>
+                <th class="col-xs-4">欲しい理由</th>
+                <th class="col-xs-2">応援！</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% user.wants.each do |want| %>
+              <% if want.is_deleted == "f" %>
+              <tr>
+               <td><div class="resize">
+                  <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><br><%= want.name %></div></td>
+                  <td><%= want.price.to_s(:delimited) %>円</td>
+                  <td><%= want.reason %></td>
+                  <% if @user != current_user %>
+                  <td>
+                    <div id="cheers_buttons_<%= want.id %>">
+                      <%= render partial: 'wants/cheer', locals:{ want: want } %>
+                  </div>
+                  <div class="contents">
+                    <%= form_with model: want, method: :post, url: wants_path, remote: true do |f| %>
+                      <%= f.hidden_field :want_image_id, value: want.want_image_id %>
+                      <%= f.hidden_field :name, value: want.name %>
+                      <%= f.hidden_field :price, value: want.price %>
+                      <%= f.submit "私も欲しい！", class: "btn btn-default" %>
+                    <% end %>
+                  </div>
+                  </td>
+                  <% end %>
+                </tr>
+                <% end %>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+         <div class="user_table table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-xs-3">無駄遣い</th>
+                <th class="col-xs-3">金額</th>
+                <th class="col-xs-4">無駄に思っている理由</th>
+                <th class="col-xs-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% user.wastes.each do |waste| %>
+              <% if waste.status == "0" %>
+              <tr>
+                <td><%= waste.name %></td>
+                <td><%= waste.price.to_s(:delimited) %>円</td>
+                <td><%= waste.reason %></td>
+                <td></td>
+              </tr>
+              <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>

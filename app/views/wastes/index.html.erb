@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="row">
+    <h2>無駄遣いを変更する</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col-xs-3">節約したいもの</th>
+          <th class="col-xs-3">金額</th>
+          <th class="col-xs-4">理由</th>
+          <th class="col-xs-2">更新する</th>
+        </tr>
+      </thead>
+      <% @user.wastes.each do |waste| %>
+      <% if waste.status != "2" %>
+      <tbody>
+        <tr>
+          <td><%= waste.name %></td>
+          <td><%= waste.price %></td>
+          <td><%= waste.reason %></td>
+          <% if waste.status == "0" %>
+          <td><%= link_to "マイページから隠す", wastes_hide_path(waste),method: :put, class: "btn btn-success"  %>
+            <%= link_to "無駄遣いから削除", wastes_hide_away_path(waste),method: :put, class: "btn btn-danger"  %></td>
+
+            <% elsif waste.status == "1" %>
+            <td><%= link_to "マイページに戻す", wastes_reveal_path(waste),method: :put, class: "btn btn-success"  %>
+              <%= link_to "無駄遣いから削除", wastes_hide_away_path(waste),method: :put, class: "btn btn-danger"  %></td>
+              <% else %>
+              <td></td>
+              <% end %>
+              <% end %>
+          </tr>
+        </tbody>
+
+      <% end %>
+
+      </table>
+    </div>
+
+
+    <div class="row">
+      <h2>節約したいものを入力</h2>
+      <%= form_with model: @waste do |f| %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-xs-3">節約したいもの</th>
+            <th class="col-xs-3">１個／1回あたりの値段</th>
+            <th class="col-xs-4">節約／辞めたい理由</th>
+            <th class="col-xs-2">更新</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= f.text_field :name %></td>
+            <td><%= f.text_field :price %></td>
+            <td><%= f.text_field :reason %></td>
+            <td><%= f.submit "追加", class: "btn btn-success" %></td>
+          </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+    <div class="row row-btn">
+      <div class="index-btn">
+        <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
+        <%= link_to "欲しいものを入力／変更する", wants_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
