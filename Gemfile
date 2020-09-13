@@ -68,3 +68,7 @@ gem 'font-awesome-sass'
 gem 'chartkick'
 gem 'groupdate'
 gem 'jquery-rails'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
