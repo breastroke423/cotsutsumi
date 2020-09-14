@@ -1,4 +1,15 @@
-目標達成おめでとうございます！！！
 
-<%= link_to "マイページ", mypage_path, class: "btn btn-default" %>
-<%= link_to "目標を追加／変更する", wants_path ,data: {"turbolinks" => false},class: "btn btn-default" %>
+<div class="container">
+  <div class="achievement-base">
+    <div class="row">
+      目標達成！<br>おめでとうございます！
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="index-btn">
+      <%= link_to "マイページ", mypage_path, class: "btn btn-default" %>
+      <%= link_to "目標を追加／変更する", wants_path ,data: {"turbolinks" => false},class: "btn btn-default" %>
+    </div>
+  </div>
+</div>

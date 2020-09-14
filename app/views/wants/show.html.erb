@@ -1,7 +1,20 @@
-<h2>欲しいものを買う</h2>
-
-  <%= @want.name %><br>
-  <%= @want.price %><br>
-  <%= @want.reason %><br>
-  登録日<%= @want.created_at %><br>
-        <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, params: {want_id: @want.id}} %>
+<div class="container">
+  <div class="want-base">
+  <div class="row">
+      <div class="col-xs-6">
+        <%= attachment_image_tag @want, :want_image, :fill, 60, 60, fallback: "want_no_image.jpg", size:'150x150' %>
+        <br>
+        <%= @want.name %>
+      </div>
+      <div class="col-xs-6">
+      <div class="want-info">
+        購入金額<br>
+        <%= @want.price.to_s(:delimited) %>円<br>
+        <%= @want.reason %><br>
+        登録日<br><%= @want.created_at.strftime("%Y年%m月%d日") %>
+      </div>
+      </div>
+      <%= button_to "購入する", {controller: 'wants', action: 'purchase'}, {method: :patch, :class => "btn btn-success",  params: {want_id: @want.id}} %>
+    </div>
+  </div>
+</div>
