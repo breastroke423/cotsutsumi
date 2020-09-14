@@ -24,6 +24,7 @@
   background-color: #eedcb3;
 }
 
+
 table {
   box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
   // border: dashed 2px #ffb03f;/*破線*/
@@ -39,6 +40,7 @@ table {
 header {
   height: 80px;
   background-color: #825745;
+  margin-bottom: 20px;
 }
 
 nav {
@@ -68,13 +70,17 @@ nav {
   background: #fffde8;
   box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
   border-radius: 9px;
-  table > thead > tr > th{
-    border-bottom: dashed 2px #ffb03f;
-  }
-  table > tbody > tr > td{
-    border-bottom: dashed 2px #ffb03f;
-  }
   margin: 20px auto;
+}
+
+
+.total-base {
+  background: #fffde8;
+  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  border: dashed 2px #ffb03f;/*破線*/
+  border-radius: 9px;
+  margin: 20px auto;
+  width: 90%;
 }
 
 footer {
@@ -83,6 +89,9 @@ footer {
   height: 50px;
   margin-top: 20px;
 }
+
+
+// 以下ボタンのレイアウト
 
 .btn {
     padding: 14px 24px;
@@ -129,6 +138,7 @@ footer {
 .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus {
     background: blue; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
     color: white; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    border-color: blue;
 }
 
 
@@ -147,8 +157,9 @@ footer {
 .btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover,
 .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus,
 .btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus {
-    background: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-    color: 好きな色; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    background: #CC0000; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: white; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    border-color: #CC0000;
 }
 
 
