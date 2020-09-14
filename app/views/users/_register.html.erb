@@ -56,7 +56,7 @@
               <% if want.is_deleted == "f" %>
               <tr>
                <td><div class="resize">
-                  <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "no_image.jpg" %><br><%= want.name %></div></td>
+                  <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %></div></td>
                   <td><%= want.price.to_s(:delimited) %>円</td>
                   <td><%= want.reason %></td>
                   <% if @user != current_user %>

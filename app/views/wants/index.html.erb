@@ -1,80 +1,81 @@
 <div class="container">
-<h2>目標を変更する</h2>
+  <h2>目標を変更する</h2>
+  <div class="index-base">
+    <div class="row">
+      <div class="table-border table-responsive">
 
-<div class="row table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="col-xs-2">イメージ</th>
+              <th class="col-xs-2">欲しいもの</th>
+              <th class="col-xs-2">金額(円)</th>
+              <th class="col-xs-3">理由</th>
+              <th class="col-xs-1">更新</th>
+              <th class="col-xs-1">削除</th>
+              <th class="col-xs-1">全体公開</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @wants.each do |want| %>
+            <tr>
+              <%= form_with model: want, local: true do |f| %>
+              <td><div class="resize"><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "want_no_image.jpg" %><br>
+                <%= f.attachment_field :want_image %></div></td>
+                <td><%= f.text_field :name %></td>
+                <td><%= f.text_field :price %></td>
+                <td><%= f.text_field :reason %></td>
+                <td><%= f.submit "←更新", class: "btn btn-success" %></td>
+                <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-danger" %></td>
+                <td>
+                  <div id="hide_<%= want.id %>">
+                    <%= render partial: 'wants/hide', locals:{ want: want } %>
+                  </div>
+                </td>
+                <% end %>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <h2>欲しいものを追加する</h2>
+    <div class="index-base">
+      <div class="row">
+        <div class="table-border table-responsive">
+          <%= form_with model: @want, local: true do |f| %>
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="col-xs-2">画像追加</th>
+                <th class="col-xs-3">欲しいもの</th>
+                <th class="col-xs-2">金額(円)</th>
+                <th class="col-xs-4">理由</th>
+                <th class="col-xs-1">追加</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label><%= f.attachment_field :want_image %></label>
+                </td>
+                <td><%= f.text_field :name %></td>
+                <td><%= f.text_field :price %></td>
+                <td><%= f.text_field :reason %></td>
+                <td><%= f.submit "←追加", class: "btn btn-success" %></td>
+              </tr>
+            </tbody>
+          </table>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th class="col-xs-2">イメージ</th>
-      <th class="col-xs-2">欲しいもの</th>
-      <th class="col-xs-2">金額</th>
-      <th class="col-xs-3">理由</th>
-      <th class="col-xs-1">更新</th>
-      <th class="col-xs-1">削除</th>
-      <th class="col-xs-1">全体公開</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @wants.each do |want| %>
-        <tr>
-            <%= form_with model: want, local: true do |f| %>
-          <td><%= attachment_image_tag want, :want_image, :fill, 60, 60, fallback: "no_image.jpg" %><br>
-            <%= f.attachment_field :want_image %></td>
-            <td><%= f.text_field :name %></td>
-            <td><%= f.text_field :price %></td>
-            <td><%= f.text_field :reason %></td>
-            <td><%= f.submit "←更新", class: "btn btn-success" %></td>
-            <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-danger" %></td>
-            <td>
-              <div id="hide_<%= want.id %>">
-                <%= render partial: 'wants/hide', locals:{ want: want } %>
-              </div>
-            </td>
-            <% end %>
-        </tr>
-    <% end %>
-    </tbody>
-</table>
-
-</div>
-  <h2>欲しいものを追加する</h2>
-
-<div class="row">
-  <%= form_with model: @want, local: true do |f| %>
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="col-xs-2"> </th>
-        <th class="col-xs-2">欲しいもの</th>
-        <th class="col-xs-2">金額</th>
-        <th class="col-xs-3">理由</th>
-        <th class="col-xs-1">追加</th>
-        <th class="col-xs-1"></th>
-        <th class="col-xs-1"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <label><%= f.attachment_field :want_image %></label>
-        </td>
-        <td><%= f.text_field :name %></td>
-        <td><%= f.text_field :price %></td>
-        <td><%= f.text_field :reason %></td>
-        <td><%= f.submit "←追加", class: "btn btn-success" %></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <% end %>
-</div>
-
-<div class="row row-btn">
-<div class="index-btn">
-  <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
-  <%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
-</div>
-</div>
-</div>
+    <div class="row row-btn">
+      <div class="index-btn">
+        <%= link_to "マイページ", mypage_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
+        <%= link_to "無駄遣いを入力／変更する", wastes_path, data: {"turbolinks" => false},  class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
