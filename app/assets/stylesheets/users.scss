@@ -42,32 +42,35 @@
 
 
 .profile {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   text-align: center;
+  width: 70%;
 }
+
 .profile-image {
   width: 100px;
   height: 100px;
   margin: 0 auto;
 }
-// プロフィール画像動かない
 .follow {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: left;
+  text-align: center;
   padding: 30px auto;
-  p{
-    .fix {
-      margin-top: 5px;
-    }
+  a {
+  color: black;
+  margin: 10px auto;
+  }
+  p {
+    margin: 0 auto;
   }
 }
 
 .saving {
   text-align:center;
+}
+
+.profile-info {
+  margin-right: -30px;
 }
 
 

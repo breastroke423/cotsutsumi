@@ -13,10 +13,11 @@
   <header>
     <div class="container">
       <nav  class="nav navbar-nav navbar-left">
-        <span><%= link_to root_path do %>
-          <!-- 画像入れたい、検討中 -->こつつみ
+        <div class="logo">
+          <%= link_to root_path do %>
+          <%= image_tag 'want_no_image.jpg', :size =>'90x65' %>
           <% end %>
-        </span>
+        </div>
       </nav>
       <nav class="nav navbar-nav navbar-right">
         <li><%= link_to "About", homes_about_path, class: "btn btn-default" %></li>
@@ -33,13 +34,13 @@
     </div>
   </header>
   <!-- /header -->
-    <div class="container">
+  <div class="container">
     <% if flash[:success] %>
-      <div class="flash">
-        <%= flash[:success] %>
-      </div>
-  <% end %>
+    <div class="flash">
+      <%= flash[:success] %>
     </div>
+    <% end %>
+  </div>
 
   <%= yield %>
 
