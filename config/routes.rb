@@ -5,11 +5,13 @@ patch 'wastes/count_up' => 'wastes#count_up'
 patch 'wastes/count_down' => 'wastes#count_down'
 patch 'wants/purchase' => 'wants#purchase'
 
-resources :users do
+resources :users, :except => :show do
+  get :search, on: :collection
   resource :relationships, only: [:create, :destroy]
   get :follows
   get :followers
 end
+
 
   put 'users/:id/hide' => 'users#hide', as:'users_hide'
   put 'wastes/:id/hide' => 'wastes#hide', as:'wastes_hide'
