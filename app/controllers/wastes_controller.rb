@@ -21,6 +21,7 @@ class WastesController < ApplicationController
     @waste = Waste.find(params[:waste])
     @waste.count = @waste.count + 1
     @waste.save
+    flash.now[:notice] = "すばらしい！！"
 
 # 部分テンプレート用
 @user = current_user
@@ -54,7 +55,7 @@ def count_down
   @waste = Waste.find(params[:waste])
   @waste.count = @waste.count - 1
   @waste.save
-
+  flash.now[:alert] = "今回はご褒美！"
 # 部分テンプレート用
 @user = current_user
 @wastes = Waste.where(user_id: @user.id)
