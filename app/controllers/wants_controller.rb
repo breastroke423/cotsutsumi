@@ -1,5 +1,5 @@
 class WantsController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @user = current_user
@@ -19,7 +19,8 @@ before_action :authenticate_user!
     if @want.save
       redirect_to wants_path
     else
-      render 'new'
+      @user = current_user
+      render 'index'
     end
   end
 
@@ -36,7 +37,8 @@ before_action :authenticate_user!
     if @want.update(want_params)
       redirect_to wants_path
     else
-      render 'edit'
+      @user = current_user
+      render 'index'
     end
   end
 

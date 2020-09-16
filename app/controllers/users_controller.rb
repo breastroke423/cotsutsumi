@@ -67,6 +67,14 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    if params[:nickname].present?
+      @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%")
+    else
+      @users = User.none
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:nickname, :profile_image, :introduction)

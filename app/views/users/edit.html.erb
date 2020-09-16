@@ -21,7 +21,7 @@
       <%= f.submit "プロフィールの更新", class: "btn btn-success"  %>
     </div>
     <%#= link_to "パスワードお忘れですか？", new_password_path(resource_name) %><br />
-    <div>
+    <div class="actions">
       <% if user_signed_in? && @user.id == current_user.id %>
       <%= link_to "退会する", users_hide_path(current_user), method: :put, "data-confirm" => "本当に退会しますか？", class: "btn btn-danger" %>
       <% end %>
