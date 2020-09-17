@@ -4,7 +4,7 @@ lock "~> 3.14.1"
 set :application, "cotsutsumi" # my_app_name → アプリケーション名
 set :repo_url, "git@github.com:breastroke423/cotsutsumi.git" # git@example.com:me/my_repo.git → GitHubに登録しているアプリのアドレス
 
-set :deploy_to, "/home/cotsutsumi"
+set :deploy_to, "/home/ec2-user/cotsutsumi"
 set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
 append :linked_dirs, "log", "public", "tmp"

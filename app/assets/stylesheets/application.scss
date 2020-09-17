@@ -120,6 +120,12 @@ h2 {
   text-align: center;
 }
 
+.img_prev:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1.01, 1.01);
+}
+
 
 // 以下ボタンのレイアウト
 
