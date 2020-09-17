@@ -13,6 +13,7 @@ class WastesController < ApplicationController
       redirect_to wastes_path
     else
       @user = current_user
+      flash.now[:alert] = "必要内容の入力を"
       render 'index'
     end
   end
@@ -108,6 +109,7 @@ end
 def hide_away
   @waste = Waste.find(params[:id])
   @waste.update(status: "2")
+  flash[:hide] = "削除しました"
   redirect_to wastes_path
 end
 

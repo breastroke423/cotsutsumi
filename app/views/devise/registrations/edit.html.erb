@@ -4,7 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <label class="control-label sr-only" for="inputEmail">プロフィール画像</label><br>
-  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %>
+  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", fallback: "no_image.jpg", onClick: "$('.img_field').click()", class: "user-edit-form img_prev" %>
 
   <div class="field">
     <%= f.label :ニックネーム %><br />
