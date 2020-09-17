@@ -20,6 +20,7 @@ class WantsController < ApplicationController
       redirect_to wants_path
     else
       @user = current_user
+      flash.now[:alert] = "必要内容の入力を"
       render 'index'
     end
   end
@@ -45,6 +46,7 @@ class WantsController < ApplicationController
   def destroy
     want = Want.find(params[:id])
     want.destroy
+    flash[:notice] = "削除しました"
     redirect_to wants_path
   end
 
