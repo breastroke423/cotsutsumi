@@ -26,16 +26,22 @@ class UsersController < ApplicationController
   def mypage
     @user = current_user
     @wastes = Waste.where(user_id: @user.id)
+
+# 自分自身の無駄遣い削減合計
     @user_total_price = 0
     @wastes.each do |waste|
       waste_total = waste.price * waste.count
       @user_total_price+=waste_total
     end
+
+# 現在の積みたて＝今使ってもいい額＝無駄遣い削減合計ー目標達成の購入額
     @user_difference_price = @user_total_price - @user.purchase_price
     @waste_count_all = 0
     @wastes.each do |waste|
       @waste_count_all += waste.count
     end
+
+# 全ユーザーの無駄遣い削減額
     @user_all = User.all
     @users_wastes_all = 0
     @user_all.each do |user|
@@ -44,6 +50,8 @@ class UsersController < ApplicationController
         @users_wastes_all+=waste_all_total
       end
     end
+
+# 全ユーザーの目標達成購入額
     @users_purchase_all = 0
     @user_all.each do |user|
       @users_purchase_all+=user.purchase_price
@@ -58,7 +66,7 @@ class UsersController < ApplicationController
     @users = current_user.followers
   end
 
-  def hide
+  def hide # 退会オプション、destroyにしないのは合計額が崩れるから
     @user = User.find(params[:id])
     @user.update(is_deleted: "t")
     # default = "f"
@@ -67,7 +75,8 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def search
+
+  def search # 検索用
     if params[:nickname].present?
       @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%")
     else

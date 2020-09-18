@@ -25,7 +25,8 @@ class WantsController < ApplicationController
     end
   end
 
-  def purchase
+
+  def purchase # 目標達成／購入のページ用
     @user = current_user
     @want = Want.find(params[:want_id])
     @user.purchase_price = @user.purchase_price + @want.price
@@ -50,6 +51,7 @@ class WantsController < ApplicationController
     redirect_to wants_path
   end
 
+# ↓全体表示させるかさせないか、のメソッド
   def hide
     @want = Want.find(params[:id])
     @want.update(is_deleted: "t")
