@@ -2,6 +2,8 @@
   <h2>目標を変更する</h2>
   <div class="index-base">
     <div class="row">
+
+      <!-- 欲しいもの一覧表示 -->
       <div class="table-border table-responsive">
         <% @wants.each_with_index do |want, i| %>
         <%= form_with model: want, local: true do |f| %>
@@ -28,68 +30,71 @@
               <td>
                 <%= f.file_field :want_image, class: "img_field", id: "img_field_#{i}", style: "display:none;" %>
                 <%= attachment_image_tag want, :want_image, fallback: "want_no_image.jpg", onClick: "$('#img_field_#{i}').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
-            </td>
-            <td><%= f.text_field :name %></td>
-            <td><%= f.text_field :price %></td>
-            <td><%= f.text_field :reason %></td>
-            <td><%= f.submit "←更新", class: "btn btn-success" %></td>
-            <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-danger" %></td>
-            <td>
-              <div id="hide_<%= want.id %>">
-                <%= render partial: 'wants/hide', locals:{ want: want } %>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-<h2>欲しいものを追加する</h2>
-<div class="index-base">
-  <div class="row">
-    <div class="table-border table-responsive">
-      <%= form_with model: @want, local: true do |f| %>
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="col-xs-2">画像追加</th>
-            <th class="col-xs-3">欲しいもの</th>
-            <th class="col-xs-2">金額(円)</th>
-            <th class="col-xs-4">理由</th>
-            <% if flash[:alert] %>
-            <th class="col-xs-1 alert">
-              <%= flash[:alert] %>
-            </th>
-            <% else %>
-            <th class="col-xs-1">追加</th>
-            <% end %>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label><%= f.file_field :want_image, class: "img_field", style: "display:none;" %>
-                <%= attachment_image_tag @want, :want_image, fallback: "want_no_image.jpg", onClick: "$('#img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %></label>
               </td>
               <td><%= f.text_field :name %></td>
               <td><%= f.text_field :price %></td>
               <td><%= f.text_field :reason %></td>
-              <td><%= f.submit "←追加", class: "btn btn-success" %></td>
+              <td><%= f.submit "←更新", class: "btn btn-success" %></td>
+              <td><%= link_to "削除", want_path(want), method: :delete, class: "btn btn-danger" %></td>
+              <td>
+                <div id="hide_<%= want.id %>">
+                  <%= render partial: 'wants/hide', locals:{ want: want } %>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
+        <% end %>
         <% end %>
       </div>
     </div>
   </div>
 
-  <div class="row row-btn">
-    <div class="index-btn">
-      <%= link_to "マイページ", mypage_path, class: "btn btn-default" %>
-      <%= link_to "無駄遣いを入力／変更する", wastes_path, class: "btn btn-default" %>
+  <!-- 欲しいもの追加 -->
+  <h2>欲しいものを追加する</h2>
+  <div class="index-base">
+    <div class="row">
+      <div class="table-border table-responsive">
+        <%= form_with model: @want, local: true do |f| %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="col-xs-2">画像追加</th>
+              <th class="col-xs-3">欲しいもの</th>
+              <th class="col-xs-2">金額(円)</th>
+              <th class="col-xs-4">理由</th>
+              <% if flash[:alert] %>
+              <th class="col-xs-1 alert">
+                <%= flash[:alert] %>
+              </th>
+              <% else %>
+              <th class="col-xs-1">追加</th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label><%= f.file_field :want_image, class: "img_field", style: "display:none;" %>
+                  <%= attachment_image_tag @want, :want_image, fallback: "want_no_image.jpg", onClick: "$('#img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %></label>
+                </td>
+                <td><%= f.text_field :name %></td>
+                <td><%= f.text_field :price %></td>
+                <td><%= f.text_field :reason %></td>
+                <td><%= f.submit "←追加", class: "btn btn-success" %></td>
+              </tr>
+            </tbody>
+          </table>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+<!-- 遷移ボタン -->
+    <div class="row row-btn">
+      <div class="index-btn">
+        <%= link_to "マイページ", mypage_path, class: "btn btn-default" %>
+        <%= link_to "無駄遣いを入力／変更する", wastes_path, class: "btn btn-default" %>
+      </div>
     </div>
   </div>
-</div>

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :wastes
   has_many :cheers, dependent: :destroy
   validates :nickname, presence: true, length: {maximum: 15}
-
+  validates :email, presence: true
 
   attachment :profile_image
 
