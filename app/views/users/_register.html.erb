@@ -15,19 +15,29 @@
   </div>
   <!-- 検索機能 -->
 
+  <!-- ユーザの一覧表示 -->
   <% @users.each do |user| %>
+  <!-- 退会していない人＝有効のみ表示 -->
   <% if user.is_deleted == "f" %>
   <div class="table-base">
     <div class="row">
       <div class="table-border table-responsive">
         <table class="table">
           <thead>
+                         <% if @user != current_user %>
             <tr valign="middle">
               <th class="col-xs-3">ユーザー</th>
               <th class="col-xs-3">通算節約金額</th>
               <th class="col-xs-4">意気込み</th>
               <th class="col-xs-2">フォロー</th>
             </tr>
+            <% else %>
+            <tr valign="middle">
+              <th class="col-xs-4">ユーザー</th>
+              <th class="col-xs-4">通算節約金額</th>
+              <th class="col-xs-4">意気込み</th>
+            </tr>
+            <% end %>
           </thead>
           <tbody>
             <tr valign="middle">
@@ -56,66 +66,49 @@
         </div>
       </div>
 
+<!-- 欲しいもののテーブル -->
       <div class="row">
         <div class="table-border table-responsive">
           <table class="table">
             <thead>
-              <tr>
-                <th class="col-xs-3">欲しいもの</th>
-                <th class="col-xs-3">金額</th>
-                <th class="col-xs-4">欲しい理由</th>
-                <th class="col-xs-2">応援！</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% user.wants.each do |want| %>
-              <% if want.is_deleted == "f" %>
-              <tr>
-               <td><div class="resize">
-                <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %></div></td>
-                <td><%= want.price.to_s(:delimited) %>円</td>
-                <td><%= want.reason %></td>
-                <% if @user != current_user %>
-                <td>
-                  <div id="cheers_buttons_<%= want.id %>">
-                    <%= render partial: 'wants/cheer', locals:{ want: want } %>
-                  </div>
-                  <div class="contents">
-                    <%= form_with model: want, method: :post, url: wants_path, remote: true do |f| %>
-                    <%= f.hidden_field :want_image_id, value: want.want_image_id %>
-                    <%= f.hidden_field :name, value: want.name %>
-                    <%= f.hidden_field :price, value: want.price %>
-                    <%= f.submit "私も欲しい！", class: "btn btn-default" %>
-                    <% end %>
-                  </div>
-                </td>
-                <% end %>
-              </tr>
-              <% end %>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="row">
-       <div class="table-border table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="col-xs-3">無駄遣い</th>
+             <% if @user != current_user %>
+             <tr>
+              <th class="col-xs-3">欲しいもの</th>
               <th class="col-xs-3">金額</th>
-              <th class="col-xs-4">無駄に思っている理由</th>
-              <th class="col-xs-2"></th>
+              <th class="col-xs-4">欲しい理由</th>
+              <th class="col-xs-2">応援！</th>
             </tr>
+            <% else %>
+            <tr>
+              <th class="col-xs-4">欲しいもの</th>
+              <th class="col-xs-4">金額</th>
+              <th class="col-xs-4">欲しい理由</th>
+            </tr>
+            <% end %>
           </thead>
           <tbody>
-            <% user.wastes.each do |waste| %>
-            <% if waste.status == "0" %>
+            <% user.wants.each_with_index do |want, i| %>
+            <% if want.is_deleted == "f" %>
             <tr>
-              <td><%= waste.name %></td>
-              <td><%= waste.price.to_s(:delimited) %>円</td>
-              <td><%= waste.reason %></td>
-              <td></td>
+             <td><div class="resize">
+              <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %></div></td>
+              <td><%= want.price.to_s(:delimited) %>円</td>
+              <td><%= want.reason %></td>
+              <% if @user != current_user %>
+              <td>
+                <div id="cheers_buttons_<%= want.id %>">
+                  <%= render partial: 'wants/cheer', locals:{ want: want } %>
+                </div>
+                <div class="contents">
+                  <%= form_with model: want, method: :post, url: wants_path, remote: true do |f| %>
+                  <%= f.hidden_field :want_image_id, value: want.want_image_id %>
+                  <%= f.hidden_field :name, value: want.name %>
+                  <%= f.hidden_field :price, value: want.price %>
+                  <%= f.submit "私も欲しい！", id: "btn_#{i}", onClick: "$('#btn_#{i}').click()", class: "btn btn-default" %>
+                  <% end %>
+                </div>
+              </td>
+              <% end %>
             </tr>
             <% end %>
             <% end %>
@@ -123,7 +116,51 @@
         </table>
       </div>
     </div>
+
+    <!-- 無駄遣いのテーブル -->
+    <div class="row">
+     <div class="table-border table-responsive">
+      <table class="table">
+        <thead>
+          <% if @user != current_user %>
+          <tr>
+            <th class="col-xs-3">無駄遣い</th>
+            <th class="col-xs-3">金額</th>
+            <th class="col-xs-4">無駄に思っている理由</th>
+            <th class="col-xs-2"></th>
+          </tr>
+          <% else %>
+          <tr>
+            <th class="col-xs-4">無駄遣い</th>
+            <th class="col-xs-4">金額</th>
+            <th class="col-xs-4">無駄に思っている理由</th>
+          </tr>
+          <% end %>
+        </thead>
+        <tbody>
+          <% user.wastes.each do |waste| %>
+          <% if waste.status == "0" %>
+          <% if @user != current_user %>
+          <tr>
+            <td><%= waste.name %></td>
+            <td><%= waste.price.to_s(:delimited) %>円</td>
+            <td><%= waste.reason %></td>
+            <td></td>
+          </tr>
+          <% else %>
+          <tr>
+            <td><%= waste.name %></td>
+            <td><%= waste.price.to_s(:delimited) %>円</td>
+            <td><%= waste.reason %></td>
+          </tr>
+          <% end %>
+          <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <% end %>
-  <% end %>
+</div>
+<% end %>
+<% end %>
 </div>
