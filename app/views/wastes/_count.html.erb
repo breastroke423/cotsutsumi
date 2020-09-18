@@ -1,4 +1,4 @@
-
+<!-- 合計額計算している -->
 <div class="row total-base">
   <div class="col-xs-6 saving">
     <h3>通算ガマン</h3>
@@ -14,15 +14,15 @@
   </div>
 </div>
 
-
+<!-- 無駄遣い一覧表示、ボタンでcount up/down -->
 <div class="row mytable">
   <div class="table-border table-responsive">
     <table class="table">
       <thead>
         <tr>
-          <th></th>
           <th>無駄遣い</th>
           <th>金額</th>
+          <th>節約目的</th>
           <th>通算ガマン</th>
           <th>本日のガマン</th>
           <% if flash[:notice] %>
@@ -43,9 +43,9 @@
       <tr>
         <% user.wastes.each do |waste| %>
         <% if waste.status == "0" %>
-        <td></td>
         <td><%= waste.name %></td>
         <td><%= waste.price.to_s(:delimited) %>円</td>
+        <td><%= waste.reason %></td>
         <td><%= (waste.price * waste.count).to_s(:delimited) %>円／<%= waste.count %>回</td>
         <td><%= button_to "ガマン！", {controller: 'wastes', action: 'count_up'}, {method: :patch, :class => "btn btn-success", params: {waste: waste.id}, remote: true} %>
         </td>

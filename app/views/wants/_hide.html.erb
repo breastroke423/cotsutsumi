@@ -1,3 +1,4 @@
+<!-- 全体表示させるかどうかのボタン -->
 <% if want.is_deleted == "f" %>
   <%= link_to "しない", wants_hide_path(want), method: :put,remote: true, class: "btn btn-danger" %>
 <% else %>
