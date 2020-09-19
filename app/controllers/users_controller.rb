@@ -68,10 +68,10 @@ class UsersController < ApplicationController
 
   def hide # 退会オプション、destroyにしないのは合計額が崩れるから
     @user = User.find(params[:id])
-    @user.update(is_deleted: "t")
+    @user.update(is_deleted: true)
     # default = "f"
     reset_session
-    flash[:notice] = "買いたいものができたときのご利用お待ちしております"
+    flash[:thanks] = "買いたいものができたときのご利用お待ちしております"
     redirect_to root_path
   end
 

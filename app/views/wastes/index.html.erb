@@ -25,16 +25,16 @@
           </thead>
           <tbody>
             <% @user.wastes.each do |waste| %>
-            <% if waste.status != "2" %>
+            <% if waste.status != 2 %>
             <tr>
               <td><%= waste.name %></td>
               <td><%= waste.price.to_s(:delimited) %>円</td>
               <td><%= waste.reason %></td>
-              <% if waste.status == "0" %>
+              <% if waste.status == 0 %>
               <td><%= link_to "マイページから隠す", wastes_hide_path(waste),method: :put, class: "btn btn-success"  %>
               </td>
               <td><%= link_to "無駄遣いから削除", wastes_hide_away_path(waste),method: :put, class: "btn btn-danger"  %></td>
-              <% elsif waste.status == "1" %>
+              <% elsif waste.status == 1 %>
               <td><%= link_to "マイページに戻す", wastes_reveal_path(waste),method: :put, class: "btn btn-success"  %>
               </td>
               <td>

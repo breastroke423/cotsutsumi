@@ -13,9 +13,9 @@
               <th class="col-xs-2">金額(円)</th>
               <th class="col-xs-3">理由</th>
               <th class="col-xs-1">更新</th>
-              <% if flash[:notice] %>
+              <% if flash[:destroy] %>
               <th class="col-xs-1 alert">
-                <%= flash[:notice] %>
+                <%= flash[:destroy] %>
               </th>
               <% else %>
               <th class="col-xs-1">削除</th>

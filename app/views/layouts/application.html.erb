@@ -36,7 +36,9 @@
   </header>
   <!-- /header -->
   </div>
-
+<% if flash[:thanks] %>
+  <%= flash[:thanks] %>
+<% end %>
   <%= yield %>
 
   <footer>

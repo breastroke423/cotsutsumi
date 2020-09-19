@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_054316) do
+ActiveRecord::Schema.define(version: 2020_09_19_110920) do
 
   create_table "cheers", force: :cascade do |t|
     t.integer "user_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_09_10_054316) do
 
   create_table "users", force: :cascade do |t|
     t.string "nickname"
-    t.string "is_deleted", default: "f"
+    t.boolean "is_deleted", default: false, null: false
     t.text "introduction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_10_054316) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.string "want_image_id"
-    t.string "is_deleted", default: "f"
+    t.integer "status", default: 0
   end
 
   create_table "wastes", force: :cascade do |t|
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2020_09_10_054316) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "count", default: 0
-    t.string "status", default: "0"
+    t.integer "status", default: 0
   end
 
 end
