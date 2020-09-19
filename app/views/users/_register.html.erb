@@ -18,7 +18,7 @@
   <!-- ユーザの一覧表示 -->
   <% @users.each do |user| %>
   <!-- 退会していない人＝有効のみ表示 -->
-  <% if user.is_deleted == "f" %>
+  <% if user.is_deleted == false %>
   <div class="table-base">
     <div class="row">
       <div class="table-border table-responsive">
@@ -88,7 +88,7 @@
           </thead>
           <tbody class="window_btn">
             <% user.wants.each_with_index do |want, i| %>
-            <% if want.is_deleted == "f" %>
+            <% if want.status == 0 %>
             <tr>
              <td><div class="resize">
               <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %></div></td>
@@ -140,7 +140,7 @@
         </thead>
         <tbody>
           <% user.wastes.each do |waste| %>
-          <% if waste.status == "0" %>
+          <% if waste.status == 0 %>
           <% if @user != current_user %>
           <tr>
             <td><%= waste.name %></td>
