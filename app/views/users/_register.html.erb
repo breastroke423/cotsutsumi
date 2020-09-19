@@ -18,7 +18,7 @@
   <!-- ユーザの一覧表示 -->
   <% @users.each do |user| %>
   <!-- 退会していない人＝有効のみ表示 -->
-  <% if user.is_deleted == "f" %>
+  <% if user.is_deleted == false %>
   <div class="table-base">
     <div class="row">
       <div class="table-border table-responsive">
@@ -86,9 +86,9 @@
             </tr>
             <% end %>
           </thead>
-          <tbody>
+          <tbody class="window_btn">
             <% user.wants.each_with_index do |want, i| %>
-            <% if want.is_deleted == "f" %>
+            <% if want.status == 0 %>
             <tr>
              <td><div class="resize">
               <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %></div></td>
@@ -99,12 +99,13 @@
                 <div id="cheers_buttons_<%= want.id %>">
                   <%= render partial: 'wants/cheer', locals:{ want: want } %>
                 </div>
-                <div class="contents">
+                <div id="btn_<%= user.id %>_<%= i %>", class="contents">
                   <%= form_with model: want, method: :post, url: wants_path, remote: true do |f| %>
                   <%= f.hidden_field :want_image_id, value: want.want_image_id %>
                   <%= f.hidden_field :name, value: want.name %>
                   <%= f.hidden_field :price, value: want.price %>
-                  <%= f.submit "私も欲しい！", id: "btn_#{i}", onClick: "$('#btn_#{i}').click()", class: "btn btn-default" %>
+                  <%= f.hidden_field :row_number, value: "#{user.id}_#{i}" %>
+                  <%= f.submit "私も欲しい！", class: "btn btn-default" %>
                   <% end %>
                 </div>
               </td>
@@ -139,7 +140,7 @@
         </thead>
         <tbody>
           <% user.wastes.each do |waste| %>
-          <% if waste.status == "0" %>
+          <% if waste.status == 0 %>
           <% if @user != current_user %>
           <tr>
             <td><%= waste.name %></td>

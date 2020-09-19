@@ -25,13 +25,13 @@
           <th>節約目的</th>
           <th>通算ガマン</th>
           <th>本日のガマン</th>
-          <% if flash[:notice] %>
+          <% if flash[:gain] %>
           <th class="notice">
-            <%= flash[:notice] %>
+            <%= flash[:gain] %>
           </th>
-          <% elsif flash[:alert] %>
+          <% elsif flash[:lose] %>
           <th class="alert">
-            <%= flash[:alert] %>
+            <%= flash[:lose] %>
           </th>
           <% else %>
           <th></th>
@@ -42,7 +42,7 @@
     <tbody>
       <tr>
         <% user.wastes.each do |waste| %>
-        <% if waste.status == "0" %>
+        <% if waste.status == 0 %>
         <td><%= waste.name %></td>
         <td><%= waste.price.to_s(:delimited) %>円</td>
         <td><%= waste.reason %></td>

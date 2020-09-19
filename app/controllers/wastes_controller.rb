@@ -22,7 +22,7 @@ class WastesController < ApplicationController
     @waste = Waste.find(params[:waste])
     @waste.count = @waste.count + 1
     @waste.save
-    flash.now[:notice] = "すばらしい！！"
+    flash.now[:gain] = "すばらしい！！"
 
 # 〜〜部分テンプレート用〜〜
 @user = current_user
@@ -65,7 +65,7 @@ def count_down
   @waste = Waste.find(params[:waste])
   @waste.count = @waste.count - 1
   @waste.save
-  flash.now[:alert] = "今回はご褒美！"
+  flash.now[:lose] = "今回はご褒美！"
 
 # 〜〜部分テンプレート用〜〜
 @user = current_user
@@ -96,6 +96,7 @@ end
 end
 
 # 全ユーザーの目標達成購入額@users_purchase_all = 0
+@users_purchase_all = 0
 @user_all.each do |user|
   @users_purchase_all+=user.purchase_price
 end
@@ -116,19 +117,19 @@ end
 # ↓全体表示させるかさせないか削除してしまうか
 def hide
   @waste = Waste.find(params[:id])
-  @waste.update(status: "1")
+  @waste.update(status: 1)
   redirect_to wastes_path
 end
 
 def reveal
   @waste = Waste.find(params[:id])
-  @waste.update(status: "0")
+  @waste.update(status: 0)
   redirect_to wastes_path
 end
 
 def hide_away
   @waste = Waste.find(params[:id])
-  @waste.update(status: "2")
+  @waste.update(status: 2)
   flash[:hide] = "削除しました"
   redirect_to wastes_path
 end
