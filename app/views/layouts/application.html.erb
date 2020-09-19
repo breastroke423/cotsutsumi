@@ -9,7 +9,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body><!-- /header -->
+<body>
+  <!-- /header -->
   <header>
     <div class="container">
       <nav  class="nav navbar-nav navbar-left">
@@ -34,12 +35,6 @@
     </div>
   </header>
   <!-- /header -->
-  <div class="container">
-    <% if flash[:success] %>
-    <div class="flash">
-      <%= flash[:success] %>
-    </div>
-    <% end %>
   </div>
 
   <%= yield %>

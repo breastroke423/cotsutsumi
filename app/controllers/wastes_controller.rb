@@ -24,19 +24,25 @@ class WastesController < ApplicationController
     @waste.save
     flash.now[:notice] = "すばらしい！！"
 
-# 部分テンプレート用
+# 〜〜部分テンプレート用〜〜
 @user = current_user
 @wastes = Waste.where(user_id: @user.id)
+
+# 自分自身の無駄遣い削減合計
 @user_total_price = 0
 @wastes.each do |waste|
   waste_total = waste.price * waste.count
   @user_total_price+=waste_total
 end
+
+# 現在の積みたて＝今使ってもいい額＝無駄遣い削減合計ー目標達成の購入額
 @user_difference_price = @user_total_price - @user.purchase_price
 @waste_count_all = 0
 @wastes.each do |waste|
   @waste_count_all += waste.count
 end
+
+# 全ユーザーの無駄遣い削減額
 @user_all = User.all
 @users_wastes_all = 0
 @user_all.each do |user|
@@ -45,10 +51,13 @@ end
     @users_wastes_all+=waste_all_total
   end
 end
+
+# 全ユーザーの目標達成購入額
 @users_purchase_all = 0
 @user_all.each do |user|
   @users_purchase_all+=user.purchase_price
 end
+# 〜〜部分テンプレート用〜〜
 end
 
 
@@ -57,19 +66,26 @@ def count_down
   @waste.count = @waste.count - 1
   @waste.save
   flash.now[:alert] = "今回はご褒美！"
-# 部分テンプレート用
+
+# 〜〜部分テンプレート用〜〜
 @user = current_user
 @wastes = Waste.where(user_id: @user.id)
+
+# 自分自身の無駄遣い削減合計
 @user_total_price = 0
 @wastes.each do |waste|
   waste_total = waste.price * waste.count
   @user_total_price+=waste_total
 end
+
+# 現在の積みたて＝今使ってもいい額＝無駄遣い削減合計ー目標達成の購入額
 @user_difference_price = @user_total_price - @user.purchase_price
 @waste_count_all = 0
 @wastes.each do |waste|
   @waste_count_all += waste.count
 end
+
+# 全ユーザーの無駄遣い削減額
 @user_all = User.all
 @users_wastes_all = 0
 @user_all.each do |user|
@@ -78,11 +94,14 @@ end
     @users_wastes_all+=waste_all_total
   end
 end
-@users_purchase_all = 0
+
+# 全ユーザーの目標達成購入額@users_purchase_all = 0
 @user_all.each do |user|
   @users_purchase_all+=user.purchase_price
 end
+# 〜〜部分テンプレート用〜〜
 end
+
 
 def update
   @waste = Waste.find(params[:id])
@@ -94,6 +113,7 @@ def update
   end
 end
 
+# ↓全体表示させるかさせないか削除してしまうか
 def hide
   @waste = Waste.find(params[:id])
   @waste.update(status: "1")

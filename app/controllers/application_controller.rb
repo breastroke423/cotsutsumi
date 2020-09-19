@@ -4,6 +4,7 @@ before_action :configure_permitted_parameters , if: :devise_controller?
   protected
 
   def after_sign_in_path_for(resource)
+    # sign_upからの時だけリンク先を分けるようにする
     if request.referer&.include?("/users/sign_up")
       wants_path
     else

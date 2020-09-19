@@ -7,6 +7,7 @@ class HomesController < ApplicationController
       @users = User.all
     end
 
+# 特定のユーザーの無駄遣いの合計を計算
     @wastes = Waste.all
     @user_total_price = 0
     @wastes.each do |waste|
@@ -14,6 +15,7 @@ class HomesController < ApplicationController
       @user_total_price+=waste_total
     end
 
+# 全ユーザーの無駄遣いの合計を求める
     @user_all = User.all
     @users_wastes_all = 0
     @user_all.each do |user|
@@ -23,6 +25,7 @@ class HomesController < ApplicationController
       end
     end
 
+# 全ユーザーの目標達成額を計算する
     @users_purchase_all = 0
     @user_all.each do |user|
       @users_purchase_all+=user.purchase_price

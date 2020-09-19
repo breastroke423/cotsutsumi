@@ -9,6 +9,7 @@
         </div>
       </div>
 
+<!-- プロフィール表示 -->
       <div class="col-xs-6">
         <div class="follow">
           <div>
@@ -29,10 +30,12 @@
     </div>
   </div>
 
+<!-- 無駄遣いを管理するテーブル、ボタンと合計額、グラフを表示する部分テンプレート -->
 <div id="count">
 <%= render partial: 'wastes/count', locals: { user_total_price: @user_total_price, user_difference_price: @user_difference_price, users_wastes_all: @users_wastes_all, users_purchase_all: @users_purchase_all, user: @user,waste_count_all: @waste_count_all } %>
 </div>
 
+<!-- 遷移ボタン -->
    <div class="row index-btn">
     <%= link_to "目標変更", wants_path, class: "btn btn-default" %>
   </div>
