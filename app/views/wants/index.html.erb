@@ -5,8 +5,6 @@
 
       <!-- 欲しいもの一覧表示 -->
       <div class="table-border table-responsive">
-        <% @wants.each_with_index do |want, i| %>
-        <%= form_with model: want, local: true do |f| %>
         <table class="table">
           <thead>
             <tr>
@@ -26,10 +24,13 @@
             </tr>
           </thead>
           <tbody>
+            <% @wants.each_with_index do |want, i| %>
+            <%= form_with model: want, local: true do |f| %>
+
             <tr>
               <td>
                 <%= f.file_field :want_image, class: "img_field", id: "img_field_#{i}", style: "display:none;" %>
-                <%= attachment_image_tag want, :want_image, fallback: "want_no_image.jpg", onClick: "$('#img_field_#{i}').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
+                <%= attachment_image_tag want, :want_image, :fill, 80, 80, fallback: "want_no_image.jpg", onClick: "$('#img_field_#{i}').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
               </td>
               <td><%= f.text_field :name %></td>
               <td><%= f.text_field :price %></td>
@@ -43,9 +44,9 @@
               </td>
             </tr>
           </tbody>
+          <% end %>
+          <% end %>
         </table>
-        <% end %>
-        <% end %>
       </div>
     </div>
   </div>
@@ -90,7 +91,7 @@
       </div>
     </div>
 
-<!-- 遷移ボタン -->
+    <!-- 遷移ボタン -->
     <div class="row row-btn">
       <div class="index-btn">
         <%= link_to "マイページ", mypage_path, class: "btn btn-default" %>

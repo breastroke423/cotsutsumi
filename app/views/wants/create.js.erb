@@ -1,0 +1,24 @@
+// $(document).ready ->
+  // $(document).on("ajax:success", (event) ->
+  //   [data, status, xhr] = event.detail
+  //   $("btn_<%= @row_number %>").append xhr.responseText
+  // ).on "ajax:error", (event) ->
+  //   $("#new_article").append "<p>ERROR</p>"
+
+
+  // var forms = document.querySelectorAll(".window_btn")
+  // var form = document.querySelector(".window_btn")
+  // // forms.forEach(form => {
+  //   form.addEventListener('ajax:success', function(event) {
+  //     alert("追加しました！");
+  //   })
+  // })
+
+
+  var el = document.getElementById("btn_<%= @row_number %>")
+  el.addEventListener('ajax:success', function(event) {
+    var btn = document.querySelector("#btn_<%= @row_number %> input[type='submit']")
+    btn.removeAttribute("data-disable-with")
+    btn.value = '追加完了！'
+
+})
