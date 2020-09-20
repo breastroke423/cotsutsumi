@@ -44,8 +44,17 @@
 .profile {
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  font-size: 17px;
+  width: 60%;
+  height: 100%;
+  p {
+    font-size: 20px;
+  }
+  .intro {
+    p {
+      margin-top: 40px;
+    }
+  }
+  vertical-align: center;
 }
 
 .profile-image {
@@ -75,6 +84,8 @@
     margin: 10px auto;
   }
   }
+
+
 
 
 .saving {

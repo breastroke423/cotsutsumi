@@ -2,12 +2,13 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:update, :edit, :achievement, :mypage, :follows, :followers, :hide]
 
   def index
+  # ランダム表示
     if user_signed_in?
-      @users = User.where.not(id: current_user.id)
+      @users = User.where.not(id: current_user.id).shuffle
     else
-      @users = User.all
+      @users = User.all.shuffle
     end
-    @want = Want.new
+      @want = Want.new
   end
 
   def update

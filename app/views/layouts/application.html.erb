@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div id="wrapper">
   <!-- /header -->
   <header>
     <div class="container">
@@ -34,8 +35,13 @@
       </nav>
     </div>
   </header>
+
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="k6npIRab"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+<%= render "layouts/share_btn" %>
   <!-- /header -->
-  </div>
 <% if flash[:thanks] %>
   <%= flash[:thanks] %>
 <% end %>
@@ -46,5 +52,6 @@
       <p>CopyRight Cotsutsumi</p>
     </div>
   </footer>
+</div>
 </body>
 </html>
