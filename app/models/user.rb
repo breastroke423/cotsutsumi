@@ -6,8 +6,9 @@ class User < ApplicationRecord
   has_many :wants
   has_many :wastes
   has_many :cheers, dependent: :destroy
-  validates :nickname, presence: true, length: {maximum: 15}
+  validates :nickname, presence: true, length: {maximum: 10}
   validates :email, presence: true
+  validates :introduction, length: {maximum: 20}
 
   attachment :profile_image
 
