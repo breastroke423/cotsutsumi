@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_110920) do
+ActiveRecord::Schema.define(version: 2020_09_21_093543) do
 
   create_table "cheers", force: :cascade do |t|
     t.integer "user_id"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2020_09_19_110920) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer "count", default: 0
     t.integer "purchase_price", default: 0
     t.string "profile_image_id"
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -48,7 +47,6 @@ ActiveRecord::Schema.define(version: 2020_09_19_110920) do
     t.string "name"
     t.integer "price"
     t.text "reason"
-    t.integer "count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
