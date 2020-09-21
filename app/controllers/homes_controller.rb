@@ -2,9 +2,9 @@ class HomesController < ApplicationController
 
   def top
     if user_signed_in?
-      @users = User.where.not(id: current_user.id)
+      @users = User.where.not(id: current_user.id).sample(3)
     else
-      @users = User.all
+      @users = User.all.sample(3)
     end
 
 # 特定のユーザーの無駄遣いの合計を計算
