@@ -76,7 +76,6 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-
   def search # 検索用
     if params[:nickname].present?
       @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%")
