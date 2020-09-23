@@ -7,9 +7,23 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta property="og:url"           content="https://cotsutsumi.work" />
+  <meta property="og:type"          content="website" />
+<meta property="og:title"         content="Your Website Title" />
+<meta property="og:description"   content="Your description" />
+<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 </head>
 
 <body>
+
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="cnjnh5d7"></script>
+
+
+<div class="fb-share-button" data-href="https://cotsutsumi.work" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcotsutsumi.work%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+
   <div id="wrapper">
     <!-- /header -->
     <div class="head-group">
@@ -40,8 +54,6 @@
       </header>
       <div class="container">
         <div class="row">
-          <div id="fb-root"></div>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="k6npIRab"></script>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
           <%= render "layouts/share_btn" %>
