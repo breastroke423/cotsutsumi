@@ -164,5 +164,9 @@
 </div>
 <% end %>
 <% end %>
-<%= paginate @users %>
+
+<% unless request.path == '/' %>
+  <%= paginate @users %>
+<% end %>
+
 </div>
