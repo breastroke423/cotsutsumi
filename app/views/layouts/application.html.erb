@@ -10,55 +10,63 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <!-- /header -->
-  <div class="head-group">
-  <header>
-    <div class="container">
-      <div class="row">
-      <nav  class="nav navbar-nav navbar-left">
-        <div class="logo">
-          <%= link_to root_path do %>
-          <%= image_tag 'want_no_image.jpg', :size =>'90x65' %>
-          <% end %>
+  <div id="wrapper">
+    <!-- /header -->
+    <div class="head-group">
+      <header>
+        <div class="container">
+          <div class="row">
+            <nav  class="nav navbar-nav navbar-left">
+              <div class="logo">
+                <%= link_to root_path do %>
+                <%= image_tag 'want_no_image.jpg', :size =>'90x65' %>
+                <% end %>
+              </div>
+            </nav>
+            <nav class="nav navbar-nav navbar-right">
+              <li><%= link_to "About", homes_about_path, class: "btn btn-default" %></li>
+              <% if user_signed_in? %>
+              <li><%= link_to "マイページ", mypage_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
+              <% else %>
+              <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
+              <li><%= link_to "私もガマンする／新規登録", new_user_registration_path, class: "btn btn-default" %></li>
+              <li><%= link_to "今日のガマン入力／ログイン", new_user_session_path, class: "btn btn-default" %></li>
+              <% end %>
+            </nav>
+          </div>
         </div>
-      </nav>
-      <nav class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", homes_about_path, class: "btn btn-default" %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "マイページ", mypage_path, class: "btn btn-default" %></li>
-        <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
-        <% else %>
-        <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
-        <li><%= link_to "私もガマンする／新規登録", new_user_registration_path, class: "btn btn-default" %></li>
-        <li><%= link_to "今日のガマン入力／ログイン", new_user_session_path, class: "btn btn-default" %></li>
-        <% end %>
-      </nav>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="k6npIRab"></script>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+          <%= render "layouts/share_btn" %>
+        </div>
+      </div>
     </div>
-  </div>
-  </header>
-  <div class="container">
-<div class="row">
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="k6npIRab"></script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-<%= render "layouts/share_btn" %>
-</div>
-</div>
-</div>
-  <!-- /header -->
-<% if flash[:thanks] %>
-  <%= flash[:thanks] %>
-<% end %>
-  <%= yield %>
+    <!-- /header -->
 
-  <footer>
-    <div>
-      <p>CopyRight Cotsutsumi</p>
-    </div>
-  </footer>
-</div>
+    <% if flash[:thanks] %>
+      <div class="container">
+        <div class="row">
+          <div class="thanks top-base">
+            <%= flash[:thanks] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <footer>
+      <div>
+        <p>CopyRight Cotsutsumi</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
