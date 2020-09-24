@@ -165,8 +165,14 @@
 <% end %>
 <% end %>
 
-  <% unless request.path == '/' %>
-  <%= paginate @users %>
-  <% end %>
+
+<% if request.path.include?("follows" || "followers") %>
+<div class="row pagination-btn">
+  <div>
+    <%= paginate @users %>
+  </div>
+</div>
+<% else %>
+<% end %>
 
 </div>
