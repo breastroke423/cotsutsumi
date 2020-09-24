@@ -157,7 +157,15 @@ h2 {
   transform: scale(1.01, 1.01);
 }
 
-
+.table-heading {
+  display: flex;
+  text-align: bottom;
+align-items: flex-end;
+  h4 {
+    font-size: 13px;
+    margin-left: 30px;
+  }
+}
 
 // 以下ボタンのレイアウト
 
