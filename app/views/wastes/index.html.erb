@@ -1,5 +1,8 @@
 <div class="container">
-  <h2>無駄遣いを変更する</h2>
+  <div class="table-heading">
+    <h2>無駄遣いを変更する</h2>
+    <h4>(ガマンボタンや積み立ての確認はマイページ)</h4>
+  </div>
   <div class="index-base">
     <div class="row">
 
@@ -13,13 +16,13 @@
               <th class="col-xs-3">理由</th>
               <th class="col-xs-2">マイページに表示</th>
 
-                <% if flash[:hide] %>
-                <th class="col-xs-2 alert">
-                  <%= flash[:hide] %>
-                </th>
-                <% else %>
-                <th class="col-xs-2">削除</th>
-                <% end %>
+              <% if flash[:hide] %>
+              <th class="col-xs-2 alert">
+                <%= flash[:hide] %>
+              </th>
+              <% else %>
+              <th class="col-xs-2">削除</th>
+              <% end %>
 
             </tr>
           </thead>
