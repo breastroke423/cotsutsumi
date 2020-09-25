@@ -1,2 +1,16 @@
 <!-- ユーザー一覧表示、ログイン前後どう表示させるかはregister内で条件分けしている -->
+<div class="container">
+  <div class="row">
+    <div class="table-heading">
+      <h2>ユーザー一覧</h2><h4>ランダムで7件表示</h4>
+    </div>
+  </div>
+</div>
 <%= render "users/register" %>
+<div class="container">
+  <div class="row random">
+    <div>
+      <%= link_to "他のユーザーも確認する", users_path, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>
