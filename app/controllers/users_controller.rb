@@ -4,11 +4,9 @@ class UsersController < ApplicationController
   def index
   # ランダム表示
     if user_signed_in?
-      @users = User.where.not(id: current_user.id).shuffle
-      @users = User.page(params[:page]).per(6)
+      @users = User.where(is_deleted: false).where.not(id: current_user.id).sample(7)
     else
-      @users = User.all.shuffle
-      @users = User.page(params[:page]).per(6)
+      @users = User.where(is_deleted: false).sample(7)
     end
       @want = Want.new
   end
@@ -62,13 +60,11 @@ class UsersController < ApplicationController
   end
 
   def follows
-    @users = current_user.followings
-    @users = User.page(params[:page]).per(5)
+    @users = current_user.followings.where(is_deleted: false).page(params[:page]).per(5)
   end
 
   def followers
-    @users = current_user.followers
-    @users = User.page(params[:page]).per(5)
+    @users = current_user.followers.where(is_deleted: false).page(params[:page]).per(5)
   end
 
   def hide # 退会オプション、destroyにしないのは合計額が崩れるから
@@ -82,11 +78,9 @@ class UsersController < ApplicationController
 
   def search # 検索用
     if params[:nickname].present?
-      @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%")
-      @users = User.page(params[:page]).per(5)
+      @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%").page(params[:page]).per(5)
     else
-      @users = User.none
-      @users = User.page(params[:page]).per(5)
+      @users = User.none.page(params[:page]).per(5)
     end
   end
 
