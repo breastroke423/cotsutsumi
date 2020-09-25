@@ -118,7 +118,12 @@
   margin-bottom: 10px;
 }
 
-.pagination-btn {
+.pagination-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.random {
   display: flex;
   justify-content: center;
 }
