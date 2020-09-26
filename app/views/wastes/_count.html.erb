@@ -80,7 +80,7 @@
             <% user.wants.each do |want| %>
             <td><%= want.cheers.count %><i class="fa fa-child" aria-hidden="true" style="color:red;"></i></td>
             <td><div class="resize">
-              <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg" %><br><%= want.name %>
+              <%= attachment_image_tag want, :want_image, :fill, 45, 45, fallback: "want_no_image.jpg", size:'45x45' %><br><%= want.name %>
             </div></td>
             <td><%= want.price.to_s(:delimited) %>円</td>
             <td><%= want.reason %></td>

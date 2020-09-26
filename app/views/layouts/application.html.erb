@@ -12,6 +12,7 @@
   <meta property="og:title"         content="こつつみ" />
   <meta property="og:description"   content="目標／目的達成まで支出管理し、節約／我慢／積立を簡単操作で支援するサイトです" />
   <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta name="turbolinks-cache-control" content="no-cache">
 </head>
 
 <body>
@@ -23,9 +24,7 @@
           <div class="row">
             <nav  class="nav navbar-nav navbar-left">
               <div class="logo">
-                <%= link_to root_path do %>
-                <%= image_tag 'want_no_image.jpg', :size =>'90x65' %>
-                <% end %>
+                <%= link_to "こつつみ", root_path %>
               </div>
             </nav>
             <nav class="nav navbar-nav navbar-right">
@@ -77,3 +76,6 @@
   </div>
 </body>
 </html>
+
+
+
