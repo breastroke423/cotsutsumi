@@ -1,9 +1,10 @@
 
 <div class="container">
+  <%= form_for @user do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
   <div class="form-signin">
     <div class="user-info">
       <h2>プロフィールの変更</h2>
-      <%= form_for @user do |f| %>
       <div class="field">
         <label>プロフィール画像</label><br>
         <%= f.file_field :profile_image, class: "img_field", style: "display:none;" %>

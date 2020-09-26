@@ -1,0 +1,14 @@
+<% if model.errors.any? %>
+<div　id=“error_messages” class=“alert”>
+  <ul>
+    <% model.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% if flash[:file_error] %>
+    <li>
+      <%= flash[:file_error] %>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+<% end %>
