@@ -22,9 +22,11 @@
 
  .logo {
   margin: auto;
-  img {
-    border-radius: 7px;
-    margin-top: 7px;
+  a {
+    font-size: 55px;
+    font-family: 'Chalkboard SE','Wawati SC','Segoe UI Black',
+    sans-serif;
+    color: white;
   }
 }
 
@@ -57,14 +59,14 @@ p, a, td, th, h2, h4 {
     background-color: #825745;
   }
 
-.share_btn {
+  .share_btn {
     display: inline-flex;
     margin: 7px auto;
     justify-content: flex-end;
     width:100%;
   }
 
-.fb-share-button, .twitter, .line-it-button {
+  .fb-share-button, .twitter, .line-it-button {
     margin-left: 7px;
   }
 }
@@ -160,7 +162,7 @@ h2 {
 .table-heading {
   display: flex;
   text-align: bottom;
-align-items: flex-end;
+  align-items: flex-end;
   h4 {
     font-size: 13px;
     margin-left: 30px;

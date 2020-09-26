@@ -3,6 +3,7 @@
   <div class="row">
     <% @users.each do |user| %>
     <h2>【<%= user.nickname %>】で検索した結果一覧</h2>
+    <% break %>
     <% end %>
 <!-- ユーザー一覧表示させる -->
     <%= render "users/register" %>
