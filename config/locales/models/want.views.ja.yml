@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        want:
+          attributes:
+            name:
+              blank: "が入力されていません。"
+            price:
+              not_a_number: "を半角数字で入力してください。"
+            want_image:
+              invalid_content_type: "の拡張子は「.jpg」もしくは「.png」を選択ください。"
+    attributes:
+      want:
+        name: "欲しいもの"
+        price: "金額"
+        want_image: "画像"
+

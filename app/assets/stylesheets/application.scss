@@ -169,6 +169,13 @@ h2 {
   }
 }
 
+#error_messages {
+  ul {
+    color: red;
+    margin: 10px;
+  }
+}
+
 // 以下ボタンのレイアウト
 
 .btn {

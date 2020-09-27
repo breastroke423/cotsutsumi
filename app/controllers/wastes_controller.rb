@@ -13,7 +13,6 @@ class WastesController < ApplicationController
       redirect_to wastes_path
     else
       @user = current_user
-      flash.now[:alert] = "必要内容の入力を"
       render 'index'
     end
   end

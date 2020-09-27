@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        waste:
+          attributes:
+            name:
+              blank: "が入力されていません。"
+            price:
+              not_a_number: "を半角数字で入力してください。"
+    attributes:
+      waste:
+        name: "節約したいもの"
+        price: "金額"
+

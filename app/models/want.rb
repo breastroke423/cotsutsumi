@@ -9,5 +9,5 @@ class Want < ApplicationRecord
   def cheered_by?(user)
     cheers.where(user_id: user.id).exists?
   end
-  attachment :want_image
+  attachment :want_image, content_type: ["image/jpeg", "image/png"]
 end
