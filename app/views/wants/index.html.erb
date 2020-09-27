@@ -74,8 +74,8 @@
           <tbody>
             <tr>
               <td>
-                <label><%= f.file_field :want_image, class: "img_field", style: "display:none;" %>
-                  <%= attachment_image_tag @want, :want_image, fallback: "want_no_image.jpg", onClick: "$('#img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %></label>
+                <label><%= f.file_field :want_image, class: "img_field", style: "display:none;", accept: 'image/jpg, image/jpeg, image/png' %>
+                  <%= attachment_image_tag @want, :want_image, fallback: "want_no_image.jpg", size:'80x80', onClick: "$('#img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %></label>
                 </td>
                 <td><%= f.text_field :name %></td>
                 <td><%= f.text_field :price %></td>
@@ -97,3 +97,8 @@
       </div>
     </div>
   </div>
+<script>
+  $(document).ready( function() {
+    $('.img_field').attr('src', `<%= asset_path('want_no_image.jpg') %>`)
+  })
+</script>

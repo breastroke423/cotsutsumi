@@ -7,7 +7,7 @@
       <h2>プロフィールの変更</h2>
       <div class="field">
         <label>プロフィール画像</label><br>
-        <%= f.file_field :profile_image, class: "img_field", style: "display:none;" %>
+        <%= f.file_field :profile_image, class: "img_field", style: "display:none;", accept: 'image/jpg, image/jpeg, image/png' %>
         <%= attachment_image_tag @user, :profile_image, placeholder: "プロフィール画像", fallback: "no_image.jpg", size:'90x90', onClick: "$('.img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
       </div>
       <div class="field">
