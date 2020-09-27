@@ -23,6 +23,8 @@ ja:
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
               confirmation: "が内容とあっていません。"
+            profile_image:
+              invalid_content_type: "の拡張子は「.jpg」「.png」のみ使用できます"
     attributes:
       user:
         current_password: "現在のパスワード"
@@ -31,6 +33,7 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "次回から自動的にログイン"
+        profile_image: "プロフィール画像"
     models:
       user: "ユーザ"
   devise:

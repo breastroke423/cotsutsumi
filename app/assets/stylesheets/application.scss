@@ -30,6 +30,9 @@
   }
 }
 
+.error_style {
+  color: red;
+}
 body {
   background-color: #eedcb3;
 }
@@ -166,6 +169,13 @@ h2 {
   h4 {
     font-size: 13px;
     margin-left: 30px;
+  }
+}
+
+#error_messages {
+  ul {
+    color: red;
+    margin: 10px;
   }
 }
 

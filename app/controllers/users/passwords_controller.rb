@@ -2,9 +2,10 @@
 
 class Users::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
-  # def new
-  #   super
-  # end
+   def new
+    redirect_to new_user_session_path
+     # super
+   end
 
   # POST /resource/password
   # def create

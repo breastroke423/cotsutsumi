@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
 before_action :configure_permitted_parameters , if: :devise_controller?
 
+
+  def exist_current_user?
+    !current_user.nil?
+  end
+  
   protected
 
   def after_sign_in_path_for(resource)
@@ -11,7 +16,6 @@ before_action :configure_permitted_parameters , if: :devise_controller?
       mypage_path
     end
   end
-
 
   def after_sign_out_path_for(resource)
     root_path

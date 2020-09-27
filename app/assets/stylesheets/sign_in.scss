@@ -37,6 +37,13 @@
   input{
     margin: 0 auto;
   }
+  .field {
+    img {
+      border-radius: 50%;
+      height: 90px;
+      width: 90px;
+    }
+  }
 }
 
 .field_check {

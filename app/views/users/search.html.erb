@@ -1,10 +1,7 @@
 <!-- 検索結果一覧表示 -->
 <div class="container">
   <div class="row">
-    <% @users.each do |user| %>
-    <h2>【<%= user.nickname %>】で検索した結果一覧</h2>
-    <% break %>
-    <% end %>
+    <h2>検索結果</h2>
 <!-- ユーザー一覧表示させる -->
     <%= render "users/register" %>
   </div>
