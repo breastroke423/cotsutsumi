@@ -9,9 +9,14 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    @user = User.find_by(email: params[:user][:email].downcase)
+    if @user && (@user.valid_password?(params[:user][:password]) && (!@user.active_for_authentication?))
+      flash[:alert] = "退会済みです。"
+      render 'new'
+    end
+    super
+  end
 
   # DELETE /resource/sign_out
   # def destroy
@@ -21,17 +26,17 @@ class Users::SessionsController < Devise::SessionsController
 
 
 
-   protected
+  protected
 
   def reject_user
     @user = User.find_by(email: params[:user][:email].downcase)
     if @user
       if (@user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false))
-        flash[:error] = "退会済みです。"
+        flash[:alert] = "退会済みです。"
         redirect_to new_user_session_path
       end
     else
-      flash[:error] = "必須項目を入力してください。"
+      flash[:alert] = "必須項目を入力してください。"
     end
   end
 end

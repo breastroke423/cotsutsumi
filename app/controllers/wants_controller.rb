@@ -22,10 +22,11 @@ class WantsController < ApplicationController
         @row_number = params[:want][:row_number]
         render status: :created
       else
-      redirect_to wants_path
+        redirect_to wants_path
       end
 
     else
+      @want.want_image = nil
       @user = current_user
       render 'index'
     end

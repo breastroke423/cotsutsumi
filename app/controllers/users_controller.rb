@@ -17,6 +17,7 @@ def update
     redirect_to mypage_path
   else
     @user = current_user
+    @user.profile_image = current_user.profile_image
     render 'edit'
   end
 end
@@ -71,22 +72,22 @@ def followers
   @users = current_user.followers.where(is_deleted: false).page(params[:page]).per(5)
 end
 
-  def hide # 退会オプション、destroyにしないのは合計額が崩れるから
-    @user = User.find(params[:id])
-    @user.update(is_deleted: true)
-    # default = "f"
-    reset_session
-    flash[:thanks] = "買いたいものができたときのご利用お待ちしております"
-    redirect_to root_path
-  end
+def hide # 退会オプション、destroyにしないのは合計額が崩れるから
+  @user = User.find(params[:id])
+  @user.update(is_deleted: true)
+  # default = "f"
+  reset_session
+  flash[:thanks] = "買いたいものができたときのご利用お待ちしております"
+  redirect_to root_path
+end
 
-  def search # 検索用
-    if params[:nickname].present?
-      @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%").page(params[:page]).per(5)
-    else
-      @users = User.none.page(params[:page]).per(5)
-    end
+def search # 検索用
+  if params[:nickname].present?
+    @users = User.where('nickname LIKE ?', "%#{params[:nickname]}%").page(params[:page]).per(5)
+  else
+    @users = User.none.page(params[:page]).per(5)
   end
+end
 
   private
   def user_params
