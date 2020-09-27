@@ -1,13 +1,14 @@
 
 <div class="container">
+  <%= form_for @user do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
   <div class="form-signin">
     <div class="user-info">
       <h2>プロフィールの変更</h2>
-      <%= form_for @user do |f| %>
       <div class="field">
         <label>プロフィール画像</label><br>
         <%= f.file_field :profile_image, class: "img_field", style: "display:none;" %>
-        <%= attachment_image_tag @user, :profile_image, placeholder: "プロフィール画像", fallback: "no_image.jpg", onClick: "$('.img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
+        <%= attachment_image_tag @user, :profile_image, placeholder: "プロフィール画像", fallback: "no_image.jpg", size:'90x90', onClick: "$('.img_field').click()", class: "center-block img-thumbnail img-responsive img_prev" %>
       </div>
       <div class="field">
         <%= f.label :ニックネーム %><br />

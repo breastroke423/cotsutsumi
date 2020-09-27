@@ -10,7 +10,8 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :introduction, length: {maximum: 20}
 
-  attachment :profile_image
+  attachment :profile_image, content_type: ["image/jpeg", "image/png"]
+
 
   # ====================自分がフォローしているユーザーとの関連 ===================================
   #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)

@@ -5,7 +5,6 @@
   </div>
   <div class="index-base">
     <div class="row">
-
       <!-- 無駄遣い一覧 -->
       <div class="table-border table-responsive">
         <table class="table">
@@ -53,13 +52,13 @@
         </div>
       </div>
     </div>
-
     <!-- 節約入力 -->
     <h2>節約したいものを入力</h2>
     <div class="index-base">
       <div class="row">
         <div class="table-border table-responsive">
           <%= form_with model: @waste,local: true do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
           <table class="table">
             <thead>
               <tr>
