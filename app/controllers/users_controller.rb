@@ -17,7 +17,6 @@ def update
     redirect_to mypage_path
   else
     @user = current_user
-    flash[:file_error]="拡張子は「.jpg」もしくは「.png」としてください"
     render 'edit'
   end
 end
