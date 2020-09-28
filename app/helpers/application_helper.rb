@@ -18,7 +18,7 @@ module ApplicationHelper
         title: 'こつつみ',
         description: '目標／目的達成まで支出管理し、節約／我慢／積立を簡単操作で支援するサイトです',
         type: 'website',
-        url: https://cotsutsumi.work,
+        url: request.original_url,
         image: image_url('cotsutsumi_image.png'),
         locale: 'ja_JP'
       }
