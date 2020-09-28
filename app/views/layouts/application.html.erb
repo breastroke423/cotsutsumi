@@ -13,6 +13,7 @@
   <meta property="og:description"   content="目標／目的達成まで支出管理し、節約／我慢／積立を簡単操作で支援するサイトです" />
   <!-- <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
   <meta name="turbolinks-cache-control" content="no-cache">
+    <%= display_meta_tags(default_meta_tags) %>
 </head>
 
 <body>
@@ -24,19 +25,22 @@
           <div class="row">
             <nav  class="nav navbar-nav navbar-left">
               <div class="logo">
-                <%= link_to "こつつみ", root_path %>
+                <%= link_to root_path do %>
+                <%= image_tag('1_Primary_logo_on_transparent_301x67.png') %>
+
+                <% end %>
               </div>
             </nav>
             <nav class="nav navbar-nav navbar-right">
               <li><%= link_to "About", homes_about_path, class: "btn btn-default" %></li>
               <% if request.path.include?("sign_in" || "sign_up") || !user_signed_in? %>
-                  <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
-                  <li><%= link_to "新規登録", new_user_registration_path, class: "btn btn-default" %></li>
-                  <li><%= link_to "ログイン", new_user_session_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
+              <li><%= link_to "新規登録", new_user_registration_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: "btn btn-default" %></li>
               <% else %>
-                  <li><%= link_to "マイページ", mypage_path, class: "btn btn-default" %></li>
-                  <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
-                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
+              <li><%= link_to "マイページ", mypage_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
               <% end %>
             </nav>
           </div>
