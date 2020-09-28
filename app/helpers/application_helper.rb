@@ -1,6 +1,4 @@
 module ApplicationHelper
-
-module ApplicationHelper
   def default_meta_tags
     {
       site: 'こつつみ',
@@ -33,10 +31,4 @@ module ApplicationHelper
       }
     }
   end
-end
-
-
-
-
-
 end
