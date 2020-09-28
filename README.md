@@ -51,6 +51,7 @@ https://cotsutsumi.work
 <https://docs.google.com/spreadsheets/d/1Li0mqjAo9D6mE9aWFrYRnKpYbfO01lnlsq3yI6zvrg4/edit#gid=0>
 
 ## ER図
+<img width="633" alt="スクリーンショット 2020-09-28 20 30 56" src="https://user-images.githubusercontent.com/66353006/94429094-c2515b80-01cc-11eb-8548-54d00ed78a0d.png">
 
 ## 設計書
 [テーブル定義書／アプリケーション詳細設計書](https://docs.google.com/spreadsheets/d/1Au8eLIqfpZzAb036zpxLX5lO8sLtLPyZ3s2IwoE6vYg/edit#gid=1117064240)
