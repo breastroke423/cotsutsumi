@@ -11,7 +11,7 @@ module ApplicationHelper
       noindex: ! Rails.env.production?,
       icon: [
         { href: image_url('cotsutsumi_favi.png') },
-        { href: image_url('cotsutsumi_image.png') rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('cotsutsumi_image.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' }
       ],
       og: {
         site_name: 'こつつみ',
