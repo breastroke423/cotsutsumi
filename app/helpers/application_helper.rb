@@ -31,4 +31,64 @@ module ApplicationHelper
       # }
     }
   end
+
+  def calculation_waste_purchase
+    # 自分自身の無駄遣い削減合計
+    calculation_waste_total
+
+    # 全ユーザーの無駄遣い削減額
+    all_user_wast_total
+
+    # 全ユーザーの目標達成購入額
+    all_user_purchase_total
+  end
+
+  def count_down_save
+    @waste = Waste.find(params[:waste])
+    @waste.count = @waste.count - 1
+    @waste.save
+    flash.now[:lose] = "今回はご褒美！"
+  end
+
+  def count_up_save
+    @waste = Waste.find(params[:waste])
+    @waste.count = @waste.count + 1
+    @waste.save
+    flash.now[:gain] = "すばらしい！！"
+  end
+
+  def calculation_waste_total
+    @user_total_price = 0
+    @wastes.each do |waste|
+      waste_total = waste.price * waste.count
+      @user_total_price+=waste_total
+    end
+  end
+
+  def calculation_possible_total
+    @user_difference_price = @user_total_price - @user.purchase_price
+    @waste_count_all = 0
+    @wastes.each do |waste|
+      @waste_count_all += waste.count
+    end
+  end
+
+  def all_user_wast_total
+    @user_all = User.all
+    @users_wastes_all = 0
+    @user_all.each do |user|
+      user.wastes.each do |waste|
+        waste_all_total = waste.price * waste.count
+        @users_wastes_all+=waste_all_total
+      end
+    end
+  end
+
+  def all_user_purchase_total
+    @users_purchase_all = 0
+    @user_all.each do |user|
+      @users_purchase_all+=user.purchase_price
+    end
+  end
 end
+
