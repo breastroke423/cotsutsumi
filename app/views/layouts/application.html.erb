@@ -29,15 +29,15 @@
             </nav>
             <nav class="nav navbar-nav navbar-right">
               <li><%= link_to "About", homes_about_path, class: "btn btn-default" %></li>
-              <% if request.path.include?("sign_in" || "sign_up") || !user_signed_in? %>
+                <% if request.path.include?("sign_in" || "sign_up") || !user_signed_in? %>
               <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
               <li><%= link_to "新規登録", new_user_registration_path, class: "btn btn-default" %></li>
               <li><%= link_to "ログイン", new_user_session_path, class: "btn btn-default" %></li>
-              <% else %>
+                <% else %>
               <li><%= link_to "マイページ", mypage_path, class: "btn btn-default" %></li>
               <li><%= link_to "ユーザー一覧", users_path, class: "btn btn-default" %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-default" %></li>
-              <% end %>
+                <% end %>
             </nav>
           </div>
         </div>
@@ -57,13 +57,13 @@
     <!-- /header -->
 
     <% if flash[:thanks] %>
-    <div class="container">
-      <div class="row">
-        <div class="thanks top-base">
-          <%= flash[:thanks] %>
+      <div class="container">
+        <div class="row">
+          <div class="thanks top-base">
+            <%= flash[:thanks] %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
 
     <%= yield %>
