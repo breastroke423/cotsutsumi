@@ -1,10 +1,11 @@
+@mixin border {
+  border-bottom: dashed 2px #ffb03f;
+  border-top: dashed 2px #ffb03f;
+}
 
-.table-base {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
+@mixin flash {
   border-radius: 9px;
-  margin: 15px 0 50px;
+  margin-bottom: 10px;
 }
 
 .table-border {
@@ -13,22 +14,11 @@
     margin: 10px auto;
   }
   table > thead > tr > th{
-    border-bottom: dashed 2px #ffb03f;
-    border-top: dashed 2px #ffb03f;
+    @include border;
   }
   table > tbody > tr > td{
-    border-bottom: dashed 2px #ffb03f;
-    border-top: dashed 2px #ffb03f;
+    @include border;
   }
-}
-
-.total-base {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
-  margin: 20px auto;
-  width: 90%;
 }
 
 .resize {
@@ -86,7 +76,6 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-
   p {
     color: black;
     margin: 10px auto;
@@ -115,23 +104,16 @@
   background-color: #BAD3FF;
   color: blue;
   text-align: center;
-  border-radius: 9px;
-  margin-bottom: 10px;
+  @include flash;
 }
 .alert {
   background-color: #FFBEDA;
   color: red;
   text-align: center;
-  border-radius: 9px;
-  margin-bottom: 10px;
+  @include flash;
 }
 
-.pagination-btn{
-  display: flex;
-  justify-content: center;
-}
-
-.random {
+.pagination-btn, .random {
   display: flex;
   justify-content: center;
 }

@@ -10,22 +10,9 @@
 input {
   width: 90%;
 }
-.actions{
-  a {
-    width: 90%;
-  }
-}
 
 textarea {
   width: 90%;
-}
-
-.user-info {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
-  padding: 0 10px 20px;
 }
 
 #error_explanation
