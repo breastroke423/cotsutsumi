@@ -20,6 +20,13 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
 
+ @mixin table {
+  border: dashed 2px #ffb03f;/*破線*/
+  background: #fffde8;
+  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+  border-radius: 9px;
+}
+
  .logo {
   margin: 10px auto;
   img {
@@ -104,20 +111,14 @@ nav {
 
 
 .mytable {
+  @include table;
   width: 95%;
-  border: dashed 2px #ffb03f;/*破線*/
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border-radius: 9px;
   margin: 20px auto;
 }
 
 
 .total-base {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
+  @include table;
   margin: 50px auto;
   width: 95%;
 }
@@ -139,10 +140,7 @@ h2 {
 
 
 .top-base {
-  background: #fffde8;
-  box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-  border: dashed 2px #ffb03f;/*破線*/
-  border-radius: 9px;
+  @include table;
   margin: 0 auto 50px;
   width: 100%;
   text-align: center;
@@ -176,6 +174,69 @@ h2 {
     margin: 10px;
   }
 }
+
+
+.about-base {
+  @include table;
+  margin: 15px auto 50px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.user-info {
+  @include table;
+  padding: 0 10px 20px;
+  margin: 30px auto;
+  .field {
+    img {
+      border-radius: 50%;
+      height: 90px;
+      width: 90px;
+    }
+    label {
+      width: 90%;
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+}
+
+.index-base {
+  @include table;
+  margin: 20px 0 30px;
+  padding: 10px;
+}
+
+.want-base {
+  @include table;
+  margin: 50px auto;
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.achievement-base{
+  @include table;
+  margin: 50px auto;
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.index-base {
+  @include table;
+  margin: 20px 0 30px;
+}
+
+.table-base {
+  @include table;
+  margin: 15px 0 50px;
+}
+
+
+
 
 // 以下ボタンのレイアウト
 
